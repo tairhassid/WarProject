@@ -8,7 +8,7 @@ import java.util.Random;
 public class MissileLauncherDestructors implements Runnable{
 	public final static int MIN_TIME = 1000;
 	public final static int MAX_TIME = 5000;
-	private enum type {Plane, Ship};
+	public enum type {Plane, Ship};
 	private type theType;
 	private Map<MissileLaunchers,Long> destructedMissile;
 	private long destructAfterLaunch;

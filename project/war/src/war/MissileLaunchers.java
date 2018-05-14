@@ -1,8 +1,5 @@
 package war;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Random;
 import java.util.Vector;
 
@@ -15,7 +12,6 @@ public class MissileLaunchers implements Runnable {
 	private static int idGenerator = 100;
 	private String id;
 	private boolean isHidden;
-	//private Queue<Missile> missiles = new LinkedList<>();
 	private Vector<Missile> missiles;
 	private boolean isDestroyed;
 
@@ -35,6 +31,10 @@ public class MissileLaunchers implements Runnable {
 
 	public void setDestroyed(boolean isDestroyed) {
 		this.isDestroyed = isDestroyed;
+	}
+	
+	public boolean isDestroyed(){
+		return this.isDestroyed;
 	}
 
 	@Override
@@ -70,6 +70,7 @@ public class MissileLaunchers implements Runnable {
 
 	public void addMissile(Missile theMissile) {
 		missiles.add(theMissile);
+		//theMissile.start();
 	}
 
 	public boolean destructMissileLauncher(){
@@ -80,8 +81,8 @@ public class MissileLaunchers implements Runnable {
 		else {
 			int random = randomNumber(ZERO, ONE); // succeeded or not
 			setDestroyed((random == 0)? true : false);
-			return true;
 		}
+		return true;
 	}
 
 	public int randomNumber(int from, int to){
