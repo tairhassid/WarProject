@@ -21,7 +21,6 @@ public class MissileLaunchers implements Runnable {
 		missiles = new Vector<>();
 		setDestroyed(false);
 		setIsHidden();
-		System.out.println("create");
 	}
 
 	public void setIsHidden() {
@@ -41,17 +40,18 @@ public class MissileLaunchers implements Runnable {
 	@Override
 	public void run() {
 		while(!isDestroyed) {
-			if(!missiles.isEmpty())
-				if (isHidden) {
-					isHidden = false;
-					try {
-						launch();
-						//Thread.sleep(randomNumber(MIN_TIME, MAX_TIME));
-					} catch (InterruptedException e) {
-						setDestroyed(true);
-						e.printStackTrace();
-					}
+			if(!missiles.isEmpty()) {
+				try {
+					if (isHidden)
+						isHidden = false;
+					launch();
+					//Thread.sleep(randomNumber(MIN_TIME, MAX_TIME));
+				} catch (InterruptedException e) {
+					setDestroyed(true);
+					e.printStackTrace();
 				}
+
+			}
 			//if defined as hidden, sleep for x seconds being exposed- isHidden = false
 			//try catch Interrupted exception - if destroyed isDestroyed = true
 		}
@@ -61,20 +61,16 @@ public class MissileLaunchers implements Runnable {
 	public void launch() throws InterruptedException {
 		Missile theMissile = missiles.remove(missiles.size()-1);
 		if(theMissile != null){
-			synchronized (theMissile) {
-				theMissile.notifyAll();
-			}
 			synchronized (this) {
 				wait();
 			}
 		}
-
 	}
 
 	public void addMissile(Missile theMissile) {
 		missiles.add(theMissile);
-		Thread theMissileThread = new Thread(theMissile);
-		theMissileThread.start();
+		System.out.println("In launcher- addMissile " + theMissile.getId());
+		theMissile.start();
 	}
 
 	public boolean destructMissileLauncher(){

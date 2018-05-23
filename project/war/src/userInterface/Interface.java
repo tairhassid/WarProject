@@ -57,7 +57,7 @@ public class Interface {
 				break;	
 
 			case 4:
-				logic.launchMissile("Sderot", 1, 1000); //just as an example
+				logic.launchMissile("Sderot", 8000, 1000); //just as an example
 				break;
 
 			case 5:

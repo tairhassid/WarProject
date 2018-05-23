@@ -6,20 +6,29 @@ import java.util.Calendar;
 import war.MissileLauncherDestructors.type;
 
 public class BusinessLogic {
-
+	
+	public static long timer;
 	private static BusinessLogic instance;
+	
 	private ArrayList<MissileLaunchers> missileLaunchers = new ArrayList<>();
 	private ArrayList<MissileDestructors> missileDestructors = new ArrayList<>();
 	private ArrayList<MissileLauncherDestructors> missileLauncherDestructors = new ArrayList<>();
 	private ArrayList<Missile> allMissiles = new ArrayList<>();
 
-	private int totalMissilesLaunched = 0;
-	private int totalMissilesDestructed = 0;
-	private int totalSuccessfulLaunched = 0;
-	private int totalDamage = 0;
-	private int totalMissileLauncherDestroyed = 0;
+	private int totalMissilesLaunched;
+	private int totalMissilesDestructed;
+	private int totalSuccessfulLaunched;
+	private int totalDamage;
+	private int totalMissileLauncherDestroyed;
 
-	private  BusinessLogic() {}
+	private  BusinessLogic() {
+		totalMissilesLaunched = 0;
+		totalMissilesDestructed = 0;
+		totalSuccessfulLaunched = 0;
+		totalDamage = 0;
+		totalMissileLauncherDestroyed = 0;
+		timer = Calendar.getInstance().getTimeInMillis(); 
+	}
 
 	public static BusinessLogic getInstance(){
 		if(instance == null){
@@ -33,6 +42,7 @@ public class BusinessLogic {
 		missileLaunchers.add(theMissileLauncher);
 
 		Thread missileLauncher = new Thread(theMissileLauncher);
+		System.out.println("add missile launcher");
 		missileLauncher.start();
 	}
 
@@ -105,19 +115,21 @@ public class BusinessLogic {
 			//No missile destructor exist
 		}
 		else {
-			Missile theMissile = findMissile();
-			if(theMissileDestructor.destructMissile(theMissile)) {
-				totalMissilesDestructed++;
-			};
+			//Missile theMissile = findMissile();
+			for(Missile theMissile : allMissiles)
+				if(theMissile.getLaunchTime() > 0 && theMissileDestructor.destructMissile(theMissile)) {
+					totalMissilesDestructed++;
+					break;
+			}
 		}
 	}
 
-	private Missile findMissile() {
-		for(Missile theMissile : allMissiles)
-			if(theMissile.destructMissile(Calendar.getInstance().getTimeInMillis()/1000))
-				return theMissile;
-		return null;
-	}
+//	private Missile findMissile() {
+//		for(Missile theMissile : allMissiles)
+//			if(theMissile.destructMissile(getCurrentTime()))
+//				return theMissile;
+//		return null;
+//	}
 
 	private MissileDestructors findMissileDestructor(){
 		if (!missileDestructors.isEmpty())
@@ -133,6 +145,10 @@ public class BusinessLogic {
 
 	public void sumUp() {
 		// TODO 
+	}
+	
+	public static long getCurrentTime() {
+		return Calendar.getInstance().getTimeInMillis() - timer;
 	}
 
 	public int getTotalMissilesLaunched() {

@@ -1,10 +1,8 @@
 package war;
 
-
-import java.util.Calendar;
 import java.util.Random;
 
-public class Missile implements Runnable {
+public class Missile extends Thread {
 	private final static int ZERO = 0;
 	private final static int ONE =1;
 	private static int idGenerator = 0;
@@ -24,39 +22,43 @@ public class Missile implements Runnable {
 		this.damage = damage;
 		this.launcher = launcher;
 		this.isDestructed = false;
+		this.launchTime = 0;
 	}
 
 	@Override
 	public void run() {
-		while(!isDestructed) {
-			try {
-				flying();
-			} catch (InterruptedException e) {
-				isDestructed = true;
-				e.printStackTrace();
-			}
+		try {
+			flying();
+		} catch (InterruptedException e) {
+			System.out.println("thread interrupted" + this.getId());
+			isDestructed = true;
 		}
 	}
 
-	public boolean destructMissile(long currentTime){
+	public boolean destructMissile(long currentTime) {
 		if ( currentTime > flyTime + launchTime)
-			return isDestructed = false;
-		else
-			return isDestructed = true;
+			return false;
+		else {
+			System.out.println("in Missile - Desctruct succeeded=" + this.getId());
+			this.interrupt();
+		}
+		return true;
 	}
 
 	public void flying() throws InterruptedException {
 		synchronized (this) {
 			setLaunchTime();
-			launcher.addMissile(this);
-			wait();	
+			Thread.sleep(flyTime);
+			System.out.println("finishedFlying " + this.getId());
+			isDestructed = true;
 		}
-		Thread.sleep(flyTime);
-		launcher.notify();
+		synchronized (launcher) {
+			launcher.notifyAll();
+		}
 	}
 
 	public void setLaunchTime(){
-		this.launchTime = Calendar.getInstance().getTimeInMillis()/1000;
+		this.launchTime = BusinessLogic.getCurrentTime();
 	}
 
 	public int randomNumber(int from, int to){

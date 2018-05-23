@@ -1,11 +1,11 @@
 package war;
 
-import java.util.Calendar;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class MissileLauncherDestructors implements Runnable{
+public class MissileLauncherDestructors implements Runnable {
 	public final static int MIN_TIME = 1000;
 	public final static int MAX_TIME = 5000;
 	public enum type {Plane, Ship};
@@ -27,7 +27,7 @@ public class MissileLauncherDestructors implements Runnable{
 	
 	public boolean destructMissileLauncher(MissileLaunchers theMissileLauncher){
 		try {
-			destructAfterLaunch = Calendar.getInstance().getTimeInMillis() / 1000;
+			destructAfterLaunch = BusinessLogic.getCurrentTime();
 			destructedMissile.put(theMissileLauncher, destructAfterLaunch);
 			Thread.sleep(randomNumber(MIN_TIME, MAX_TIME));
 			return theMissileLauncher.destructMissileLauncher();
@@ -47,9 +47,4 @@ public class MissileLauncherDestructors implements Runnable{
 		
 		return number;
 	}
-	
-	
-	
-	
-	
 }
