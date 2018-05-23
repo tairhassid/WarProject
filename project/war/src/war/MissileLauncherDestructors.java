@@ -9,29 +9,36 @@ public class MissileLauncherDestructors implements Runnable{
 	public final static int MIN_TIME = 1000;
 	public final static int MAX_TIME = 5000;
 	public enum type {Plane, Ship};
-	private type theType;
 	private Map<MissileLaunchers,Long> destructedMissile;
 	private long destructAfterLaunch;
+	private boolean isDesructed;
 	
 	public MissileLauncherDestructors(type theType) {
-		this.theType = theType;
 		this.destructedMissile = new HashMap<>();
+		this.isDesructed = false;
 	}
 
 	@Override
 	public void run() {
-		//TBD
+		while(!isDesructed) {
+			// TODO
+		}
 	}
 	
-	public void destructMissileLauncher(MissileLaunchers theMissileLauncher){
+	public boolean destructMissileLauncher(MissileLaunchers theMissileLauncher){
 		try {
 			destructAfterLaunch = Calendar.getInstance().getTimeInMillis() / 1000;
 			destructedMissile.put(theMissileLauncher, destructAfterLaunch);
 			Thread.sleep(randomNumber(MIN_TIME, MAX_TIME));
-			theMissileLauncher.destructMissileLauncher();
+			return theMissileLauncher.destructMissileLauncher();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		return false;
+	}
+	
+	public boolean destructSelf() {
+		return isDesructed = true;
 	}
 	
 	public int randomNumber(int from, int to){

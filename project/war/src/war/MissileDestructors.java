@@ -22,18 +22,19 @@ public class MissileDestructors implements Runnable{
 	
 	@Override
 	public void run() {
-		//TBD
+		
 	}
 	
-	public void destructMissile(Missile theMissile){
+	public boolean destructMissile(Missile theMissile){
 		try {
 			Thread.sleep(randomNumber(MIN_TIME, MAX_TIME));
 			destructAfterLaunch = (Calendar.getInstance().getTimeInMillis() / 1000) - theMissile.getLaunchTime();
 			destructedMissile.put(theMissile, destructAfterLaunch);
-			theMissile.destructMissile(destructAfterLaunch);
+			return theMissile.destructMissile(destructAfterLaunch);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		return false;
 	}
 	
 	public int randomNumber(int from, int to){
@@ -42,8 +43,6 @@ public class MissileDestructors implements Runnable{
 		
 		return number;
 	}
-
-
 }
 
 

@@ -36,38 +36,43 @@ public class Missile implements Runnable {
 				e.printStackTrace();
 			}
 		}
-
 	}
-	
+
 	public boolean destructMissile(long currentTime){
-		if ( currentTime > flyTime)
+		if ( currentTime > flyTime + launchTime)
 			return isDestructed = false;
 		else
 			return isDestructed = true;
 	}
 
 	public void flying() throws InterruptedException {
-		setLaunchTime();
-		launcher.addMissile(this);
-		wait();
+		synchronized (this) {
+			setLaunchTime();
+			launcher.addMissile(this);
+			wait();	
+		}
 		Thread.sleep(flyTime);
 		launcher.notify();
 	}
-	
+
 	public void setLaunchTime(){
 		this.launchTime = Calendar.getInstance().getTimeInMillis()/1000;
 	}
-	
+
 	public int randomNumber(int from, int to){
 		Random rand = new Random();
 		int number = rand.nextInt(to) + from;
-		
+
 		return number;
 	}
-	
+
 	public long getLaunchTime(){
 		return launchTime;
 	}
+
+	/*	public boolean getIsDestructed() {
+		return isDestructed;
+	}*/
 
 
 }
