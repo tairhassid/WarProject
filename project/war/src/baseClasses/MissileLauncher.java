@@ -1,9 +1,11 @@
-package war;
+package baseClasses;
 
-import java.util.Random;
+//import java.util.Random;
 import java.util.Vector;
 
-public class MissileLaunchers implements Runnable {
+import BL.War;
+
+public class MissileLauncher implements Runnable {
 	private final static int ZERO = 0;
 	private final static int TWO = 2;
 	private final static int MIN_TIME = 1000;
@@ -14,23 +16,30 @@ public class MissileLaunchers implements Runnable {
 	private boolean isHidden;
 	private Vector<Missile> missiles;
 	private boolean isDestroyed;
+	private long destructTime;
 
 
-	public MissileLaunchers() {
+	public MissileLauncher() {
 		this.id = "L" + (++idGenerator);
 		missiles = new Vector<>();
 		setDestroyed(false);
 		setIsHidden();
 	}
+	
+	public void setDestructTime(long destructTime){
+		this.destructTime = destructTime;
+	}
 
 	public void setIsHidden() {
-		int  n = randomNumber(ZERO,TWO);
+		int  n = War.randomNumber(ZERO, TWO);
 		this.isHidden = ((n == 0)? true : false);
 	}
 
 
 	public void setDestroyed(boolean isDestroyed) {
 		this.isDestroyed = isDestroyed;
+
+		
 	}
 
 	public boolean isDestroyed(){
@@ -42,10 +51,14 @@ public class MissileLaunchers implements Runnable {
 		while(!isDestroyed) {
 			if(!missiles.isEmpty()) {
 				try {
-					if (isHidden)
-						isHidden = false;
-					launch();
-					//Thread.sleep(randomNumber(MIN_TIME, MAX_TIME));
+					if (isHidden){
+						isHidden = false; // WE need to hide again launcher who has been hidden
+						launch();
+						isHidden = true;
+					}
+					else {
+						launch();
+					}
 				} catch (InterruptedException e) {
 					setDestroyed(true);
 					e.printStackTrace();
@@ -73,23 +86,52 @@ public class MissileLaunchers implements Runnable {
 		theMissile.start();
 	}
 
-	public boolean destructMissileLauncher(){
+	public boolean destructMissileLauncher(MissileLauncherDestructor destructor){
 		if(isHidden){
 			setDestroyed(false);
-			return false;
 		}
 		else {
-			int random = randomNumber(ZERO, TWO); // succeeded or not
-			setDestroyed((random == 0)? true : false);
+			setDestroyed(true);
 		}
-		return true;
+		synchronized (destructor) {
+			destructor.notifyAll();
+		}
+		return isDestroyed;
 	}
 
-	public int randomNumber(int from, int to){
-		Random rand = new Random();
-		int number = rand.nextInt(to) + from;
+//	public int randomNumber(int from, int to){
+//		Random rand = new Random();
+//		int number = rand.nextInt(to) + from;
+//
+//		return number;
+//	}
+	
+	public boolean isHidden(){
+		return this.isHidden;
+	}
 
-		return number;
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public Vector<Missile> getMissiles() {
+		return missiles;
+	}
+
+	public void setMissiles(Vector<Missile> missiles) {
+		this.missiles = missiles;
+	}
+
+	public long getDestructTime() {
+		return destructTime;
+	}
+
+	public void setHidden(boolean isHidden) {
+		this.isHidden = isHidden;
 	}
 
 

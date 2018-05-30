@@ -3,9 +3,9 @@ package userInterface;
 import java.io.IOException;
 import java.util.Scanner;
 
-import war.BusinessLogic;
-import war.MissileLauncherDestructors;
-import war.MissileLauncherDestructors.type;
+import BL.War;
+import baseClasses.MissileLauncherDestructor;
+import baseClasses.MissileLauncherDestructor.type;
 
 public class Interface {
 	private static boolean atWar = true;
@@ -14,7 +14,7 @@ public class Interface {
 		Scanner s = new Scanner(System.in);
 		int action;
 		
-		BusinessLogic logic = BusinessLogic.getInstance();
+		War logic = War.getInstance();
 
 		while(atWar) {
 			System.out.println("Please choose an action:");
@@ -22,11 +22,10 @@ public class Interface {
 					+ "2. Add a missile launcher destructor\n"
 					+ "3. Add a missile destructor\n"
 					+ "4. Launch missile\n"
-					+ "5. Destruct a missile launcher detructor\n"
+					+ "5. Destruct a missile launcher\n"
 					+ "6. Destruct a missile\n"
-					+ "7. Destruct a missile launcher\n"
-					+ "8. Show war conclusion\n"
-					+ "9. End war");
+					+ "7. Show war conclusion\n"
+					+ "8. End war\n");
 
 			System.out.print("Enter your choice now: ");
 			action = s.nextInt();
@@ -61,7 +60,7 @@ public class Interface {
 				break;
 
 			case 5:
-				logic.destructMissileLauncherDestructor();
+				logic.destructMissileLauncher();
 				break;
 
 			case 6:
@@ -69,14 +68,10 @@ public class Interface {
 				break;
 
 			case 7:
-				logic.destructMissileLauncher();
-				break;
-
-			case 8:
 				logic.sumUp();
 				break;
 
-			case 9:
+			case 8:
 				endWar();
 				break;
 

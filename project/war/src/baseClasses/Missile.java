@@ -1,10 +1,12 @@
-package war;
+package baseClasses;
 
-import java.util.Random;
+//import java.util.Random;
+
+import BL.War;
 
 public class Missile extends Thread {
-	private final static int ZERO = 0;
-	private final static int ONE =1;
+//	private final static int ZERO = 0;
+//	private final static int ONE =1;
 	private static int idGenerator = 0;
 	private String id;
 	private String destination;
@@ -12,10 +14,12 @@ public class Missile extends Thread {
 	private long flyTime;
 	private int damage;
 	//private long destructAfterLaunch;
-	private MissileLaunchers launcher;
+	private MissileLauncher launcher;
 	private boolean isDestructed;
+	
+	public Missile(){}
 
-	public Missile(String destination, int flyTime, int damage, MissileLaunchers launcher) {
+	public Missile(String destination, int flyTime, int damage, MissileLauncher launcher) {
 		this.id = "M" + (++idGenerator);
 		this.destination = destination;
 		this.flyTime = flyTime;
@@ -58,23 +62,55 @@ public class Missile extends Thread {
 	}
 
 	public void setLaunchTime(){
-		this.launchTime = BusinessLogic.getCurrentTime();
+		this.launchTime = War.getCurrentTime();
 	}
 
-	public int randomNumber(int from, int to){
-		Random rand = new Random();
-		int number = rand.nextInt(to) + from;
-
-		return number;
-	}
+//	public int randomNumber(int from, int to){
+//		Random rand = new Random();
+//		int number = rand.nextInt(to) + from;
+//
+//		return number;
+//	}
 
 	public long getLaunchTime(){
 		return launchTime;
 	}
 
-	/*	public boolean getIsDestructed() {
+	public String getMissileId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getDestination() {
+		return destination;
+	}
+
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+
+	public long getFlyTime() {
+		return flyTime;
+	}
+
+	public void setFlyTime(long flyTime) {
+		this.flyTime = flyTime;
+	}
+
+	public int getDamage() {
+		return damage;
+	}
+
+	public void setDamage(int damage) {
+		this.damage = damage;
+	}
+
+	public boolean getIsDestructed() {
 		return isDestructed;
-	}*/
+	}
 
 
 }
