@@ -51,14 +51,20 @@ public class Missile extends Thread {
 
 	public void flying() throws InterruptedException {
 		synchronized (this) {
+			launcher.addWaitingMissile(this);
+			System.out.println("Missile " + this.getId() + " wait");
+			wait();
+		}
+		synchronized (launcher) {
+			System.out.println("Missile " + this.getId() + " starts flying");
 			setLaunchTime();
 			Thread.sleep(flyTime);
 			System.out.println("finishedFlying " + this.getId());
-			isDestructed = true;
-		}
-		synchronized (launcher) {
 			launcher.notifyAll();
 		}
+			
+		isDestructed = true;
+
 	}
 
 	public void setLaunchTime(){

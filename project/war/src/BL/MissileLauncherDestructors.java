@@ -31,11 +31,12 @@ public class MissileLauncherDestructors {
 			//No Missile launcher destructor exist
 		}
 		else{
-			if(theMissileLauncherDestructor.destructMissileLauncher(theMissileLauncher))
+			theMissileLauncherDestructor.add(theMissileLauncher);
+			if(theMissileLauncher.getIsDestroyed())
 				totalMissileLauncherDestroyed++;
 			//theMissileLauncher.destructMissileLauncher(); //interrupt the thread
 			System.out.println("Missile is hidden="+ theMissileLauncher.isHidden());
-			System.out.println("Missile Launcher destroyed="+theMissileLauncher.isDestroyed());
+			System.out.println("Missile Launcher destroyed="+theMissileLauncher.getIsDestroyed());
 		}
 	}
 	

@@ -25,7 +25,7 @@ public class MissileLaunchers {
 		activeLauncher.add(theMissileLauncher);
 
 		Thread missileLauncher = new Thread(theMissileLauncher);
-		System.out.println("add missile launcher id:"+missileLauncher.getId());
+		System.out.println("add missile launcher id:"+theMissileLauncher.getId());
 		System.out.println("isHidden="+ theMissileLauncher.isHidden());
 		missileLauncher.start();
 	}
