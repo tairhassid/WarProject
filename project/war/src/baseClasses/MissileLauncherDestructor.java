@@ -8,18 +8,22 @@ import BL.War;
 public class MissileLauncherDestructor {
 	public final static int MIN_TIME = 1000;
 	public final static int MAX_TIME = 5000;
-	public enum type {Plane, Ship};
-	public type destructorType;
+	public enum DestructorType {Plane, Ship};
+	public DestructorType type;
 	//private Map<MissileLauncher,Long> destructedLauncher;
 	private Vector<MissileLauncher> destructedLauncher = new Vector<>();
-	private long destructAfterLaunch;
+
+
+	private long destructTime;
 	private DestructingMissile destructingMissile;
 
 
 	public MissileLauncherDestructor(){}
 
-	public MissileLauncherDestructor(type destructorType) {
-		this.destructorType= destructorType;
+	public MissileLauncherDestructor(DestructorType type) {
+		this.type= type;
+		this.destructingMissile = new DestructingMissile();
+		destructingMissile.start();
 	}
 
 /*	@Override
@@ -38,13 +42,21 @@ public class MissileLauncherDestructor {
 		}
 	}*/
 
+	public DestructorType getType() {
+		return type;
+	}
+
+	public void setType(DestructorType type) {
+		this.type = type;
+	}
+
 	public boolean destructMissileLauncher(){
 //		try {
 			MissileLauncher theMissileLauncher = destructedLauncher.remove(destructedLauncher.size()-1);
 			if(theMissileLauncher != null) {
-				destructAfterLaunch = War.getCurrentTime();
-				System.out.println("destruct after launch " + theMissileLauncher.getId()); 
-				theMissileLauncher.setDestructTime(destructAfterLaunch);
+				destructTime = War.getCurrentTime();
+				System.out.println(destructTime+"--> destruct after launch " + theMissileLauncher.getId()); 
+				theMissileLauncher.setDestructTime(destructTime);
 				return theMissileLauncher.destructSelf(this);
 //				synchronized (theMissileLauncher) {
 //					theMissileLauncher.notifyAll();
@@ -67,8 +79,7 @@ public class MissileLauncherDestructor {
 
 	public void add(MissileLauncher theMissileLauncher) {
 		//destructedLauncher.add(theMissileLauncher);
-		this.destructingMissile = new DestructingMissile();
-		destructingMissile.start();
+		
 		destructingMissile.add(theMissileLauncher);
 /*		synchronized (destructingMissile) {
 			if(destructedLauncher.size() == 1)
@@ -77,6 +88,17 @@ public class MissileLauncherDestructor {
 
 	}
 	
+	public Vector<MissileLauncher> getDestructedLauncher() {
+		return destructedLauncher;
+	}
+
+	public void setDestructedLauncher(Vector<MissileLauncher> destructedLauncher) {
+		this.destructedLauncher = destructedLauncher;
+	}
+	
+	
+	
+	//inner class
 	private class DestructingMissile extends Thread {
 		//Vector<MissileLauncher> destructedLauncher;
 		
@@ -93,9 +115,9 @@ public class MissileLauncherDestructor {
 				else {
 					synchronized (this) {
 						try {
-							System.out.println("destructingMissile waiting to run");
+							System.out.println(War.getCurrentTime()+"--> destructingMissile waiting to run");
 							wait();
-							System.out.println("destructingMissile finished waiting to run");
+							System.out.println(War.getCurrentTime()+"--> destructingMissile finished waiting to run");
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						}
@@ -108,7 +130,7 @@ public class MissileLauncherDestructor {
 			destructedLauncher.add(ml);
 			synchronized (this) {
 				if(destructedLauncher.size() == 1)
-					System.out.println("detructingMissile adding launcher");
+					System.out.println(War.getCurrentTime()+"--> detructingMissile adding launcher");
 					notify();
 			}
 		}

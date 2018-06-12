@@ -2,21 +2,19 @@ package baseClasses;
 
 import java.util.LinkedList;
 import java.util.Queue;
-//import java.util.Random;
 import java.util.Vector;
-
 import BL.War;
 
-public class MissileLauncher implements Runnable {
+public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 	private final static int ZERO = 0;
 	private final static int TWO = 2;
-	private final static int MIN_TIME = 1000;
-	private final static int MAX_TIME = 5000;
+	//private final static int MIN_TIME = 1000;
+	//private final static int MAX_TIME = 5000;
 
 	private static int idGenerator = 100;
 	private String id;
 	private boolean isHidden;
-	private Vector<Missile> missiles;
+	private Vector<Missile> missile;
 	private Queue<Missile> waitingMissiles;
 	private boolean isDestroyed;
 	private long destructTime;
@@ -24,17 +22,17 @@ public class MissileLauncher implements Runnable {
 
 	public MissileLauncher() {
 		this.id = "L" + (++idGenerator);
-		missiles = new Vector<>();
+		missile = new Vector<>();
 		waitingMissiles = new LinkedList<>();
 		setDestroyed(false);
-		setIsHidden();
+		setHidden();
 	}
 
 	public void setDestructTime(long destructTime){
 		this.destructTime = destructTime;
 	}
 
-	public void setIsHidden() {
+	public void setHidden() {
 		int  n = War.randomNumber(ZERO, TWO);
 		this.isHidden = ((n == 0)? true : false);
 	}
@@ -54,20 +52,25 @@ public class MissileLauncher implements Runnable {
 	public void run() {
 		while(!isDestroyed) {
 			try {
-				if(!waitingMissiles.isEmpty()) {
-					if (isHidden){
-						isHidden = false; // WE need to hide again launcher who has been hidden
-						launch();
-						isHidden = true;
+				synchronized (this) {
+					if(!waitingMissiles.isEmpty()) {
+						if (isHidden){
+							isHidden = false; 
+							launch();
+							System.out.println(War.getCurrentTime()+"--> finished launch");
+							isHidden = true;
+						}
+						else {
+							launch();
+						}
+
 					}
-					else {
-						launch();
-					}
-				}
-				else {
-					synchronized (this) {
-						wait();
-					}
+
+					//				else {
+					//					//System.out.println("Launcher is waiting for missiles");
+					//					synchronized (this) {
+					//					//	wait();
+					//					}
 				}
 			} catch (InterruptedException e) {
 				setDestroyed(true);
@@ -81,10 +84,12 @@ public class MissileLauncher implements Runnable {
 
 	public synchronized void launch() throws InterruptedException {
 		Missile theMissile = waitingMissiles.poll();
-		System.out.println("in launcher missile "+ theMissile.getId() + "chosen");
+		System.out.println("in launcher missile "+ theMissile.getId() + " chosen");
 		//Thread.sleep(1000); //if 4 pressed too fast and there is no sleep it's not working well
 		if(theMissile != null){
 			System.out.println("launcher notifies missile " +theMissile.getId());
+
+
 			synchronized (theMissile) {
 				theMissile.notifyAll();
 			}
@@ -94,18 +99,18 @@ public class MissileLauncher implements Runnable {
 	}
 
 	public void addMissile(Missile theMissile) {
-		missiles.add(theMissile);
-		System.out.println("In launcher- addMissile " + theMissile.getId());
+		missile.add(theMissile);
+		System.out.println("In launcher " + this.id+"- addMissile " + theMissile.getId());
 		theMissile.start();
 	}
 
-	public void addWaitingMissile(Missile theMissile) {
+	public synchronized void addWaitingMissile(Missile theMissile) {
 		waitingMissiles.add(theMissile);
 		System.out.println("In launcher addWaitingMissile " + theMissile.getId() + " there are " + waitingMissiles.size() + " waiting missiles");
-		synchronized (this) {
-			if(waitingMissiles.size() == 1)
-				notify();
-		}
+		//		synchronized (this) {
+		//			if(waitingMissiles.size() == 1)
+		//				notify();
+		//		}
 	}
 
 	public boolean destructSelf(MissileLauncherDestructor destructor){
@@ -115,16 +120,10 @@ public class MissileLauncher implements Runnable {
 		else {
 			setDestroyed(true);
 		}
-		System.out.println("Is destroyed: "+getIsDestroyed());
+		System.out.println(War.getCurrentTime()+"--> Is destroyed: "+getIsDestroyed());
 		return isDestroyed;
 	}
 
-	//	public int randomNumber(int from, int to){
-	//		Random rand = new Random();
-	//		int number = rand.nextInt(to) + from;
-	//
-	//		return number;
-	//	}
 
 	public boolean isHidden(){
 		return this.isHidden;
@@ -139,20 +138,33 @@ public class MissileLauncher implements Runnable {
 	}
 
 	public Vector<Missile> getMissiles() {
-		return missiles;
+		return missile;
 	}
 
 	public void setMissiles(Vector<Missile> missiles) {
-		this.missiles = missiles;
+		this.missile = missiles;
 	}
 
 	public long getDestructTime() {
 		return destructTime;
 	}
 
-	public void setHidden(boolean isHidden) {
-		this.isHidden = isHidden;
+	@Override
+	public String toString(){
+		String str="";
+		str += " Launcher id:"+this.id + " isHidden:"+this.isHidden;
+		for(Missile m : missile){
+			str += m.toString();
+		}
+		return str;
 	}
+
+	@Override
+	public int compareTo(MissileLauncher o) {
+		return (int)(this.destructTime - o.destructTime);
+	}
+
+
 
 
 

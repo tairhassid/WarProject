@@ -17,22 +17,38 @@ public class MissileDestructors {
 		MissileDestructor theMissileDestructor = new MissileDestructor();
 		destructor.add(theMissileDestructor);
 
-		Thread missileDestructor = new Thread(new MissileDestructor());
-		missileDestructor.start();
+		//Thread missileDestructor = new Thread(new MissileDestructor());
+		//missileDestructor.start();
 	}
 	
-	public void destructMissile(ArrayList<Missile> allMissiles){
+//	public void destructMissile(ArrayList<Missile> allMissiles){
+//		MissileDestructor theMissileDestructor = findMissileDestructor();
+//		if (theMissileDestructor == null){
+//			//No missile destructor exist
+//		}
+//		else {
+//			//Missile theMissile = findMissile();
+//			for(Missile theMissile : allMissiles)
+//				if(theMissile.getLaunchTime() > 0 && theMissileDestructor.destructMissile(theMissile)) {
+//					totalMissilesDestructed++;
+//					break;
+//			}
+//		}
+//	}
+	
+	public void destructMissile(Missile theMissile){
 		MissileDestructor theMissileDestructor = findMissileDestructor();
 		if (theMissileDestructor == null){
 			//No missile destructor exist
 		}
 		else {
 			//Missile theMissile = findMissile();
-			for(Missile theMissile : allMissiles)
-				if(theMissile.getLaunchTime() > 0 && theMissileDestructor.destructMissile(theMissile)) {
-					totalMissilesDestructed++;
-					break;
-			}
+			theMissileDestructor.add(theMissile);
+//			for(Missile theMissile : allMissiles)
+//				if(theMissile.getLaunchTime() > 0 && theMissileDestructor.destructMissile(theMissile)) {
+//					totalMissilesDestructed++;
+//					break;
+//			}
 		}
 	}
 	

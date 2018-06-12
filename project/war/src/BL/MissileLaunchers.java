@@ -1,7 +1,8 @@
 package BL;
 
+
 import java.util.ArrayList;
-import java.util.Random;
+
 
 import baseClasses.Missile;
 import baseClasses.MissileLauncher;
@@ -12,6 +13,14 @@ public class MissileLaunchers {
 	private int totalMissilesLaunched;
 	private int totalMissilesHit;
 	
+	@Override
+	public String toString(){
+		String str="";
+		for(MissileLauncher ml: launcher){
+			str += ml.toString();
+		}
+		return str;
+	}
 	
 
 	public MissileLaunchers(){
@@ -36,7 +45,7 @@ public class MissileLaunchers {
 			return;
 		}
 		else{
-			int randomIndex = randomNumber(0, activeLauncher.size());
+			int randomIndex = War.randomNumber(0, activeLauncher.size());
 			MissileLauncher launcher = activeLauncher.get(randomIndex);
 			Missile theMissile = new Missile(destination, flyTime, damage, launcher);
 			allMissiles.add(theMissile);
@@ -49,18 +58,45 @@ public class MissileLaunchers {
 	public MissileLauncher findMissileLauncher(){
 		if(activeLauncher.size() == 0)
 			return null;
-		int randomIndex = randomNumber(0, activeLauncher.size());
+		int randomIndex = War.randomNumber(0, activeLauncher.size());
 		MissileLauncher randLauncher = activeLauncher.get(randomIndex);
 		if(!randLauncher.isHidden())
 			activeLauncher.remove(randomIndex);
 		return randLauncher;
 	}
 
-	public int randomNumber(int from, int to){
-		Random rand = new Random();
-		int number = rand.nextInt(to) + from;
-
-		return number;
+	public ArrayList<MissileLauncher> getLauncher() {
+		return launcher;
 	}
+
+	public void setLauncher(ArrayList<MissileLauncher> launcher) {
+		this.launcher = launcher;
+	}
+	
+	public ArrayList<Missile> getAllMissiles(){
+		ArrayList<Missile> allMissiles = new ArrayList<>();
+		for(MissileLauncher ml : launcher){
+			allMissiles.addAll(ml.getMissiles());
+		}
+		return allMissiles;
+	}
+
+
+	public void setActiveLaunchers() {
+		
+	}
+
+
+	
+	
+
+//	public int randomNumber(int from, int to){
+//		Random rand = new Random();
+//		int number = rand.nextInt(to) + from;
+//
+//		return number;
+//	}
+	
+	
 
 }

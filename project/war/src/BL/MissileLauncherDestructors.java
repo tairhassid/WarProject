@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import baseClasses.MissileDestructor;
 import baseClasses.MissileLauncher;
 import baseClasses.MissileLauncherDestructor;
-import baseClasses.MissileLauncherDestructor.type;
+import baseClasses.MissileLauncherDestructor.DestructorType;
 
 public class MissileLauncherDestructors {
 	private ArrayList<MissileLauncherDestructor> destructor = new ArrayList<>();
@@ -15,13 +15,13 @@ public class MissileLauncherDestructors {
 		totalMissileLauncherDestroyed = 0;
 	}
 	
-	public void addMissileLauncherDestructor(MissileLauncherDestructor.type t) throws IllegalArgumentException { 
+	public void addMissileLauncherDestructor(MissileLauncherDestructor.DestructorType t) throws IllegalArgumentException { 
 		MissileLauncherDestructor theMissileLauncherDestructor = new MissileLauncherDestructor(t);
 		destructor.add(theMissileLauncherDestructor);
 
-		Thread missileLauncherDestructor = new Thread(new MissileDestructor());
-		System.out.println("Missile distructor - "+ missileLauncherDestructor.getId());
-		missileLauncherDestructor.start();
+		//Thread missileLauncherDestructor = new Thread(new MissileDestructor());
+		//System.out.println("Missile distructor - "+ missileLauncherDestructor.getId());
+		//missileLauncherDestructor.start();
 		
 	}
 	

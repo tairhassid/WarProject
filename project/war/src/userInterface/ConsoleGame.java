@@ -1,20 +1,64 @@
 package userInterface;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.Reader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
-import BL.War;
-import baseClasses.MissileLauncherDestructor;
-import baseClasses.MissileLauncherDestructor.type;
+import com.google.gson.Gson;
+import com.google.gson.annotations.Expose;
 
-public class Interface {
+import BL.War;
+
+
+public class ConsoleGame {
 	private static boolean atWar = true;
+	private War war;
 	
-	public static void main(String[] args) {
+	public ConsoleGame(){
+		war = new War();
+	}
+	
+	public void startGame(){
+		boolean gsonGame;
+		gsonGame = war.ifGsonGame(); // ask if load from gson
+		if(gsonGame){
+			readFromGson();
+			war.setAllMissilesFromGson();
+			menu();
+		
+		}
+		else{
+			menu();
+		}
+	}
+	
+
+	
+	public void readFromGson(){
+		if(Files.exists(Paths.get("war.json"))){
+			Gson gson = new Gson();
+			FileReader reader = null;
+			try {
+				reader = new FileReader("war.json");
+			}
+			catch(FileNotFoundException e){
+				e.printStackTrace();
+			}
+			war = gson.fromJson(reader, War.class);
+			System.out.println(war.toString());
+		}
+
+    }
+	
+	
+	public void menu(){
 		Scanner s = new Scanner(System.in);
 		int action;
 		
-		War logic = War.getInstance();
 
 		while(atWar) {
 			System.out.println("Please choose an action:");
@@ -33,7 +77,7 @@ public class Interface {
 
 			switch(action) {
 			case 1:
-				logic.addMissileLauncher();
+				war.addMissileLauncher();
 				break;
 
 			case 2:
@@ -42,7 +86,7 @@ public class Interface {
 					System.out.println("Choose 'Plane' or 'Ship'");
 					String typeOfDestructor = s.nextLine();
 					try {
-						logic.addMissileLauncherDestructor(typeOfDestructor);
+						war.addMissileLauncherDestructor(typeOfDestructor);
 						illegal = false;
 					}
 					catch(IllegalArgumentException ex) {
@@ -52,23 +96,23 @@ public class Interface {
 				break;
 
 			case 3:
-				logic.addMissileDestructor();
+				war.addMissileDestructor();
 				break;	
 
 			case 4:
-				logic.launchMissile("Sderot", 8000, 1000); //just as an example
+				war.launchMissile("Sderot", 3000, 1000); //just as an example
 				break;
 
 			case 5:
-				logic.destructMissileLauncher();
+				war.destructMissileLauncher();
 				break;
 
 			case 6:
-				logic.destructMissile();
+				war.destructMissile();
 				break;
 
 			case 7:
-				logic.sumUp();
+				war.sumUp();
 				break;
 
 			case 8:
