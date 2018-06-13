@@ -1,4 +1,4 @@
-package BL;
+package bussinesLogic;
 
 import java.io.FileReader;
 import java.io.Reader;
@@ -29,7 +29,8 @@ public class War {
 
 	public  War() {
 		totalDamage = 0;
-		timer = Calendar.getInstance().getTimeInMillis();
+		timer = System.currentTimeMillis();
+		//timer = System.nanoTime();
 	}
 	
 //	public void readFromGson(){
@@ -58,10 +59,12 @@ public class War {
 	}
 	
 	
-	
+	public static void setCurrentTime(long currentTime){
+		timer = currentTime;
+	}
 	
 	public static long getCurrentTime() {
-		return Calendar.getInstance().getTimeInMillis() - timer;
+		return (System.currentTimeMillis() - timer)/1000;
 	}
 
 	public int getTotalDamage() {
@@ -106,9 +109,9 @@ public class War {
 		missileDestructors.destructMissile(theMissile);
 	}
 	
-	public Missile findMissile(){//this method will return the same missile if it's not distracted yet
+	public Missile findMissile(){//returns the first missile that hasn't been destructed and already launched
 		for (Missile m : allMissiles){
-			if(!m.getIsDestructed()){
+			if(!m.getIsDestructed() && m.getLaunchTime() > 0 && m.getLaunchTime() < getCurrentTime()){
 				return m;
 			}
 		}
@@ -170,13 +173,15 @@ public class War {
 		this.allMissiles = allMissiles;
 	}
 	
-	public void setAllMissilesFromGson(){
-		setAllMissiles(missileLaunchers.getAllMissiles());
-	}
+//	public void setAllMissilesFromGson(){
+//		setAllMissiles(missileLaunchers.getAllMissiles());
+//	}
 	
-	public void setActiveLaunchers(){
-		missileLaunchers.setActiveLaunchers();
+	public void setActiveLaunchers(){ 
+		missileLaunchers.setActiveLaunchers(); //not implemented yet
 	}
+
+
 	
 
 }

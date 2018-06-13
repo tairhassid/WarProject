@@ -3,7 +3,7 @@ package baseClasses;
 import java.util.Random;
 import java.util.Vector;
 
-import BL.War;
+import bussinesLogic.War;
 
 public class MissileLauncherDestructor {
 	public final static int MIN_TIME = 1000;

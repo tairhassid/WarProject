@@ -1,4 +1,4 @@
-package BL;
+package bussinesLogic;
 
 import java.util.ArrayList;
 

@@ -3,7 +3,8 @@ package baseClasses;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Vector;
-import BL.War;
+
+import bussinesLogic.War;
 
 public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 	private final static int ZERO = 0;
@@ -84,29 +85,40 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 
 	public synchronized void launch() throws InterruptedException {
 		Missile theMissile = waitingMissiles.poll();
-		System.out.println("in launcher missile "+ theMissile.getId() + " chosen");
+		while(War.getCurrentTime() < theMissile.getLaunchTime()); //dummy while, waits until missile launch time 
+		System.out.println(War.getCurrentTime()+"--> in launcher missile "+ theMissile.getMissileId()+ " chosen");
 		//Thread.sleep(1000); //if 4 pressed too fast and there is no sleep it's not working well
 		if(theMissile != null){
-			System.out.println("launcher notifies missile " +theMissile.getId());
+			System.out.println(War.getCurrentTime()+"--> launcher notifies missile " +theMissile.getMissileId());
 
 
 			synchronized (theMissile) {
 				theMissile.notifyAll();
 			}
-			System.out.println("launcher waits for missile to finish flying");
+			System.out.println(War.getCurrentTime()+"--> launcher waits for missile to finish flying");
 			wait();
 		}
 	}
 
 	public void addMissile(Missile theMissile) {
 		missile.add(theMissile);
-		System.out.println("In launcher " + this.id+"- addMissile " + theMissile.getId());
+		System.out.println(War.getCurrentTime()+"--> In launcher " + this.id+"- addMissile " + theMissile.getMissileId());
 		theMissile.start();
 	}
+	
+	public void addMissileFromGson(MissileLauncher launcher){
+		for (Missile m : missile){
+			System.out.println(War.getCurrentTime()+"--> Missile "+m.getMissileId()+" started");
+			m.setLauncher(launcher);
+			m.start();
+		}
+	}
+	
+	
 
 	public synchronized void addWaitingMissile(Missile theMissile) {
 		waitingMissiles.add(theMissile);
-		System.out.println("In launcher addWaitingMissile " + theMissile.getId() + " there are " + waitingMissiles.size() + " waiting missiles");
+		System.out.println(War.getCurrentTime()+"--> In launcher addWaitingMissile " + theMissile.getMissileId() + " there are " + waitingMissiles.size() + " waiting missiles");
 		//		synchronized (this) {
 		//			if(waitingMissiles.size() == 1)
 		//				notify();

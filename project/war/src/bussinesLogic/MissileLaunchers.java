@@ -1,8 +1,8 @@
-package BL;
+package bussinesLogic;
 
 
 import java.util.ArrayList;
-
+import java.util.Collections;
 
 import baseClasses.Missile;
 import baseClasses.MissileLauncher;
@@ -38,6 +38,8 @@ public class MissileLaunchers {
 		System.out.println("isHidden="+ theMissileLauncher.isHidden());
 		missileLauncher.start();
 	}
+	
+	
 
 	public void launchMissile(String destination, int flyTime, int damage, ArrayList<Missile> allMissiles){
 		if(activeLauncher.size() == 0){
@@ -76,6 +78,7 @@ public class MissileLaunchers {
 	public ArrayList<Missile> getAllMissiles(){
 		ArrayList<Missile> allMissiles = new ArrayList<>();
 		for(MissileLauncher ml : launcher){
+			
 			allMissiles.addAll(ml.getMissiles());
 		}
 		return allMissiles;
@@ -84,6 +87,23 @@ public class MissileLaunchers {
 
 	public void setActiveLaunchers() {
 		
+	}
+
+
+	public void startLaunchers() {
+		for(MissileLauncher ml : launcher){
+			Collections.sort(ml.getMissiles());
+			Thread t = new Thread(ml);
+			t.start();
+			
+			
+		}
+	}
+
+	public void startMissiles() {
+		for(MissileLauncher ml : launcher){
+			ml.addMissileFromGson(ml);
+		}
 	}
 
 

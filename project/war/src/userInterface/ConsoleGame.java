@@ -6,12 +6,14 @@ import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Calendar;
 import java.util.Scanner;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.Expose;
 
-import BL.War;
+import bussinesLogic.JasonManager;
+import bussinesLogic.War;
 
 
 public class ConsoleGame {
@@ -26,8 +28,17 @@ public class ConsoleGame {
 		boolean gsonGame;
 		gsonGame = war.ifGsonGame(); // ask if load from gson
 		if(gsonGame){
-			readFromGson();
-			war.setAllMissilesFromGson();
+			JasonManager jsonManager = new JasonManager(war);
+			war = jsonManager.readFromGson();
+			//readFromGson();
+			System.out.println("timer finished reading from json at: "+War.timer);
+			jsonManager.setAllMissilesFromGson(); //instead of - war.setAllMissilesFromGson();
+			War.setCurrentTime(System.currentTimeMillis());
+			jsonManager.startLaunchers();
+			jsonManager.startMissiles();
+			jsonManager.startMissileDestructors();
+			
+			System.out.println("War: "+war.toString());
 			menu();
 		
 		}
@@ -100,7 +111,7 @@ public class ConsoleGame {
 				break;	
 
 			case 4:
-				war.launchMissile("Sderot", 3000, 1000); //just as an example
+				war.launchMissile("Sderot", 8000, 1000); //just as an example
 				break;
 
 			case 5:

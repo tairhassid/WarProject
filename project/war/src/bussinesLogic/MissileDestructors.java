@@ -1,4 +1,4 @@
-package BL;
+package bussinesLogic;
 
 import java.util.ArrayList;
 
@@ -19,6 +19,12 @@ public class MissileDestructors {
 
 		//Thread missileDestructor = new Thread(new MissileDestructor());
 		//missileDestructor.start();
+	}
+	
+	public void startMissileDestructors(){
+		for (MissileDestructor md : destructor){
+			md.addFromGson();
+		}
 	}
 	
 //	public void destructMissile(ArrayList<Missile> allMissiles){

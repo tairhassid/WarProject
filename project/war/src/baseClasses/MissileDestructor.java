@@ -1,7 +1,8 @@
 package baseClasses;
 
 import java.util.Vector;
-import BL.War;
+
+import bussinesLogic.War;
 
 
 public class MissileDestructor {
@@ -17,54 +18,76 @@ public class MissileDestructor {
 	public MissileDestructor(){
 		this.id = "D" + (++idGenerator);
 		this.destructingMissile = new DestructingMissile();
-		destructingMissile.start();
 		//this.destructedMissile = new HashMap<>();
 	}
-	
+
 	public void add(Missile theMissile) {
+		if(!destructingMissile.isAlive())
+			destructingMissile.start();
 		//destructedLauncher.add(theMissileLauncher);
-		destructingMissile.add(theMissile);
-/*		synchronized (destructingMissile) {
+		destructedMissile.add(theMissile);
+		destructingMissile.notifyDestructor(theMissile);
+		/*		synchronized (destructingMissile) {
 			if(destructedLauncher.size() == 1)
 				destructingMissile.notify();
 		}*/
 
 	}
 
-//	public boolean destructMissile(Missile theMissile){
-//				//try {
-//					//Thread.sleep(War.randomNumber(MIN_TIME, MAX_TIME));
-//		destructAfterLaunch = (War.getCurrentTime());
-//		if(!destructedMissile.containsKey(theMissile)) {
-//			destructedMissile.put(theMissile, destructAfterLaunch);
-//		}
-//		return theMissile.destructMissile(destructAfterLaunch);
-//		
-//		//		} catch (InterruptedException e) {
-//		//			e.printStackTrace();
-//		//		}
-//		//		return false;
-//	}
-	
+	public void addFromGson(){
+		if(!destructingMissile.isAlive())
+			destructingMissile.start();
+		for (Missile m : destructedMissile){
+			destructingMissile.notifyDestructor(m);
+
+		}
+
+	}
+
+	//	public boolean destructMissile(Missile theMissile){
+	//				//try {
+	//					//Thread.sleep(War.randomNumber(MIN_TIME, MAX_TIME));
+	//		destructAfterLaunch = (War.getCurrentTime());
+	//		if(!destructedMissile.containsKey(theMissile)) {
+	//			destructedMissile.put(theMissile, destructAfterLaunch);
+	//		}
+	//		return theMissile.destructMissile(destructAfterLaunch);
+	//		
+	//		//		} catch (InterruptedException e) {
+	//		//			e.printStackTrace();
+	//		//		}
+	//		//		return false;
+	//	}
+
 	public synchronized boolean destructMissile(){
-//		try {
-			Missile theMissile = destructedMissile.remove(destructedMissile.size()-1);
-			if(theMissile != null) {
-				destructAfterLaunch = War.getCurrentTime();
-				System.out.println(War.getCurrentTime()+"--> destruct after launch missile " + theMissile.getId()); 
-				//theMissile.setDestructTime(destructAfterLaunch);
-				return theMissile.destructMissile(destructAfterLaunch);
-//				synchronized (theMissileLauncher) {
-//					theMissileLauncher.notifyAll();
+		//		try {
+		Missile theMissile = destructedMissile.remove(0/*destructedMissile.size()-1*/);
+		if(theMissile != null) {
+			while(theMissile.getDestructAfterLaunch()+theMissile.getLaunchTime() > War.getCurrentTime());
+			//destructAfterLaunch = War.getCurrentTime();
+			System.out.println(War.getCurrentTime()+"--> trying to destruct missile " + theMissile.getMissileId()); 
+			//theMissile.setDestructTime(destructAfterLaunch);
+			if(theMissile.getDestructAfterLaunch() == 0)
+				theMissile.setDestructAfterLaunch(War.getCurrentTime());
+
+			
+//				try {
+//					wait();
+//				} catch (InterruptedException e) {
+//					e.printStackTrace();
 //				}
-//				wait();
-			}
-			//Thread.sleep(randomNumber(MIN_TIME, MAX_TIME));
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
+			
+			return theMissile.destructMissile();
+		}
+		//Thread.sleep(randomNumber(MIN_TIME, MAX_TIME));
+		//		} catch (InterruptedException e) {
+		//			e.printStackTrace();
+		//		}
+		System.out.println(War.getCurrentTime()+"--> There are no flying missiles!");
 		return false;
 	}
+
+
 
 	public String getId() {
 		return id;
@@ -82,61 +105,52 @@ public class MissileDestructor {
 		this.destructedMissile = destructedMissiles;
 	}
 
-	public long getDestructAfterLaunch() {
-		return destructAfterLaunch;
-	}
+	//	public long getDestructAfterLaunch() {
+	//		return destructAfterLaunch;
+	//	}
+	//
+	//	public void setDestructAfterLaunch(long destructAfterLaunch) {
+	//		this.destructAfterLaunch = destructAfterLaunch;
+	//	}
 
-	public void setDestructAfterLaunch(long destructAfterLaunch) {
-		this.destructAfterLaunch = destructAfterLaunch;
-	}
 
-//	public int randomNumber(int from, int to){
-//		Random rand = new Random();
-//		int number = rand.nextInt(to) + from;
-//
-//		return number;
-//	}
+	//inner class
+	private class DestructingMissile extends Thread {
 
-//inner class
-private class DestructingMissile extends Thread {
-	//Vector<MissileLauncher> destructedLauncher;
-	
-	public DestructingMissile() {
-		//this.destructedLauncher = new Vector<>();
-	}
-	
-	@Override
-	public void run() {
-		while(true) {
+		public DestructingMissile() {
+		}
+
+		@Override
+		public void run() {
+			while(true) {
+				synchronized (this) {
+					if(!destructedMissile.isEmpty()) {
+						destructMissile();
+					}
+
+					else {
+
+						try {
+							System.out.println(War.getCurrentTime()+"--> destructingMissile waiting to run");
+							wait();
+							System.out.println(War.getCurrentTime()+"--> destructingMissile finished waiting to run");
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+				}
+			}
+		}
+
+		public void notifyDestructor(Missile m) {
 			synchronized (this) {
-				
-			if(!destructedMissile.isEmpty()) {
-				destructMissile();
-			}
-			
-			//else {
-//				synchronized (this) {
-//					try {
-//						System.out.println(War.getCurrentTime()+"--> destructingMissile waiting to run");
-//						wait();
-//						System.out.println(War.getCurrentTime()+"--> destructingMissile finished waiting to run");
-//					} catch (InterruptedException e) {
-//						e.printStackTrace();
-//					}
-//				}
+				if(destructedMissile.size() == 1){
+					//System.out.println(War.getCurrentTime()+"--> detructingMissile adding launcher");
+					notify();
+				}
 			}
 		}
 	}
-	
-	public void add(Missile m) {
-		destructedMissile.add(m);
-		synchronized (this) {
-			if(destructedMissile.size() == 1)
-				System.out.println(War.getCurrentTime()+"--> detructingMissile adding launcher");
-				notify();
-		}
-	}
-}
 }
 
 
