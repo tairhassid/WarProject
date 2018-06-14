@@ -10,7 +10,6 @@ public class MissileDestructor {
 	public final static int MAX_TIME = 5000;
 	private static int idGenerator = 200;
 	private String id;
-	//private Map<Missile,Long> destructedMissile;
 	private Vector<Missile> destructedMissile = new Vector<>(); //all missiles we tried to destroy
 	private long destructAfterLaunch;
 	private DestructingMissile destructingMissile; //inner class
@@ -18,7 +17,16 @@ public class MissileDestructor {
 	public MissileDestructor(){
 		this.id = "D" + (++idGenerator);
 		this.destructingMissile = new DestructingMissile();
-		//this.destructedMissile = new HashMap<>();
+		
+	}
+
+	@Override
+	public String toString(){
+		String str = "";
+		for(Missile m : destructedMissile){
+			str +=m.toString();
+		}
+		return str;
 	}
 
 	public void add(Missile theMissile) {
@@ -39,7 +47,6 @@ public class MissileDestructor {
 			destructingMissile.start();
 		for (Missile m : destructedMissile){
 			destructingMissile.notifyDestructor(m);
-
 		}
 
 	}
@@ -60,23 +67,20 @@ public class MissileDestructor {
 	//	}
 
 	public synchronized boolean destructMissile(){
-		//		try {
 		Missile theMissile = destructedMissile.remove(0/*destructedMissile.size()-1*/);
 		if(theMissile != null) {
 			while(theMissile.getDestructAfterLaunch()+theMissile.getLaunchTime() > War.getCurrentTime());
-			//destructAfterLaunch = War.getCurrentTime();
-			System.out.println(War.getCurrentTime()+"--> trying to destruct missile " + theMissile.getMissileId()); 
-			//theMissile.setDestructTime(destructAfterLaunch);
+			System.out.println(War.getCurrentTime()+"--> trying to destruct missile " + theMissile.getMissileId());
+//			System.out.println("missile "+theMissile.getMissileId()+" destruct after launch = "+theMissile.getDestructAfterLaunch());
+//			System.out.println("missile "+theMissile.getMissileId()+" launch time = "+ theMissile.getLaunchTime());
+//			System.out.println("missile "+theMissile.getMissileId()+" fly time = "+ theMissile.getFlyTime());
 			if(theMissile.getDestructAfterLaunch() == 0)
 				theMissile.setDestructAfterLaunch(War.getCurrentTime());
-
-			
 //				try {
 //					wait();
 //				} catch (InterruptedException e) {
 //					e.printStackTrace();
 //				}
-			
 			return theMissile.destructMissile();
 		}
 		//Thread.sleep(randomNumber(MIN_TIME, MAX_TIME));
@@ -103,6 +107,30 @@ public class MissileDestructor {
 
 	public void setDestructedMissile(Vector<Missile> destructedMissiles) {
 		this.destructedMissile = destructedMissiles;
+	}
+	
+
+	public void initMissileDestructed(Missile theMissile) {
+		for(int i=0; i< destructedMissile.size(); i++){
+			if(destructedMissile.get(i).getMissileId().equals(theMissile.getMissileId())){
+				theMissile.setDestructAfterLaunch(destructedMissile.get(i).getDestructAfterLaunch());
+				destructedMissile.remove(i);
+				destructedMissile.add(i, theMissile);
+				//setDestructedMissileAsMissile(destructedMissile.get(i), theMissile);
+				System.out.println("in initMissileDestructor missile:"+destructedMissile.get(i).toString());
+				break;
+			}
+		}
+		
+	}
+	
+	public void setDestructedMissileAsMissile(Missile theMissile, Missile obj){//not used
+		theMissile.setDestination(obj.getDestination());
+		theMissile.setLaunchTime(obj.getLaunchTime());
+		theMissile.setFlyTime(obj.getFlyTime());
+		theMissile.setDamage(obj.getDamage());
+		theMissile.setLauncher(obj.getLauncher());
+		//theMissile.setDestructAfterLaunch(obj.getDestructAfterLaunch());
 	}
 
 	//	public long getDestructAfterLaunch() {
@@ -151,6 +179,7 @@ public class MissileDestructor {
 			}
 		}
 	}
+
 }
 
 

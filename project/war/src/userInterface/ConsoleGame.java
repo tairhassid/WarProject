@@ -30,14 +30,14 @@ public class ConsoleGame {
 		if(gsonGame){
 			JasonManager jsonManager = new JasonManager(war);
 			war = jsonManager.readFromGson();
-			//readFromGson();
-			System.out.println("timer finished reading from json at: "+War.timer);
 			jsonManager.setAllMissilesFromGson(); //instead of - war.setAllMissilesFromGson();
+			war.initMissileDestructors();
 			War.setCurrentTime(System.currentTimeMillis());
 			jsonManager.startLaunchers();
 			jsonManager.startMissiles();
 			jsonManager.startMissileDestructors();
 			
+			//join
 			System.out.println("War: "+war.toString());
 			menu();
 		
@@ -111,7 +111,7 @@ public class ConsoleGame {
 				break;	
 
 			case 4:
-				war.launchMissile("Sderot", 8000, 1000); //just as an example
+				war.launchMissile("Sderot", 8, 1000); //just as an example
 				break;
 
 			case 5:

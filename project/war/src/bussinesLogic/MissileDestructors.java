@@ -13,6 +13,7 @@ public class MissileDestructors {
 		totalMissilesDestructed = 0;
 	}
 	
+	
 	public void addMissileDestructor(){
 		MissileDestructor theMissileDestructor = new MissileDestructor();
 		destructor.add(theMissileDestructor);
@@ -25,6 +26,15 @@ public class MissileDestructors {
 		for (MissileDestructor md : destructor){
 			md.addFromGson();
 		}
+	}
+	
+	@Override
+	public String toString(){
+		String str ="";
+		for (MissileDestructor md: destructor){
+			str += md.toString();
+		}
+		return str;
 	}
 	
 //	public void destructMissile(ArrayList<Missile> allMissiles){
@@ -62,5 +72,13 @@ public class MissileDestructors {
 		if (!destructor.isEmpty())
 			return destructor.get(0);
 		return null;
+	}
+
+
+	public void initMissileDestructor(Missile theMissile) {
+		for (MissileDestructor md: destructor ){
+			md.initMissileDestructed(theMissile);
+		}
+		
 	}
 }

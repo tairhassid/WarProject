@@ -33,6 +33,12 @@ public class War {
 		//timer = System.nanoTime();
 	}
 	
+	public void initMissileDestructors(){
+		for (Missile m : allMissiles){
+			missileDestructors.initMissileDestructor(m);
+		}
+	}
+	
 //	public void readFromGson(){
 //		  try (Reader reader = new FileReader("staff.json")) {
 //
@@ -109,7 +115,7 @@ public class War {
 		missileDestructors.destructMissile(theMissile);
 	}
 	
-	public Missile findMissile(){//returns the first missile that hasn't been destructed and already launched
+	public Missile findMissile(){//returns the first missile that hasn't been destructed yet and already launched
 		for (Missile m : allMissiles){
 			if(!m.getIsDestructed() && m.getLaunchTime() > 0 && m.getLaunchTime() < getCurrentTime()){
 				return m;
@@ -138,7 +144,8 @@ public class War {
 	}
 	@Override
 	public String toString(){
-		return missileLaunchers.toString();
+		String str = missileDestructors.toString();
+		return str +=missileLaunchers.toString();
 	}
 	
 	public MissileLaunchers getMissileLaunchers() {

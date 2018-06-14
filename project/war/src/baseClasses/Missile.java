@@ -34,6 +34,7 @@ public class Missile extends Thread implements Comparable<Missile> {
 		this.launcher = launcher;
 		this.isDestructed = false;
 		this.launchTime = 0;
+		this.destructAfterLaunch = 0;
 	}
 
 	@Override
@@ -56,18 +57,18 @@ public class Missile extends Thread implements Comparable<Missile> {
 	}
 
 	public boolean destructMissile() {
-		if (War.getCurrentTime() > flyTime + launchTime){
+		if (War.getCurrentTime() >= flyTime + launchTime){
 			System.out.println(War.getCurrentTime()+"--> Failed to destruct missile "+this.getMissileId());
 			return false;
 		}
 		else {
-			try {
-				Thread.sleep(War.randomNumber(MIN_TIME, MAX_TIME));
+//			try {
 				System.out.println(War.getCurrentTime() +"--> Missile "+this.getMissileId() +" - Desctruct succeeded");
 				this.interrupt();
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+				//Thread.sleep(War.randomNumber(MIN_TIME, MAX_TIME));
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
 			
 		}
 		return true;
@@ -162,6 +163,14 @@ public class Missile extends Thread implements Comparable<Missile> {
 	
 	public void setLauncher(MissileLauncher launcher){
 		this.launcher = launcher;
+	}
+	
+	public MissileLauncher getLauncher(){
+		return this.launcher;
+	}
+	
+	public void setLaunchTime(long launchTime){
+		this.launchTime = launchTime;
 	}
 
 	@Override

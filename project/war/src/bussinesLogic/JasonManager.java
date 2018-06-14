@@ -24,8 +24,8 @@ public class JasonManager {
 				catch(FileNotFoundException e){
 					e.printStackTrace();
 				}
-				return war = gson.fromJson(reader, War.class);
-				
+			   return war = gson.fromJson(reader, War.class);
+			    
 			}
 			return null;
 		}
