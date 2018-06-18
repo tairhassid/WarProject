@@ -1,0 +1,32 @@
+18/06/2018 22:51:48
+Let the war begin:
+18/06/2018 22:51:51
+Launcher id: L101
+
+18/06/2018 22:51:51
+Launcher id: L101
+
+18/06/2018 22:51:53
+Launcher id: L102
+
+18/06/2018 22:51:53
+Launcher id: L102
+
+18/06/2018 22:51:54
+Launcher id: L103
+
+18/06/2018 22:51:54
+Launcher id: L103
+
+18/06/2018 22:51:59
+Destination: Sderot
+Launch time:6
+Missile landed: 11
+Damage: 1000
+
+18/06/2018 22:52:00
+Destination: Sderot
+Launch time:7
+Missile landed: 12
+Damage: 1000
+

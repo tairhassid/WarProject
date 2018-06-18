@@ -3,6 +3,7 @@ package bussinesLogic;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.logging.FileHandler;
 
 import baseClasses.Missile;
 import baseClasses.MissileLauncher;
@@ -10,6 +11,7 @@ import baseClasses.MissileLauncher;
 public class MissileLaunchers {
 	private ArrayList<MissileLauncher> launcher = new ArrayList<>();
 	private ArrayList<MissileLauncher> activeLauncher = new ArrayList<>();
+
 	
 	
 
@@ -23,6 +25,8 @@ public class MissileLaunchers {
 		activeLauncher.add(theMissileLauncher);
 
 		Thread missileLauncher = new Thread(theMissileLauncher);
+		theMissileLauncher.setLauncherThread(missileLauncher);
+		//theMissileLauncher.setHandler();
 		System.out.println("add missile launcher id:"+theMissileLauncher.getId());
 		System.out.println("isHidden="+ theMissileLauncher.getIsHidden());
 		missileLauncher.start();
@@ -45,6 +49,8 @@ public class MissileLaunchers {
 		return randLauncher;
 	}
 	
+	
+	
 	public MissileLauncher getMissileLauncher(){
 		if(activeLauncher.size() == 0)
 			return null;
@@ -56,6 +62,8 @@ public class MissileLaunchers {
 	public ArrayList<MissileLauncher> getLauncher() {
 		return launcher;
 	}
+	
+
 
 	public void setLauncher(ArrayList<MissileLauncher> launcher) {
 		this.launcher = launcher;
@@ -83,6 +91,7 @@ public class MissileLaunchers {
 		for(MissileLauncher ml : launcher){
 			Collections.sort(ml.getMissile());
 			Thread t = new Thread(ml);
+			ml.setLauncherThread(t);
 			t.start();
 		}
 	}

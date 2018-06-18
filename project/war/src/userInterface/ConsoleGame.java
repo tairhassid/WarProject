@@ -12,8 +12,8 @@ public class ConsoleGame {
 	private static boolean atWar = true;
 	private War war;
 
-	public ConsoleGame(){
-		war = new War();
+	public ConsoleGame(War war){
+		this.war = war;
 	}
 
 	public void startGame(){

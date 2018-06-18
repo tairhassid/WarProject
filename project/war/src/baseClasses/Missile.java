@@ -52,6 +52,7 @@ public class Missile extends Thread implements Comparable<Missile> {
 	public void run() {
 		try {
 			flying();
+			logMissile();
 		} catch (InterruptedException e) {
 			setMissileDestructed();
 		}
@@ -124,7 +125,7 @@ public class Missile extends Thread implements Comparable<Missile> {
 	}
 	
 	public void hit(){
-		isDestructed = true;
+		//isDestructed = true; // missile landed safely
 		WarSummary.getInstance().addMissileHit();
 		WarSummary.getInstance().addDamage(this.damage);
 	}
@@ -137,21 +138,27 @@ public class Missile extends Thread implements Comparable<Missile> {
 			System.out.println(War.getCurrentTime()+"--> Missile "+ this.getMissileId()+" woke up");
 		}
 	}
-	
-	
-	
-	
 
 	public void setLaunchTime(){
 		this.launchTime = War.getCurrentTime();
 	}
 
-	//	public int randomNumber(int from, int to){
-	//		Random rand = new Random();
-	//		int number = rand.nextInt(to) + from;
-	//
-	//		return number;
-	//	}
+	public void logMissile(){
+		StringBuffer buf = new StringBuffer();
+		
+		buf.append("Destination: "+ destination);
+		buf.append("\nLaunch time:"+ launchTime);
+		
+		if(isDestructed){
+			buf.append("\nMissile destroyed: "+ destructAfterLaunch+"\n");
+		}
+		else{
+			buf.append("\nMissile landed: "+ (launchTime + flyTime));
+			buf.append("\nDamage: "+damage+"\n");
+		}
+		
+		launcher.logMissile(buf);
+	}
 
 	public long getLaunchTime(){
 		return launchTime;

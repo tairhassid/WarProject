@@ -1,11 +1,14 @@
 package bussinesLogic;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.Random;
 import java.util.Scanner;
-
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import baseClasses.Missile;
 import baseClasses.MissileLauncher;
@@ -15,7 +18,6 @@ import baseClasses.MissileLauncherDestructor.DestructorType;
 public class War {
 	
 	public static long timer;
-	//private static War instance;
 	private ArrayList<Missile> allMissiles = new ArrayList<>();
 	private int totalDamage;
 	private MissileLaunchers missileLaunchers = new MissileLaunchers();
@@ -23,11 +25,13 @@ public class War {
 	private MissileLauncherDestructors missileLauncherDestructors = new MissileLauncherDestructors();
 	private boolean gsonGame;
 	
+	
 
 	public  War() {
 		totalDamage = 0;
 		timer = System.currentTimeMillis();
 		gsonGame = false;
+		
 	}
 
 	
@@ -36,30 +40,7 @@ public class War {
 			missileDestructors.initMissileDestructor(m);
 		}
 	}
-	
-//	public void readFromGson(){
-//		  try (Reader reader = new FileReader("staff.json")) {
-//
-//		        // Convert JSON to Java Object
-//		        Staff staff = gson.fromJson(reader, Staff.class);
-//		        System.out.println(staff);
-//
-//
-//		    } catch (IOException e) {
-//		        e.printStackTrace();
-//		    }
-//	}
 
-//	public static War getInstance(){
-//		if(instance == null){
-//			instance = new War();
-//		}
-//		return instance;
-//	}
-
-
-	
-	
 	public static void setCurrentTime(long currentTime){
 		timer = currentTime;
 	}
@@ -233,6 +214,9 @@ public class War {
 	public void setGsonGame(boolean gsonGame){
 		this.gsonGame = gsonGame;
 	}
+	
+	
+
 
 }
 
