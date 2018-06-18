@@ -25,7 +25,7 @@ public class MissileLaunchers {
 		activeLauncher.add(theMissileLauncher);
 
 		Thread missileLauncher = new Thread(theMissileLauncher);
-		theMissileLauncher.setLauncherThread(missileLauncher);
+		//theMissileLauncher.setLauncherThread(missileLauncher);
 		//theMissileLauncher.setHandler();
 		System.out.println("add missile launcher id:"+theMissileLauncher.getId());
 		System.out.println("isHidden="+ theMissileLauncher.getIsHidden());
@@ -91,7 +91,7 @@ public class MissileLaunchers {
 		for(MissileLauncher ml : launcher){
 			Collections.sort(ml.getMissile());
 			Thread t = new Thread(ml);
-			ml.setLauncherThread(t);
+			//ml.setLauncherThread(t);
 			t.start();
 		}
 	}

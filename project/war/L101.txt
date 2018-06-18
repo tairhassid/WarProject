@@ -1,6 +1,15 @@
-18/06/2018 22:51:51
+18/06/2018 23:06:49
 Launcher id: L101
 
-18/06/2018 22:51:51
-Launcher id: L101
+18/06/2018 23:07:00
+Destination: Sderot
+Launch time:9
+Missile landed: 14
+Damage: 1000
+
+18/06/2018 23:07:05
+Destination: Sderot
+Launch time:14
+Missile landed: 19
+Damage: 1000
 

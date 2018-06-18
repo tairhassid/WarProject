@@ -74,7 +74,7 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 
 	@Override
 	public void run() {
-		setHandler();
+	
 		try {
 			while(!isDestroyed) {
 				if(!waitingMissiles.isEmpty()) {
@@ -209,6 +209,7 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 			String log = "Launcher id: "+ this.id+ "\n";
 			handler = new FileHandler(id + ".txt", true);
 			handler.setFormatter(new WarFormatter());
+			//handler.setFilter(new LauncherFilter(this));
 			handler.setFilter(new LauncherFilter(this));
 			LoggerManager.getLogger().setUseParentHandlers(false);
 			LoggerManager.addHandler(handler);
@@ -255,10 +256,11 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
         public boolean isLoggable(LogRecord rec) {
             if (rec.getSourceClassName().equalsIgnoreCase(MissileLauncher.class.getName()) &&
             		rec.getParameters()[0] == launcher){
+            	System.out.println(rec.getParameters()[0]);
             	return true;
             }
             else{
-            	//System.out.println("rec thread id:"+ rec.getThreadID()+ " launcher thread: " + launcher.getLauncherThread().getId());
+            	System.out.println("in LaunchFilter isLoggable = false");
                 return false;
             }
         }
