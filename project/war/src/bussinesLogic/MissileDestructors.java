@@ -1,29 +1,28 @@
 package bussinesLogic;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import baseClasses.Missile;
 import baseClasses.MissileDestructor;
 
 public class MissileDestructors {
 	private ArrayList<MissileDestructor> destructor = new ArrayList<>();
-	private int totalMissilesDestructed;
+//	private int totalMissilesDestructed;
 	
 	public MissileDestructors(){
-		totalMissilesDestructed = 0;
+//		totalMissilesDestructed = 0;
 	}
 	
 	
 	public void addMissileDestructor(){
 		MissileDestructor theMissileDestructor = new MissileDestructor();
 		destructor.add(theMissileDestructor);
-
-		//Thread missileDestructor = new Thread(new MissileDestructor());
-		//missileDestructor.start();
 	}
 	
 	public void startMissileDestructors(){
 		for (MissileDestructor md : destructor){
+			Collections.sort(md.getDestructedMissile(), new SortByDestructTime());
 			md.addFromGson();
 		}
 	}
@@ -60,6 +59,7 @@ public class MissileDestructors {
 		else {
 			//Missile theMissile = findMissile();
 			theMissileDestructor.add(theMissile);
+			
 //			for(Missile theMissile : allMissiles)
 //				if(theMissile.getLaunchTime() > 0 && theMissileDestructor.destructMissile(theMissile)) {
 //					totalMissilesDestructed++;
@@ -67,6 +67,8 @@ public class MissileDestructors {
 //			}
 		}
 	}
+	
+	
 	
 	private MissileDestructor findMissileDestructor(){
 		if (!destructor.isEmpty())
@@ -81,4 +83,6 @@ public class MissileDestructors {
 		}
 		
 	}
+	
+	
 }

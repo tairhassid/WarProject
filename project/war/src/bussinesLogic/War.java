@@ -1,14 +1,11 @@
 package bussinesLogic;
 
-import java.io.FileReader;
-import java.io.Reader;
 import java.util.ArrayList;
-import java.util.Calendar;
+import java.util.ConcurrentModificationException;
+import java.util.Iterator;
 import java.util.Random;
 import java.util.Scanner;
 
-import com.google.gson.Gson;
-import com.google.gson.annotations.Expose;
 
 import baseClasses.Missile;
 import baseClasses.MissileLauncher;
@@ -24,14 +21,15 @@ public class War {
 	private MissileLaunchers missileLaunchers = new MissileLaunchers();
 	private MissileDestructors missileDestructors = new MissileDestructors();
 	private MissileLauncherDestructors missileLauncherDestructors = new MissileLauncherDestructors();
+	private boolean gsonGame;
 	
-    
 
 	public  War() {
 		totalDamage = 0;
 		timer = System.currentTimeMillis();
-		//timer = System.nanoTime();
+		gsonGame = false;
 	}
+
 	
 	public void initMissileDestructors(){
 		for (Missile m : allMissiles){
@@ -60,9 +58,6 @@ public class War {
 //	}
 
 
-	public void sumUp() {
-		// TODO 
-	}
 	
 	
 	public static void setCurrentTime(long currentTime){
@@ -92,7 +87,6 @@ public class War {
 	
 	public void launchMissile(String destination, int flyTime, int damage){
 		missileLaunchers.launchMissile(destination, flyTime, damage, allMissiles);
-		
 	}
 	
 	public void destructMissileLauncher(){
@@ -142,10 +136,29 @@ public class War {
 		return false;
 		
 	}
+	
+//	public void setWarSummary(){
+//		if(allMissiles.isEmpty()){
+//			//do nothing
+//			System.err.println("The war haven't started yet!");
+//			return;
+//		}
+//		for (Missile m : allMissiles){
+//			if(m.getDestructAfterLaunch() < m.getFlyTime()){ //missile got destroyed my missile destructor
+//				warSummary.addDestructedMissile();
+//			}
+//			else{ //missile landed safely
+//				warSummary.addMissileHit();
+//				warSummary.addDamage(m.getDamage());
+//			}
+//		}
+//		warSummary.setTotalLaunchedMissiles(allMissiles.size());
+//	}
 	@Override
 	public String toString(){
-		String str = missileDestructors.toString();
-		return str +=missileLaunchers.toString();
+		//String str = missileDestructors.toString();
+		String str = missileLauncherDestructors.toString();
+		return str; //+=missileLaunchers.toString();
 	}
 	
 	public MissileLaunchers getMissileLaunchers() {
@@ -180,16 +193,46 @@ public class War {
 		this.allMissiles = allMissiles;
 	}
 	
-//	public void setAllMissilesFromGson(){
-//		setAllMissiles(missileLaunchers.getAllMissiles());
-//	}
-	
-	public void setActiveLaunchers(){ 
-		missileLaunchers.setActiveLaunchers(); //not implemented yet
+
+
+
+	public void initMissileLauncherDestructors() {
+		for (MissileLauncher ml : missileLaunchers.getLauncher()){
+			missileLauncherDestructors.initMissileDestructor(ml);
+		}
+		
 	}
-
-
 	
+	public void getWarSummary(){
+		Iterator<Missile> iterMissiles = allMissiles.iterator();
+		Iterator<MissileLauncher> iterLaunchers = missileLaunchers.getActiveLaunchers().iterator();
+		
+		if(allMissiles.isEmpty()){
+			System.out.println("the war hasn't began yet!");
+			return;
+		}
+		
+		if(gsonGame){ //there is a chance that a missile from gson never got launched
+			while(iterMissiles.hasNext()){
+				Missile m = iterMissiles.next();
+				if(!m.getDidLaunched() && allMissiles.contains(m))
+					iterMissiles.remove();
+			}
+			
+			while(iterLaunchers.hasNext()){
+				MissileLauncher ml = iterLaunchers.next();
+				if(ml.getIsDestroyed())
+					iterLaunchers.remove();
+			}
+		}
+		WarSummary.getInstance().setTotalDestroyedMissilesDestructors(missileLaunchers.getLauncher().size() - missileLaunchers.getActiveLaunchers().size());
+		WarSummary.getInstance().setTotalLaunchedMissiles(allMissiles.size());
+		System.out.println(WarSummary.getInstance().getWarSummary());
+	}
+	
+	public void setGsonGame(boolean gsonGame){
+		this.gsonGame = gsonGame;
+	}
 
 }
 

@@ -11,13 +11,14 @@ public class MissileDestructor {
 	private static int idGenerator = 200;
 	private String id;
 	private Vector<Missile> destructedMissile = new Vector<>(); //all missiles we tried to destroy
-	private long destructAfterLaunch;
 	private DestructingMissile destructingMissile; //inner class
+	
+	
+	private boolean isBusy = false;
 
 	public MissileDestructor(){
 		this.id = "D" + (++idGenerator);
 		this.destructingMissile = new DestructingMissile();
-		
 	}
 
 	@Override
@@ -32,63 +33,37 @@ public class MissileDestructor {
 	public void add(Missile theMissile) {
 		if(!destructingMissile.isAlive())
 			destructingMissile.start();
-		//destructedLauncher.add(theMissileLauncher);
 		destructedMissile.add(theMissile);
+		isBusy = true;
 		destructingMissile.notifyDestructor(theMissile);
-		/*		synchronized (destructingMissile) {
-			if(destructedLauncher.size() == 1)
-				destructingMissile.notify();
-		}*/
 
 	}
 
 	public void addFromGson(){
 		if(!destructingMissile.isAlive())
 			destructingMissile.start();
-		for (Missile m : destructedMissile){
-			destructingMissile.notifyDestructor(m);
-		}
+		isBusy = true;
+//		for (Missile m : destructedMissile){
+//			destructingMissile.notifyDestructor(m);
+//		}
 
 	}
 
-	//	public boolean destructMissile(Missile theMissile){
-	//				//try {
-	//					//Thread.sleep(War.randomNumber(MIN_TIME, MAX_TIME));
-	//		destructAfterLaunch = (War.getCurrentTime());
-	//		if(!destructedMissile.containsKey(theMissile)) {
-	//			destructedMissile.put(theMissile, destructAfterLaunch);
-	//		}
-	//		return theMissile.destructMissile(destructAfterLaunch);
-	//		
-	//		//		} catch (InterruptedException e) {
-	//		//			e.printStackTrace();
-	//		//		}
-	//		//		return false;
-	//	}
-
-	public synchronized boolean destructMissile(){
-		Missile theMissile = destructedMissile.remove(0/*destructedMissile.size()-1*/);
-		if(theMissile != null) {
+	public synchronized void destructMissile(){
+		Missile theMissile = destructedMissile.remove(0);
+		if(theMissile != null ) {
 			while(theMissile.getDestructAfterLaunch()+theMissile.getLaunchTime() > War.getCurrentTime());
-			System.out.println(War.getCurrentTime()+"--> trying to destruct missile " + theMissile.getMissileId());
-//			System.out.println("missile "+theMissile.getMissileId()+" destruct after launch = "+theMissile.getDestructAfterLaunch());
-//			System.out.println("missile "+theMissile.getMissileId()+" launch time = "+ theMissile.getLaunchTime());
-//			System.out.println("missile "+theMissile.getMissileId()+" fly time = "+ theMissile.getFlyTime());
 			if(theMissile.getDestructAfterLaunch() == 0)
 				theMissile.setDestructAfterLaunch(War.getCurrentTime());
-//				try {
-//					wait();
-//				} catch (InterruptedException e) {
-//					e.printStackTrace();
-//				}
-			return theMissile.destructMissile();
+			//isBusy = false;
+			if(theMissile.getDidLaunched()){
+				System.out.println(War.getCurrentTime()+"--> trying to destruct missile " + theMissile.getMissileId());
+				theMissile.destructMissile();
+			}
 		}
-		//Thread.sleep(randomNumber(MIN_TIME, MAX_TIME));
-		//		} catch (InterruptedException e) {
-		//			e.printStackTrace();
-		//		}
-		System.out.println(War.getCurrentTime()+"--> There are no flying missiles!");
-		return false;
+		isBusy = false;
+		System.out.println(War.getCurrentTime()+"--> There are no flying missiles in launcher "+theMissile.getLauncher().getId());
+		//return false;
 	}
 
 
@@ -116,30 +91,11 @@ public class MissileDestructor {
 				theMissile.setDestructAfterLaunch(destructedMissile.get(i).getDestructAfterLaunch());
 				destructedMissile.remove(i);
 				destructedMissile.add(i, theMissile);
-				//setDestructedMissileAsMissile(destructedMissile.get(i), theMissile);
-				System.out.println("in initMissileDestructor missile:"+destructedMissile.get(i).toString());
 				break;
 			}
 		}
 		
 	}
-	
-	public void setDestructedMissileAsMissile(Missile theMissile, Missile obj){//not used
-		theMissile.setDestination(obj.getDestination());
-		theMissile.setLaunchTime(obj.getLaunchTime());
-		theMissile.setFlyTime(obj.getFlyTime());
-		theMissile.setDamage(obj.getDamage());
-		theMissile.setLauncher(obj.getLauncher());
-		//theMissile.setDestructAfterLaunch(obj.getDestructAfterLaunch());
-	}
-
-	//	public long getDestructAfterLaunch() {
-	//		return destructAfterLaunch;
-	//	}
-	//
-	//	public void setDestructAfterLaunch(long destructAfterLaunch) {
-	//		this.destructAfterLaunch = destructAfterLaunch;
-	//	}
 
 
 	//inner class
@@ -153,6 +109,7 @@ public class MissileDestructor {
 			while(true) {
 				synchronized (this) {
 					if(!destructedMissile.isEmpty()) {
+						isBusy = true;
 						destructMissile();
 					}
 
@@ -172,8 +129,7 @@ public class MissileDestructor {
 
 		public void notifyDestructor(Missile m) {
 			synchronized (this) {
-				if(destructedMissile.size() == 1){
-					//System.out.println(War.getCurrentTime()+"--> detructingMissile adding launcher");
+				if(destructedMissile.size() == 1 && !isBusy){
 					notify();
 				}
 			}

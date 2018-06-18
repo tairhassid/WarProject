@@ -3,70 +3,51 @@ package baseClasses;
 import java.util.Random;
 import java.util.Vector;
 
+import com.google.gson.annotations.SerializedName;
+
 import bussinesLogic.War;
+import bussinesLogic.WarSummary;
 
 public class MissileLauncherDestructor {
 	public final static int MIN_TIME = 1000;
 	public final static int MAX_TIME = 5000;
-	public enum DestructorType {Plane, Ship};
+	public enum DestructorType {
+		@SerializedName("plane")
+		Plane, 
+		@SerializedName("ship")
+		Ship};
 	public DestructorType type;
-	//private Map<MissileLauncher,Long> destructedLauncher;
 	private Vector<MissileLauncher> destructedLauncher = new Vector<>();
 
-
+	private boolean isBusy = false;
 	private long destructTime;
 	private DestructingMissile destructingMissile;
 
 
-	public MissileLauncherDestructor(){}
+	public MissileLauncherDestructor(){
+		this.destructingMissile = new DestructingMissile();
+	}
 
 	public MissileLauncherDestructor(DestructorType type) {
 		this.type= type;
 		this.destructingMissile = new DestructingMissile();
-		destructingMissile.start();
 	}
 
-/*	@Override
-	public void run() {
-		while(true){
-			if(!destructedLauncher.isEmpty()){
-				destructMissileLauncher();
-			}
-			synchronized (this) {
-				try {
-					wait();
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-			}
-		}
-	}*/
-
-	public DestructorType getType() {
-		return type;
-	}
-
-	public void setType(DestructorType type) {
-		this.type = type;
-	}
 
 	public boolean destructMissileLauncher(){
-//		try {
-			MissileLauncher theMissileLauncher = destructedLauncher.remove(destructedLauncher.size()-1);
-			if(theMissileLauncher != null) {
-				destructTime = War.getCurrentTime();
-				System.out.println(destructTime+"--> destruct after launch " + theMissileLauncher.getId()); 
+		MissileLauncher theMissileLauncher = destructedLauncher.remove(0);
+		System.out.println("******MissileLauncherDestructor chose missile launcher ");
+		if(theMissileLauncher != null) {
+			while(theMissileLauncher.getDestructTime() > War.getCurrentTime());
+			destructTime = War.getCurrentTime();
+			System.out.println(destructTime+"--> trying to destruct missile launcher " + theMissileLauncher.getId());
+			if(theMissileLauncher.getDestructTime() == 0)
 				theMissileLauncher.setDestructTime(destructTime);
-				return theMissileLauncher.destructSelf(this);
-//				synchronized (theMissileLauncher) {
-//					theMissileLauncher.notifyAll();
-//				}
-//				wait();
-			}
-			//Thread.sleep(randomNumber(MIN_TIME, MAX_TIME));
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
+			
+
+			return theMissileLauncher.destructSelf(this);
+		}
+		isBusy = false;
 		return false;
 	}
 
@@ -78,16 +59,35 @@ public class MissileLauncherDestructor {
 	}
 
 	public void add(MissileLauncher theMissileLauncher) {
-		//destructedLauncher.add(theMissileLauncher);
-		
-		destructingMissile.add(theMissileLauncher);
-/*		synchronized (destructingMissile) {
-			if(destructedLauncher.size() == 1)
-				destructingMissile.notify();
-		}*/
-
+		if(!destructingMissile.isAlive())
+			destructingMissile.start();
+		destructedLauncher.add(theMissileLauncher);
+		isBusy = true;
+		destructingMissile.notifyDestructor();
 	}
-	
+
+	public void addFromGson(){
+		System.out.println("~~~~~~destructedLauncher " + this.getType() + " size " + destructedLauncher.size());
+		if(!destructingMissile.isAlive())
+			destructingMissile.start();
+		isBusy = true;
+		//		for (MissileLauncher m : destructedLauncher){
+		//			destructingMissile.notifyDestructor();
+		//		}
+	}
+
+
+	public void initMissileLauncherDestructed(MissileLauncher theMissileLauncher) {
+		for(int i=0 ; i < destructedLauncher.size() ; i++) {
+			if(destructedLauncher.get(i).getId().equals(theMissileLauncher.getId())) {
+				theMissileLauncher.setDestructTime(destructedLauncher.get(i).getDestructTime());
+				destructedLauncher.remove(i);
+				destructedLauncher.add(i, theMissileLauncher);
+				break;
+			}
+		}
+	}
+
 	public Vector<MissileLauncher> getDestructedLauncher() {
 		return destructedLauncher;
 	}
@@ -95,22 +95,40 @@ public class MissileLauncherDestructor {
 	public void setDestructedLauncher(Vector<MissileLauncher> destructedLauncher) {
 		this.destructedLauncher = destructedLauncher;
 	}
+
+	public DestructorType getType() {
+		return type;
+	}
+
+	public void setType(DestructorType type) {
+		this.type = type;
+	}
 	
-	
-	
+	@Override
+	public String toString(){
+		String str = "";
+		str += "type: "+ this.getType();
+		for(MissileLauncher ml : destructedLauncher){
+			str +=ml.toString();
+		}
+		return str;
+	}
+
+
+
 	//inner class
 	private class DestructingMissile extends Thread {
-		//Vector<MissileLauncher> destructedLauncher;
-		
+
 		public DestructingMissile() {
-			//this.destructedLauncher = new Vector<>();
 		}
-		
+
 		@Override
 		public void run() {
 			while(true) {
 				if(!destructedLauncher.isEmpty()) {
+					isBusy = true;
 					destructMissileLauncher();
+					
 				}
 				else {
 					synchronized (this) {
@@ -125,12 +143,10 @@ public class MissileLauncherDestructor {
 				}
 			}
 		}
-		
-		public void add(MissileLauncher ml) {
-			destructedLauncher.add(ml);
+
+		public void notifyDestructor() {
 			synchronized (this) {
-				if(destructedLauncher.size() == 1)
-					System.out.println(War.getCurrentTime()+"--> detructingMissile adding launcher");
+				if(destructedLauncher.size() == 1 && !isBusy)
 					notify();
 			}
 		}

@@ -1,18 +1,18 @@
 package bussinesLogic;
 
-import java.util.ArrayList;
 
-import baseClasses.MissileDestructor;
+import java.util.ArrayList;
 import baseClasses.MissileLauncher;
 import baseClasses.MissileLauncherDestructor;
-import baseClasses.MissileLauncherDestructor.DestructorType;
+
 
 public class MissileLauncherDestructors {
 	private ArrayList<MissileLauncherDestructor> destructor = new ArrayList<>();
-	private int totalMissileLauncherDestroyed;
+	//private int totalMissileLauncherDestroyed;
+	
 	
 	public MissileLauncherDestructors(){
-		totalMissileLauncherDestroyed = 0;
+		//totalMissileLauncherDestroyed = 0;
 	}
 	
 	public void addMissileLauncherDestructor(MissileLauncherDestructor.DestructorType t) throws IllegalArgumentException { 
@@ -25,6 +25,17 @@ public class MissileLauncherDestructors {
 		
 	}
 	
+	
+	@Override 
+	public String toString(){
+		String str ="";
+		for (MissileLauncherDestructor mld: destructor){
+			str += mld.toString();
+		}
+		return str;
+	}
+	
+	
 	public void destructMissileLauncher(MissileLauncher theMissileLauncher){
 		MissileLauncherDestructor theMissileLauncherDestructor = findMissileLauncherDestructor();
 		if (theMissileLauncherDestructor == null){
@@ -32,11 +43,11 @@ public class MissileLauncherDestructors {
 		}
 		else{
 			theMissileLauncherDestructor.add(theMissileLauncher);
-			if(theMissileLauncher.getIsDestroyed())
-				totalMissileLauncherDestroyed++;
-			//theMissileLauncher.destructMissileLauncher(); //interrupt the thread
-			System.out.println("Missile is hidden="+ theMissileLauncher.isHidden());
-			System.out.println("Missile Launcher destroyed="+theMissileLauncher.getIsDestroyed());
+//			if(theMissileLauncher.getIsDestroyed())
+//				totalMissileLauncherDestroyed++;
+//			//theMissileLauncher.destructMissileLauncher(); //interrupt the thread
+//			System.out.println("Missile is hidden="+ theMissileLauncher.isHidden());
+//			System.out.println("Missile Launcher destroyed="+theMissileLauncher.getIsDestroyed());
 		}
 	}
 	
@@ -46,5 +57,23 @@ public class MissileLauncherDestructors {
 		}
 		return null;
 	}
+
+	public void startMissileLauncherDestructors() {
+		for(MissileLauncherDestructor mld : destructor) {
+			mld.addFromGson();
+		}
+		
+	}
+	
+	public void initMissileDestructor(MissileLauncher theMissileLauncher) {
+		for (MissileLauncherDestructor mld: destructor ){
+			mld.initMissileLauncherDestructed(theMissileLauncher);
+		}
+		
+	}
+	
+
+	
+ 
 	
 }

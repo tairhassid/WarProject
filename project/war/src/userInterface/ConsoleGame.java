@@ -1,16 +1,8 @@
 package userInterface;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Calendar;
 import java.util.Scanner;
 
-import com.google.gson.Gson;
-import com.google.gson.annotations.Expose;
+
 
 import bussinesLogic.JasonManager;
 import bussinesLogic.War;
@@ -19,57 +11,60 @@ import bussinesLogic.War;
 public class ConsoleGame {
 	private static boolean atWar = true;
 	private War war;
-	
+
 	public ConsoleGame(){
 		war = new War();
 	}
-	
+
 	public void startGame(){
 		boolean gsonGame;
 		gsonGame = war.ifGsonGame(); // ask if load from gson
 		if(gsonGame){
 			JasonManager jsonManager = new JasonManager(war);
+	
 			war = jsonManager.readFromGson();
 			jsonManager.setAllMissilesFromGson(); //instead of - war.setAllMissilesFromGson();
 			war.initMissileDestructors();
+			war.initMissileLauncherDestructors();
 			War.setCurrentTime(System.currentTimeMillis());
-			jsonManager.startLaunchers();
-			jsonManager.startMissiles();
-			jsonManager.startMissileDestructors();
 			
-			//join
-			System.out.println("War: "+war.toString());
+			jsonManager.startMissiles();
+			jsonManager.startLaunchers();
+			jsonManager.startMissileDestructors();
+			jsonManager.startMissileLauncherDestructors();
+			jsonManager.setActiveLaunchers();
+			
 			menu();
-		
+
 		}
 		else{
 			menu();
 		}
 	}
-	
 
-	
-	public void readFromGson(){
-		if(Files.exists(Paths.get("war.json"))){
-			Gson gson = new Gson();
-			FileReader reader = null;
-			try {
-				reader = new FileReader("war.json");
-			}
-			catch(FileNotFoundException e){
-				e.printStackTrace();
-			}
-			war = gson.fromJson(reader, War.class);
-			System.out.println(war.toString());
-		}
 
-    }
-	
-	
+
+//	public void readFromGson(){
+//		if(Files.exists(Paths.get("war.json"))){
+//			Gson gson = new Gson();
+//			FileReader reader = null;
+//			try {
+//				reader = new FileReader("war.json");
+//			}
+//			catch(FileNotFoundException e){
+//				e.printStackTrace();
+//			}
+//			war = gson.fromJson(reader, War.class);
+//			System.out.println(war.toString());
+//		}
+//
+//	}
+
+
 	public void menu(){
 		Scanner s = new Scanner(System.in);
 		int action;
-		
+
 
 		while(atWar) {
 			System.out.println("Please choose an action:");
@@ -111,7 +106,7 @@ public class ConsoleGame {
 				break;	
 
 			case 4:
-				war.launchMissile("Sderot", 8, 1000); //just as an example
+				war.launchMissile("Sderot", 5, 1000); //just as an example
 				break;
 
 			case 5:
@@ -123,7 +118,7 @@ public class ConsoleGame {
 				break;
 
 			case 7:
-				war.sumUp();
+				war.getWarSummary();
 				break;
 
 			case 8:

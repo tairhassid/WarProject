@@ -9,7 +9,7 @@ import com.google.gson.Gson;
 
 public class JasonManager {
 		private Gson gson = new Gson();
-		private War war= new War();
+		private War war;
 		
 		public JasonManager(War war){
 			this.war = war;
@@ -24,8 +24,9 @@ public class JasonManager {
 				catch(FileNotFoundException e){
 					e.printStackTrace();
 				}
-			   return war = gson.fromJson(reader, War.class);
-			    
+			   war = gson.fromJson(reader, War.class);
+			   war.setGsonGame(true);
+			   return war;
 			}
 			return null;
 		}
@@ -47,7 +48,15 @@ public class JasonManager {
 		public void startMissileDestructors(){
 			war.getMissileDestructors().startMissileDestructors();
 		}
+
+		public void startMissileLauncherDestructors() {
+			war.getMissileLauncherDestructors().startMissileLauncherDestructors();
+			
+		}
 		
+		public void setActiveLaunchers(){
+			war.getMissileLaunchers().setActiveLaunchers();
+		}
 		
 		
 		
