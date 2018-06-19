@@ -23,6 +23,7 @@ public class Missile extends Thread implements Comparable<Missile> {
 	private int damage;
 	private long destructAfterLaunch;
 	private boolean didLaunched;
+	private boolean isFlying;
 	
 	
 
@@ -44,6 +45,7 @@ public class Missile extends Thread implements Comparable<Missile> {
 		this.launchTime = 0;
 		this.destructAfterLaunch = 0;
 		this.didLaunched = false;
+		this.isFlying = false;
 		
 		
 	}
@@ -57,50 +59,48 @@ public class Missile extends Thread implements Comparable<Missile> {
 			setMissileDestructed();
 		}
 	}
-	
-	//Yogev and may missile
-//	@Override
-//	public void run() {
-//		synchronized (launcher) {
-//			try{
-//				System.out.println(War.getCurrentTime()+"--> Missile " + this.getMissileId() + 
-//						" starts flying for "+this.getFlyTime()+ " sec");
-//				setLaunchTime();
-//				Thread.sleep(flyTime*1000);
-//				System.out.println(War.getCurrentTime()+"--> Missile finished flying " + this.getMissileId() );
-//			}catch(InterruptedException e){
-//				setMissileDestructed();
-//			}
-//		}
-//	}
+
 
 	public void setMissileDestructed(){
 		System.out.println(War.getCurrentTime()+"--> thread "+this.getMissileId() +" interrupted");
-		isDestructed = true;
+		//isDestructed = true;
+		isFlying = false;
 		setDestructAfterLaunch(War.getCurrentTime());
+		logMissile(); 
 		synchronized (launcher) {
 			launcher.notifyAll();			
 		}
 
 	}
 
-	public boolean destructMissile() {
+	public void destructMissile(MissileDestructor theMissileDestructor) {
 		if (War.getCurrentTime() >= flyTime + launchTime){
 			System.out.println(War.getCurrentTime()+"--> Failed to destruct missile "+this.getMissileId());
-			return false;
+			//return false;
 		}
 		else {
-			//			try {
 			System.out.println(War.getCurrentTime() +"--> Missile "+this.getMissileId() +" - Desctruct succeeded");
 			WarSummary.getInstance().addDestructedMissile();
+			isDestructed = true;
 			this.interrupt();
-			//Thread.sleep(War.randomNumber(MIN_TIME, MAX_TIME));
-			//			} catch (InterruptedException e) {
-			//				e.printStackTrace();
-			//			}
-
 		}
-		return true;
+		theMissileDestructor.logMissile(logDestructedMissile());
+		//return true;
+	}
+	
+	public String logDestructedMissile(){
+		StringBuffer buf = new StringBuffer();
+		
+		buf.append("Target Missile: "+ missileId);
+		if(isDestructed){
+			buf.append("\nMissile destroyed!\n");
+		}
+		else{
+			buf.append("\nDestruct failed");
+			buf.append("\nDamage: "+damage+"\n");
+		}
+		
+		return buf.toString();
 	}
 
 	public void flying() throws InterruptedException {
@@ -111,10 +111,12 @@ public class Missile extends Thread implements Comparable<Missile> {
 			System.out.println(War.getCurrentTime()+"--> Missile "+ this.getMissileId()+" woke up");
 		}
 		synchronized (launcher) {
+			isFlying = true;
 			didLaunched = true;
 			System.out.println(War.getCurrentTime()+"--> Missile " + this.getMissileId() + " starts flying for "+this.getFlyTime()+ " sec");
 			setLaunchTime();
 			Thread.sleep(flyTime*1000);
+			isFlying = false;
 			System.out.println(War.getCurrentTime()+"--> Missile finished flying " + this.getMissileId() );
 			launcher.setBusy(false);
 			launcher.notify();
@@ -146,7 +148,8 @@ public class Missile extends Thread implements Comparable<Missile> {
 	public void logMissile(){
 		StringBuffer buf = new StringBuffer();
 		
-		buf.append("Destination: "+ destination);
+		buf.append("Missile id: "+ missileId);
+		buf.append("\nDestination: "+ destination);
 		buf.append("\nLaunch time:"+ launchTime);
 		
 		if(isDestructed){
@@ -167,6 +170,10 @@ public class Missile extends Thread implements Comparable<Missile> {
 
 	public String getMissileId() {
 		return missileId;
+	}
+	
+	public boolean isFlying(){
+		return this.isFlying;
 	}
 
 

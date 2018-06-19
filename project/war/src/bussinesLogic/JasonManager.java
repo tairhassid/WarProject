@@ -25,6 +25,7 @@ public class JasonManager {
 					e.printStackTrace();
 				}
 			   war = gson.fromJson(reader, War.class);
+			   
 			   war.setGsonGame(true);
 			   return war;
 			}

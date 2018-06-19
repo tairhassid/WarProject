@@ -1,0 +1,54 @@
+19/06/2018 13:10:12
+Missile Destructor id: D201
+
+19/06/2018 13:10:18
+Target Missile: M1
+Missile destroyed!
+
+19/06/2018 13:10:23
+Target Missile: M4
+Missile destroyed!
+
+19/06/2018 13:10:24
+Target Missile: M3
+Destruct failed
+Damage: 5000
+
+19/06/2018 13:16:59
+Missile Destructor id: D201
+
+19/06/2018 13:22:24
+Missile Destructor id: D201
+
+19/06/2018 13:22:30
+Target Missile: M1
+Missile destroyed!
+
+19/06/2018 13:22:35
+Target Missile: M4
+Missile destroyed!
+
+19/06/2018 13:22:36
+Target Missile: M3
+Destruct failed
+Damage: 5000
+
+19/06/2018 13:23:56
+Missile Destructor id: D201
+
+19/06/2018 13:24:02
+Target Missile: M1
+Missile destroyed!
+
+19/06/2018 13:24:07
+Target Missile: M4
+Missile destroyed!
+
+19/06/2018 13:24:08
+Target Missile: M3
+Destruct failed
+Damage: 5000
+
+19/06/2018 13:24:42
+Missile Destructor id: D201
+

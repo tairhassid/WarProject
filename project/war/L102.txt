@@ -1,9 +1,0 @@
-18/06/2018 23:06:50
-Launcher id: L102
-
-18/06/2018 23:07:01
-Destination: Sderot
-Launch time:11
-Missile landed: 16
-Damage: 1000
-

@@ -31,12 +31,13 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 
 	private boolean isBusy;
 	private FileHandler handler;
-	private Thread launcherThread;
+	//private Thread launcherThread;
 
 	//Gson constructor
 	public MissileLauncher(){
 		++idGenerator;
 		setHandler();
+		System.err.println("Launcher id: "+ id);
 	}
 
 	public MissileLauncher(int isHidden) {
@@ -50,8 +51,13 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 	}
 
 	public void setHidden(int isHidden) {
-		this.isHidden = ((isHidden == 1) ? true : false);
-	}
+		if(isHidden == 1){
+			this.isHidden = true;
+			this.isCurrentlyHidden = true;
+		}
+		else
+			this.isHidden = false;
+		}
 
 
 	public void setDestroyed(boolean isDestroyed) {
@@ -60,13 +66,6 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 
 	}
 	
-	public void setLauncherThread(Thread launcherThread){
-		this.launcherThread = launcherThread;
-	}
-	
-	public Thread getLauncherThread(){
-		return this.launcherThread;
-	}
 
 	public boolean getIsDestroyed(){
 		return this.isDestroyed;
@@ -162,8 +161,23 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 		else {
 			setDestroyed(true);
 		}
-		System.out.println(War.getCurrentTime()+"--> Launcher "+this.getId()+" is destroyed: "+getIsDestroyed());			
+		System.out.println(War.getCurrentTime()+"--> Launcher "+this.getId()+" is destroyed: "+ isDestroyed);
+		destructor.logMissile(logLauncher());
 		return isDestroyed;
+	}
+	
+	public String logLauncher(){
+		StringBuffer buf = new StringBuffer();
+		
+		buf.append("Target Launcher: "+ id);
+		
+		if(isDestroyed){
+			buf.append("\nLauncher destroyed!\n");
+		}
+		else{
+			buf.append("\nDestruct failed\n");
+		}
+		return buf.toString();
 	}
 
 
@@ -207,9 +221,8 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 	public void setHandler(){
 		try {
 			String log = "Launcher id: "+ this.id+ "\n";
-			handler = new FileHandler(id + ".txt", true);
+			handler = new FileHandler(War.LOG_PATH + id + ".txt", true);
 			handler.setFormatter(new WarFormatter());
-			//handler.setFilter(new LauncherFilter(this));
 			handler.setFilter(new LauncherFilter(this));
 			LoggerManager.getLogger().setUseParentHandlers(false);
 			LoggerManager.addHandler(handler);
@@ -256,11 +269,9 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
         public boolean isLoggable(LogRecord rec) {
             if (rec.getSourceClassName().equalsIgnoreCase(MissileLauncher.class.getName()) &&
             		rec.getParameters()[0] == launcher){
-            	System.out.println(rec.getParameters()[0]);
             	return true;
             }
             else{
-            	System.out.println("in LaunchFilter isLoggable = false");
                 return false;
             }
         }

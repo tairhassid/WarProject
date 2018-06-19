@@ -1,22 +1,16 @@
 package bussinesLogic;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.logging.FileHandler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import baseClasses.Missile;
 import baseClasses.MissileLauncher;
 import baseClasses.MissileLauncherDestructor;
 import baseClasses.MissileLauncherDestructor.DestructorType;
 
 public class War {
-	
+	public static final String LOG_PATH = "logFiles\\";
 	public static long timer;
 	private ArrayList<Missile> allMissiles = new ArrayList<>();
 	private int totalDamage;
@@ -82,6 +76,7 @@ public class War {
 	
 	public void destructMissile(){
 		Missile theMissile = findMissile();
+		System.out.println("Missile found to destruct: "+ theMissile);
 		if(theMissile == null){
 			//No missiles to destruct
 			System.out.println("No missiles to destruct");
@@ -91,8 +86,10 @@ public class War {
 	}
 	
 	public Missile findMissile(){//returns the first missile that hasn't been destructed yet and already launched
-		for (Missile m : allMissiles){
-			if(!m.getIsDestructed() && m.getLaunchTime() > 0 && m.getLaunchTime() < getCurrentTime()){
+		for (Missile m : allMissiles){// need to check if isFlying!!!
+			System.out.println(getCurrentTime());
+			if(!m.getIsDestructed() && m.getLaunchTime() > 0 && m.getLaunchTime() < getCurrentTime()
+					&& m.isFlying()){ //checking if is flying
 				return m;
 			}
 		}
@@ -138,8 +135,8 @@ public class War {
 	@Override
 	public String toString(){
 		//String str = missileDestructors.toString();
-		String str = missileLauncherDestructors.toString();
-		return str; //+=missileLaunchers.toString();
+		//String str = missileLauncherDestructors.toString();
+		return "War:"+missileLaunchers.toString();
 	}
 	
 	public MissileLaunchers getMissileLaunchers() {
@@ -214,6 +211,7 @@ public class War {
 	public void setGsonGame(boolean gsonGame){
 		this.gsonGame = gsonGame;
 	}
+	
 	
 	
 

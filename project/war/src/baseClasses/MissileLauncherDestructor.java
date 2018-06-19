@@ -1,11 +1,18 @@
 package baseClasses;
 
+import java.io.IOException;
 import java.util.Random;
 import java.util.Vector;
+import java.util.logging.FileHandler;
+import java.util.logging.Filter;
+import java.util.logging.Level;
+import java.util.logging.LogRecord;
 
 import com.google.gson.annotations.SerializedName;
 
+import bussinesLogic.LoggerManager;
 import bussinesLogic.War;
+import bussinesLogic.WarFormatter;
 import bussinesLogic.WarSummary;
 
 public class MissileLauncherDestructor {
@@ -22,15 +29,39 @@ public class MissileLauncherDestructor {
 	private boolean isBusy = false;
 	private long destructTime;
 	private DestructingMissile destructingMissile;
+	private FileHandler handler;
 
 
 	public MissileLauncherDestructor(){
 		this.destructingMissile = new DestructingMissile();
+		setHandler();
 	}
 
 	public MissileLauncherDestructor(DestructorType type) {
 		this.type= type;
 		this.destructingMissile = new DestructingMissile();
+		setHandler();
+	}
+	
+	public void setHandler(){
+		try {
+			String log = "Launcher Destructor id: "+ this.type + "\n";
+			handler = new FileHandler(War.LOG_PATH + this.type + ".txt", true);
+			handler.setFormatter(new WarFormatter());
+			handler.setFilter(new LauncherDestructorFilter(this));
+			LoggerManager.getLogger().setUseParentHandlers(false);
+			LoggerManager.addHandler(handler);
+			
+			
+			LoggerManager.getLogger().log(Level.INFO, log, this);
+			
+		} catch (SecurityException | IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void logMissile(String log){
+		LoggerManager.getLogger().log(Level.INFO, log, this);
 	}
 
 
@@ -44,7 +75,6 @@ public class MissileLauncherDestructor {
 			if(theMissileLauncher.getDestructTime() == 0)
 				theMissileLauncher.setDestructTime(destructTime);
 			
-
 			return theMissileLauncher.destructSelf(this);
 		}
 		isBusy = false;
@@ -146,9 +176,32 @@ public class MissileLauncherDestructor {
 
 		public void notifyDestructor() {
 			synchronized (this) {
-				if(destructedLauncher.size() == 1 && !isBusy)
+				if(destructedLauncher.size() == 1 /*&& !isBusy*/)
 					notify();
 			}
 		}
 	}
+}
+
+class LauncherDestructorFilter implements Filter {
+
+    private MissileLauncherDestructor destructor;
+
+    public LauncherDestructorFilter(MissileLauncherDestructor destructor) {
+        this.destructor = destructor;
+    }
+
+    @Override
+    public boolean isLoggable(LogRecord rec) {
+        if (rec.getSourceClassName().equalsIgnoreCase(MissileLauncherDestructor.class.getName()) &&
+        		rec.getParameters()[0] == destructor){
+        	//System.out.println(rec.getParameters()[0]);
+        	return true;
+        }
+        else{
+        	//System.out.println("in LaunchFilter isLoggable = false");
+            return false;
+        }
+    }
+
 }

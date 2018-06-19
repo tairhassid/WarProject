@@ -23,6 +23,7 @@ public class ConsoleGame {
 			JasonManager jsonManager = new JasonManager(war);
 	
 			war = jsonManager.readFromGson();
+		    System.out.println(	war.toString());
 			jsonManager.setAllMissilesFromGson(); //instead of - war.setAllMissilesFromGson();
 			war.initMissileDestructors();
 			war.initMissileLauncherDestructors();
