@@ -34,7 +34,7 @@ public class MissileLauncherDestructor {
 
 	public MissileLauncherDestructor(){
 		this.destructingMissile = new DestructingMissile();
-		setHandler();
+		//setHandler();
 	}
 
 	public MissileLauncherDestructor(DestructorType type) {
@@ -45,7 +45,7 @@ public class MissileLauncherDestructor {
 	
 	public void setHandler(){
 		try {
-			String log = "Launcher Destructor id: "+ this.type + "\n";
+			String log = "Launcher Destructor type: "+ this.type + "\n";
 			handler = new FileHandler(War.LOG_PATH + this.type + ".txt", true);
 			handler.setFormatter(new WarFormatter());
 			handler.setFilter(new LauncherDestructorFilter(this));
@@ -65,7 +65,7 @@ public class MissileLauncherDestructor {
 	}
 
 
-	public boolean destructMissileLauncher(){
+	public synchronized boolean destructMissileLauncher(){
 		MissileLauncher theMissileLauncher = destructedLauncher.remove(0);
 		System.out.println("******MissileLauncherDestructor chose missile launcher ");
 		if(theMissileLauncher != null) {
@@ -108,6 +108,7 @@ public class MissileLauncherDestructor {
 
 
 	public void initMissileLauncherDestructed(MissileLauncher theMissileLauncher) {
+	//setHandler();
 		for(int i=0 ; i < destructedLauncher.size() ; i++) {
 			if(destructedLauncher.get(i).getId().equals(theMissileLauncher.getId())) {
 				theMissileLauncher.setDestructTime(destructedLauncher.get(i).getDestructTime());
@@ -163,9 +164,9 @@ public class MissileLauncherDestructor {
 				else {
 					synchronized (this) {
 						try {
-							System.out.println(War.getCurrentTime()+"--> destructingMissile waiting to run");
+							System.out.println(War.getCurrentTime()+"--> destructingLauncher waiting to run");
 							wait();
-							System.out.println(War.getCurrentTime()+"--> destructingMissile finished waiting to run");
+							System.out.println(War.getCurrentTime()+"--> destructingLauncher finished waiting to run");
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						}

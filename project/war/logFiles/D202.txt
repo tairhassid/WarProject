@@ -1,27 +1,12 @@
-19/06/2018 13:10:12
+20/06/2018 14:05:55
 Missile Destructor id: D202
 
-19/06/2018 13:10:20
-Target Missile: M2
-Missile destroyed!
-
-19/06/2018 13:16:59
+20/06/2018 14:12:35
 Missile Destructor id: D202
 
-19/06/2018 13:22:24
+20/06/2018 14:13:22
 Missile Destructor id: D202
 
-19/06/2018 13:22:32
-Target Missile: M2
-Missile destroyed!
-
-19/06/2018 13:23:56
-Missile Destructor id: D202
-
-19/06/2018 13:24:04
-Target Missile: M2
-Missile destroyed!
-
-19/06/2018 13:24:42
+20/06/2018 14:13:44
 Missile Destructor id: D202
 

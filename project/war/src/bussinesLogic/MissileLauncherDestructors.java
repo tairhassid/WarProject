@@ -60,6 +60,7 @@ public class MissileLauncherDestructors {
 
 	public void startMissileLauncherDestructors() {
 		for(MissileLauncherDestructor mld : destructor) {
+			mld.setHandler();
 			mld.addFromGson();
 		}
 		

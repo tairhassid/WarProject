@@ -1,0 +1,28 @@
+20/06/2018 14:05:55
+Launcher Destructor type: Plane
+
+20/06/2018 14:05:59
+Target Launcher: L101
+Launcher destroyed!
+
+20/06/2018 14:12:35
+Launcher Destructor type: Plane
+
+20/06/2018 14:12:39
+Target Launcher: L101
+Launcher destroyed!
+
+20/06/2018 14:13:22
+Launcher Destructor type: Plane
+
+20/06/2018 14:13:26
+Target Launcher: L101
+Launcher destroyed!
+
+20/06/2018 14:13:44
+Launcher Destructor type: Plane
+
+20/06/2018 14:13:48
+Target Launcher: L101
+Launcher destroyed!
+

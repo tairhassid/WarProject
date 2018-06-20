@@ -1,0 +1,44 @@
+20/06/2018 14:05:55
+Launcher Destructor type: Ship
+
+20/06/2018 14:06:03
+Target Launcher: L102
+Destruct failed
+
+20/06/2018 14:06:07
+Target Launcher: L102
+Launcher destroyed!
+
+20/06/2018 14:12:35
+Launcher Destructor type: Ship
+
+20/06/2018 14:12:43
+Target Launcher: L102
+Destruct failed
+
+20/06/2018 14:12:47
+Target Launcher: L102
+Launcher destroyed!
+
+20/06/2018 14:13:22
+Launcher Destructor type: Ship
+
+20/06/2018 14:13:30
+Target Launcher: L102
+Destruct failed
+
+20/06/2018 14:13:34
+Target Launcher: L102
+Launcher destroyed!
+
+20/06/2018 14:13:44
+Launcher Destructor type: Ship
+
+20/06/2018 14:13:52
+Target Launcher: L102
+Destruct failed
+
+20/06/2018 14:13:56
+Target Launcher: L102
+Launcher destroyed!
+

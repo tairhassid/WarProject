@@ -1,0 +1,36 @@
+20/06/2018 14:05:55
+Launcher id: L101
+
+20/06/2018 14:06:01
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+20/06/2018 14:12:35
+Launcher id: L101
+
+20/06/2018 14:12:41
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+20/06/2018 14:13:22
+Launcher id: L101
+
+20/06/2018 14:13:28
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+20/06/2018 14:13:44
+Launcher id: L101
+
+20/06/2018 14:13:50
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+

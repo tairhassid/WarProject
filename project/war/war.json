@@ -54,7 +54,7 @@
             },
             {
               "id": "M3",
-              "destructAfterLaunch": 8
+              "destructAfterLaunch":4
             },
             {
               "id": "M4",
@@ -75,7 +75,15 @@
     },
     "missileLauncherDestructors": {
       "destructor": [
-
+        {
+          "type": "plane",
+          "destructedLauncher": [
+          {
+            "id": "L101",
+            "destructTime": 4
+          }
+          ]
+        },
         {
           "type": "ship",
           "destructedLauncher": [
@@ -85,7 +93,7 @@
             }, 
             {
               "id": "L102",
-              "destructTime": 10
+              "destructTime": 12
             }
           ]
         }

@@ -10,6 +10,8 @@ import java.util.logging.Filter;
 import java.util.logging.Level;
 import java.util.logging.LogRecord;
 
+import com.google.gson.annotations.SerializedName;
+
 import bussinesLogic.LoggerManager;
 import bussinesLogic.ObjectFilter;
 import bussinesLogic.War;
@@ -21,6 +23,7 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 
 
 	private static int idGenerator = 100;
+	@SerializedName("id")
 	private String id;
 	private boolean isHidden;
 	private boolean isCurrentlyHidden;
@@ -36,8 +39,9 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 	//Gson constructor
 	public MissileLauncher(){
 		++idGenerator;
-		setHandler();
-		System.err.println("Launcher id: "+ id);
+	//	setHandler();
+		//System.err.println("Launcher id: "+ id);
+		this.isCurrentlyHidden = this.isHidden;
 	}
 
 	public MissileLauncher(int isHidden) {
@@ -103,11 +107,11 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 
 
 	public synchronized void launch() throws InterruptedException {
-		Collections.sort(waitingMissiles, new SortByLaunchTime());
+		Collections.sort(waitingMissiles);
 		Missile theMissile = waitingMissiles.remove(0);
 		if(theMissile != null){
 			while(War.getCurrentTime() < theMissile.getLaunchTime()); //dummy while, waits until missile launch time 
-			isCurrentlyHidden = false; //not sure if it's the right place 
+			isCurrentlyHidden = false;
 			System.out.println(War.getCurrentTime()+"--> in launcher missile "+ theMissile.getMissileId()+ " chosen");
 			System.out.println(War.getCurrentTime()+"--> launcher notifies missile " +theMissile.getMissileId());
 
@@ -154,7 +158,7 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 	}
 
 
-	public synchronized boolean destructSelf(MissileLauncherDestructor destructor){ //destructor not used
+	public boolean destructSelf(MissileLauncherDestructor destructor){ 
 		if(isCurrentlyHidden){
 			setDestroyed(false);
 		}

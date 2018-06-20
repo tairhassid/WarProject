@@ -89,6 +89,7 @@ public class MissileLaunchers {
 
 	public void startLaunchers() {
 		for(MissileLauncher ml : launcher){
+			ml.setHandler();
 			Collections.sort(ml.getMissile());
 			Thread t = new Thread(ml);
 			//ml.setLauncherThread(t);

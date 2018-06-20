@@ -1,24 +1,65 @@
-19/06/2018 13:24:40
+20/06/2018 14:13:42
 Let the war begin:
 
-19/06/2018 13:24:42
-Launcher id: null
-
-19/06/2018 13:24:42
-Launcher id: null
-
-19/06/2018 13:24:42
+20/06/2018 14:13:44
 Missile Destructor id: D201
 
-19/06/2018 13:24:42
+20/06/2018 14:13:44
 Missile Destructor id: D202
 
-19/06/2018 13:24:42
-Launcher Destructor id: null
+20/06/2018 14:13:44
+Launcher id: L101
 
-19/06/2018 13:24:42
-Launcher id: null
+20/06/2018 14:13:44
+Launcher id: L102
 
-19/06/2018 13:24:42
-Launcher id: null
+20/06/2018 14:13:44
+Launcher Destructor type: Plane
+
+20/06/2018 14:13:44
+Launcher Destructor type: Ship
+
+20/06/2018 14:13:48
+Target Launcher: L101
+Launcher destroyed!
+
+20/06/2018 14:13:50
+Target Missile: M1
+Missile destroyed!
+
+20/06/2018 14:13:50
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+20/06/2018 14:13:51
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+20/06/2018 14:13:52
+Target Launcher: L102
+Destruct failed
+
+20/06/2018 14:13:52
+Target Missile: M3
+Destruct failed
+Damage: 5000
+
+20/06/2018 14:13:55
+Target Missile: M4
+Missile destroyed!
+
+20/06/2018 14:13:55
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+20/06/2018 14:13:56
+Target Launcher: L102
+Launcher destroyed!
 
