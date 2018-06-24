@@ -1,28 +1,649 @@
-20/06/2018 14:05:55
+24/06/2018 16:26:50
 Launcher Destructor type: Plane
 
-20/06/2018 14:05:59
+24/06/2018 16:26:54
 Target Launcher: L101
 Launcher destroyed!
 
-20/06/2018 14:12:35
+24/06/2018 16:29:28
 Launcher Destructor type: Plane
 
-20/06/2018 14:12:39
+24/06/2018 16:29:32
 Target Launcher: L101
 Launcher destroyed!
 
-20/06/2018 14:13:22
+24/06/2018 16:38:47
 Launcher Destructor type: Plane
 
-20/06/2018 14:13:26
+24/06/2018 16:38:51
 Target Launcher: L101
 Launcher destroyed!
 
-20/06/2018 14:13:44
+24/06/2018 16:48:37
 Launcher Destructor type: Plane
 
-20/06/2018 14:13:48
+24/06/2018 16:48:41
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 16:54:39
+Launcher Destructor type: Plane
+
+24/06/2018 16:54:43
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 16:56:39
+Launcher Destructor type: Plane
+
+24/06/2018 16:56:43
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:00:21
+Launcher Destructor type: Plane
+
+24/06/2018 17:00:27
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:01:31
+Launcher Destructor type: Plane
+
+24/06/2018 17:01:35
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:03:03
+Launcher Destructor type: Plane
+
+24/06/2018 17:03:07
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:05:49
+Launcher Destructor type: Plane
+
+24/06/2018 17:05:55
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:08:29
+Launcher Destructor type: Plane
+
+24/06/2018 17:08:33
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:10:55
+Launcher Destructor type: Plane
+
+24/06/2018 17:10:59
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:15:32
+Launcher Destructor type: Plane
+
+24/06/2018 17:15:54
+Launcher Destructor type: Plane
+
+24/06/2018 17:15:58
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:18:49
+Launcher Destructor type: Plane
+
+24/06/2018 17:18:53
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:25:58
+Launcher Destructor type: Plane
+
+24/06/2018 17:26:02
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:31:08
+Launcher Destructor type: Plane
+
+24/06/2018 17:31:12
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:33:58
+Launcher Destructor type: Plane
+
+24/06/2018 17:34:02
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:34:06
+Launcher Destructor type: Plane
+
+24/06/2018 17:34:10
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:35:18
+Launcher Destructor type: Plane
+
+24/06/2018 17:35:22
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:38:40
+Launcher Destructor type: Plane
+
+24/06/2018 17:38:44
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:41:44
+Launcher Destructor type: Plane
+
+24/06/2018 17:41:48
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:53:15
+Launcher Destructor type: Plane
+
+24/06/2018 17:53:19
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:54:28
+Launcher Destructor type: Plane
+
+24/06/2018 17:54:32
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:56:55
+Launcher Destructor type: Plane
+
+24/06/2018 17:56:59
+Launcher Destructor type: Plane
+
+24/06/2018 17:57:03
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 17:59:21
+Launcher Destructor type: Plane
+
+24/06/2018 17:59:25
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 18:08:52
+Launcher Destructor type: Plane
+
+24/06/2018 18:08:57
+Launcher Destructor type: Plane
+
+24/06/2018 18:09:01
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 18:09:57
+Launcher Destructor type: Plane
+
+24/06/2018 18:10:01
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 18:13:48
+Launcher Destructor type: Plane
+
+24/06/2018 18:13:52
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 18:17:53
+Launcher Destructor type: Plane
+
+24/06/2018 18:17:57
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 18:24:05
+Launcher Destructor type: Plane
+
+24/06/2018 18:24:09
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 18:25:33
+Launcher Destructor type: Plane
+
+24/06/2018 18:25:37
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 18:34:13
+Launcher Destructor type: Plane
+
+24/06/2018 18:34:17
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 18:36:36
+Launcher Destructor type: Plane
+
+24/06/2018 18:36:40
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 18:58:30
+Launcher Destructor type: Plane
+
+24/06/2018 18:58:34
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 18:59:11
+Launcher Destructor type: Plane
+
+24/06/2018 18:59:15
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 19:00:04
+Launcher Destructor type: Plane
+
+24/06/2018 19:00:08
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 19:02:43
+Launcher Destructor type: Plane
+
+24/06/2018 19:02:47
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 19:04:51
+Launcher Destructor type: Plane
+
+24/06/2018 19:04:55
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 19:20:02
+Launcher Destructor type: Plane
+
+24/06/2018 19:20:06
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 19:27:44
+Launcher Destructor type: Plane
+
+24/06/2018 19:27:53
+Launcher Destructor type: Plane
+
+24/06/2018 19:27:57
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 19:28:13
+Launcher Destructor type: Plane
+
+24/06/2018 19:28:17
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 19:28:44
+Launcher Destructor type: Plane
+
+24/06/2018 19:28:48
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 19:32:11
+Launcher Destructor type: Plane
+
+24/06/2018 19:32:15
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 19:53:43
+Launcher Destructor type: Plane
+
+24/06/2018 19:53:48
+Launcher Destructor type: Plane
+
+24/06/2018 19:53:52
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 19:54:32
+Launcher Destructor type: Plane
+
+24/06/2018 19:54:36
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 19:54:51
+Launcher Destructor type: Plane
+
+24/06/2018 19:54:55
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 19:56:19
+Launcher Destructor type: Plane
+
+24/06/2018 19:56:23
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 20:01:26
+Launcher Destructor type: Plane
+
+24/06/2018 20:01:30
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 20:02:05
+Launcher Destructor type: Plane
+
+24/06/2018 20:02:09
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 20:06:55
+Launcher Destructor type: Plane
+
+24/06/2018 20:06:59
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 20:08:35
+Launcher Destructor type: Plane
+
+24/06/2018 20:08:39
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 20:11:19
+Launcher Destructor type: Plane
+
+24/06/2018 20:11:23
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 20:14:37
+Launcher Destructor type: Plane
+
+24/06/2018 20:14:41
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 20:43:15
+Launcher Destructor type: Plane
+
+24/06/2018 20:43:15
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 21:07:55
+Launcher Destructor type: Plane
+
+24/06/2018 21:07:59
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 21:09:31
+Launcher Destructor type: Plane
+
+24/06/2018 21:09:35
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 21:11:00
+Launcher Destructor type: Plane
+
+24/06/2018 21:11:04
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 21:29:11
+Launcher Destructor type: Plane
+
+24/06/2018 21:29:15
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 21:30:06
+Launcher Destructor type: Plane
+
+24/06/2018 21:30:10
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 21:41:54
+Launcher Destructor type: Plane
+
+24/06/2018 21:41:58
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 21:45:55
+Launcher Destructor type: Plane
+
+24/06/2018 21:45:59
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 21:48:43
+Launcher Destructor type: Plane
+
+24/06/2018 21:48:47
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 21:56:32
+Launcher Destructor type: Plane
+
+24/06/2018 21:56:38
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 21:57:23
+Launcher Destructor type: Plane
+
+24/06/2018 21:57:29
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 22:10:24
+Launcher Destructor type: Plane
+
+24/06/2018 22:10:30
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 22:11:29
+Launcher Destructor type: Plane
+
+24/06/2018 22:11:35
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 23:00:46
+Launcher Destructor type: Plane
+
+24/06/2018 23:00:52
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 23:02:54
+Launcher Destructor type: Plane
+
+24/06/2018 23:03:00
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 23:06:43
+Launcher Destructor type: Plane
+
+24/06/2018 23:06:49
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 23:09:43
+Launcher Destructor type: Plane
+
+24/06/2018 23:09:49
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 23:14:20
+Launcher Destructor type: Plane
+
+24/06/2018 23:14:26
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 23:15:01
+Launcher Destructor type: Plane
+
+24/06/2018 23:15:07
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 23:20:35
+Launcher Destructor type: Plane
+
+24/06/2018 23:20:41
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 23:21:10
+Target Launcher: L102
+Destruct failed
+
+24/06/2018 23:21:46
+Launcher Destructor type: Plane
+
+24/06/2018 23:21:50
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 23:23:38
+Launcher Destructor type: Plane
+
+24/06/2018 23:23:42
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 23:28:02
+Launcher Destructor type: Plane
+
+24/06/2018 23:28:06
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 23:34:51
+Launcher Destructor type: Plane
+
+24/06/2018 23:34:55
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 23:35:22
+Target Launcher: L102
+Destruct failed
+
+24/06/2018 23:38:03
+Launcher Destructor type: Plane
+
+24/06/2018 23:38:07
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 23:38:35
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 23:39:25
+Launcher Destructor type: Plane
+
+24/06/2018 23:39:29
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 23:39:51
+Target Launcher: L103
+Launcher destroyed!
+
+24/06/2018 23:49:15
+Launcher Destructor type: Plane
+
+24/06/2018 23:49:19
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 23:50:17
+Target Launcher: L103
+Destruct failed
+
+24/06/2018 23:50:27
+Target Launcher: L103
+Destruct failed
+
+24/06/2018 23:55:36
+Target Launcher: L102
+Destruct failed
+
+24/06/2018 23:56:29
+Target Launcher: L104
+Launcher destroyed!
+
+24/06/2018 23:57:17
+Launcher Destructor type: Plane
+
+24/06/2018 23:57:21
+Target Launcher: L101
+Launcher destroyed!
+
+24/06/2018 23:58:45
+Target Launcher: L102
+Destruct failed
+
+24/06/2018 23:58:53
+Target Launcher: L102
+Destruct failed
+
+24/06/2018 23:58:58
+Target Launcher: L103
+Destruct failed
+
+24/06/2018 23:59:24
+Target Launcher: L102
+Destruct failed
+
+24/06/2018 23:59:27
+Target Launcher: L102
+Destruct failed
+
+24/06/2018 23:59:32
+Target Launcher: L103
+Destruct failed
+
+24/06/2018 23:59:34
+Target Launcher: L104
+Launcher destroyed!
+
+25/06/2018 00:00:41
+Launcher Destructor type: Plane
+
+25/06/2018 00:00:45
 Target Launcher: L101
 Launcher destroyed!
 

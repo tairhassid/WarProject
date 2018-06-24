@@ -1,34 +1,769 @@
-20/06/2018 14:05:55
+24/06/2018 16:26:50
 Launcher id: L101
 
-20/06/2018 14:06:01
+24/06/2018 16:26:56
 Missile id: M1
 Destination: Sderot
 Launch time:2
 Missile destroyed: 6
 
-20/06/2018 14:12:35
+24/06/2018 16:29:28
 Launcher id: L101
 
-20/06/2018 14:12:41
+24/06/2018 16:29:34
 Missile id: M1
 Destination: Sderot
 Launch time:2
 Missile destroyed: 6
 
-20/06/2018 14:13:22
+24/06/2018 16:38:47
 Launcher id: L101
 
-20/06/2018 14:13:28
+24/06/2018 16:38:53
 Missile id: M1
 Destination: Sderot
 Launch time:2
 Missile destroyed: 6
 
-20/06/2018 14:13:44
+24/06/2018 16:48:37
 Launcher id: L101
 
-20/06/2018 14:13:50
+24/06/2018 16:48:43
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 16:54:39
+Launcher id: L101
+
+24/06/2018 16:54:45
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 16:56:39
+Launcher id: L101
+
+24/06/2018 16:56:45
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 17:00:21
+Launcher id: L101
+
+24/06/2018 17:00:27
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 17:01:31
+Launcher id: L101
+
+24/06/2018 17:01:37
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 17:03:03
+Launcher id: L101
+
+24/06/2018 17:03:09
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 17:05:49
+Launcher id: L101
+
+24/06/2018 17:05:55
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 17:08:29
+Launcher id: L101
+
+24/06/2018 17:08:35
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 17:10:55
+Launcher id: L101
+
+24/06/2018 17:11:01
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 17:15:32
+Launcher id: L101
+
+24/06/2018 17:15:38
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 17:15:54
+Launcher id: L101
+
+24/06/2018 17:18:49
+Launcher id: L101
+
+24/06/2018 17:18:55
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 17:25:58
+Launcher id: L101
+
+24/06/2018 17:26:04
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 17:31:08
+Launcher id: L101
+
+24/06/2018 17:31:14
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 17:33:58
+Launcher id: L101
+
+24/06/2018 17:34:06
+Launcher id: L101
+
+24/06/2018 17:34:12
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 17:35:18
+Launcher id: L101
+
+24/06/2018 17:35:24
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 17:38:40
+Launcher id: L101
+
+24/06/2018 17:38:46
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 17:41:44
+Launcher id: L101
+
+24/06/2018 17:41:50
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 17:53:15
+Launcher id: L101
+
+24/06/2018 17:53:21
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 17:54:28
+Launcher id: L101
+
+24/06/2018 17:54:34
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 17:56:55
+Launcher id: L101
+
+24/06/2018 17:56:59
+Launcher id: L101
+
+24/06/2018 17:57:05
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 17:59:21
+Launcher id: L101
+
+24/06/2018 17:59:27
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 18:08:52
+Launcher id: L101
+
+24/06/2018 18:08:57
+Launcher id: L101
+
+24/06/2018 18:09:03
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 18:09:57
+Launcher id: L101
+
+24/06/2018 18:10:03
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 18:13:48
+Launcher id: L101
+
+24/06/2018 18:13:54
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 18:17:53
+Launcher id: L101
+
+24/06/2018 18:17:59
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 18:24:05
+Launcher id: L101
+
+24/06/2018 18:24:11
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 18:25:33
+Launcher id: L101
+
+24/06/2018 18:25:39
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 18:34:13
+Launcher id: L101
+
+24/06/2018 18:34:19
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 18:36:36
+Launcher id: L101
+
+24/06/2018 18:36:42
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 18:41:25
+Launcher id: L101
+
+24/06/2018 18:41:39
+Missile id: M1
+Destination: Sderot
+Launch time:14
+Missile landed: 19
+Damage: 1000
+
+24/06/2018 18:42:09
+Missile id: M2
+Destination: Sderot
+Launch time:45
+Missile destroyed: 49
+
+24/06/2018 18:58:30
+Launcher id: L101
+
+24/06/2018 18:58:36
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 18:59:11
+Launcher id: L101
+
+24/06/2018 18:59:17
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 19:00:04
+Launcher id: L101
+
+24/06/2018 19:00:10
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 19:02:43
+Launcher id: L101
+
+24/06/2018 19:02:49
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 19:04:51
+Launcher id: L101
+
+24/06/2018 19:04:57
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 19:20:02
+Launcher id: L101
+
+24/06/2018 19:20:08
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 19:27:44
+Launcher id: L101
+
+24/06/2018 19:27:53
+Launcher id: L101
+
+24/06/2018 19:27:59
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 19:28:13
+Launcher id: L101
+
+24/06/2018 19:28:44
+Launcher id: L101
+
+24/06/2018 19:28:50
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 19:32:11
+Launcher id: L101
+
+24/06/2018 19:32:17
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 19:53:43
+Launcher id: L101
+
+24/06/2018 19:53:48
+Launcher id: L101
+
+24/06/2018 19:53:54
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 19:54:32
+Launcher id: L101
+
+24/06/2018 19:54:38
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 19:54:51
+Launcher id: L101
+
+24/06/2018 19:54:57
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 19:56:19
+Launcher id: L101
+
+24/06/2018 19:56:25
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 20:01:26
+Launcher id: L101
+
+24/06/2018 20:01:32
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 20:01:34
+Missile id: M2
+Destination: Beer-Sheva
+Launch time:6
+Missile destroyed: 8
+
+24/06/2018 20:02:05
+Launcher id: L101
+
+24/06/2018 20:02:11
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 20:02:18
+Missile id: M2
+Destination: Beer-Sheva
+Launch time:6
+Missile landed: 13
+Damage: 2000
+
+24/06/2018 20:06:55
+Launcher id: L101
+
+24/06/2018 20:07:01
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 20:08:35
+Launcher id: L101
+
+24/06/2018 20:08:41
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 20:11:19
+Launcher id: L101
+
+24/06/2018 20:11:25
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 20:14:37
+Launcher id: L101
+
+24/06/2018 20:14:43
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 20:43:15
+Launcher id: L101
+
+24/06/2018 20:43:21
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 21:07:55
+Launcher id: L101
+
+24/06/2018 21:08:01
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 21:09:31
+Launcher id: L101
+
+24/06/2018 21:09:37
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 21:11:00
+Launcher id: L101
+
+24/06/2018 21:11:06
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 21:29:11
+Launcher id: L101
+
+24/06/2018 21:29:17
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 21:30:06
+Launcher id: L101
+
+24/06/2018 21:30:12
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 21:41:54
+Launcher id: L101
+
+24/06/2018 21:42:08
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile landed: 14
+Damage: 1500
+
+24/06/2018 21:45:55
+Launcher id: L101
+
+24/06/2018 21:46:01
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 21:48:43
+Launcher id: L101
+
+24/06/2018 21:48:49
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 21:56:32
+Launcher id: L101
+
+24/06/2018 21:56:38
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 21:57:23
+Launcher id: L101
+
+24/06/2018 21:57:29
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 22:10:24
+Launcher id: L101
+
+24/06/2018 22:10:30
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 22:11:29
+Launcher id: L101
+
+24/06/2018 22:11:35
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 23:00:46
+Launcher id: L101
+
+24/06/2018 23:00:52
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 23:02:54
+Launcher id: L101
+
+24/06/2018 23:03:00
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 23:06:43
+Launcher id: L101
+
+24/06/2018 23:06:49
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 23:09:43
+Launcher id: L101
+
+24/06/2018 23:09:49
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 23:14:20
+Launcher id: L101
+
+24/06/2018 23:14:26
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 23:15:01
+Launcher id: L101
+
+24/06/2018 23:15:07
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 23:20:35
+Launcher id: L101
+
+24/06/2018 23:20:41
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 23:21:46
+Launcher id: L101
+
+24/06/2018 23:21:52
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 23:23:38
+Launcher id: L101
+
+24/06/2018 23:23:44
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 23:28:02
+Launcher id: L101
+
+24/06/2018 23:28:08
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 23:34:51
+Launcher id: L101
+
+24/06/2018 23:34:57
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 23:38:03
+Launcher id: L101
+
+24/06/2018 23:38:09
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 23:39:25
+Launcher id: L101
+
+24/06/2018 23:39:31
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 23:49:15
+Launcher id: L101
+
+24/06/2018 23:49:21
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+24/06/2018 23:57:17
+Launcher id: L101
+
+24/06/2018 23:57:23
+Missile id: M1
+Destination: Sderot
+Launch time:2
+Missile destroyed: 6
+
+25/06/2018 00:00:41
+Launcher id: L101
+
+25/06/2018 00:00:47
 Missile id: M1
 Destination: Sderot
 Launch time:2

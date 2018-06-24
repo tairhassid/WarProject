@@ -17,7 +17,7 @@ public class War {
 	private MissileLaunchers missileLaunchers = new MissileLaunchers();
 	private MissileDestructors missileDestructors = new MissileDestructors();
 	private MissileLauncherDestructors missileLauncherDestructors = new MissileLauncherDestructors();
-	private boolean gsonGame;
+	public static boolean gsonGame;
 	
 	
 
@@ -136,7 +136,7 @@ public class War {
 	public String toString(){
 		//String str = missileDestructors.toString();
 		//String str = missileLauncherDestructors.toString();
-		return "War:"+missileLaunchers.toString();
+		return "War:" + missileLauncherDestructors.toString();
 	}
 	
 	public MissileLaunchers getMissileLaunchers() {
@@ -176,6 +176,7 @@ public class War {
 
 	public void initMissileLauncherDestructors() {
 		for (MissileLauncher ml : missileLaunchers.getLauncher()){
+			System.out.println(ml.getId());
 			missileLauncherDestructors.initMissileDestructor(ml);
 		}
 		
@@ -202,6 +203,7 @@ public class War {
 				if(ml.getIsDestroyed())
 					iterLaunchers.remove();
 			}
+			setGsonGame(false);
 		}
 		WarSummary.getInstance().setTotalDestroyedMissilesDestructors(missileLaunchers.getLauncher().size() - missileLaunchers.getActiveLaunchers().size());
 		WarSummary.getInstance().setTotalLaunchedMissiles(allMissiles.size());
@@ -209,7 +211,7 @@ public class War {
 	}
 	
 	public void setGsonGame(boolean gsonGame){
-		this.gsonGame = gsonGame;
+		War.gsonGame = gsonGame;
 	}
 	
 	

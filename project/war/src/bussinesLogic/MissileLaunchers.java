@@ -27,7 +27,7 @@ public class MissileLaunchers {
 		Thread missileLauncher = new Thread(theMissileLauncher);
 		//theMissileLauncher.setLauncherThread(missileLauncher);
 		//theMissileLauncher.setHandler();
-		System.out.println("add missile launcher id:"+theMissileLauncher.getId());
+		System.out.println("add missile launcher id:"+theMissileLauncher.getLauncherId());
 		System.out.println("isHidden="+ theMissileLauncher.getIsHidden());
 		missileLauncher.start();
 	}
@@ -54,6 +54,7 @@ public class MissileLaunchers {
 	public MissileLauncher getMissileLauncher(){
 		if(activeLauncher.size() == 0)
 			return null;
+		System.out.println("Active launchers size " + activeLauncher.size());
 		int randomIndex = War.randomNumber(0, activeLauncher.size());
 		MissileLauncher randLauncher = activeLauncher.get(randomIndex);
 		return randLauncher;
@@ -90,10 +91,11 @@ public class MissileLaunchers {
 	public void startLaunchers() {
 		for(MissileLauncher ml : launcher){
 			ml.setHandler();
+			MissileLauncher.idGenerator++;
 			Collections.sort(ml.getMissile());
-			Thread t = new Thread(ml);
+			//Thread t = new Thread(ml);
 			//ml.setLauncherThread(t);
-			t.start();
+			ml.start();
 		}
 	}
 

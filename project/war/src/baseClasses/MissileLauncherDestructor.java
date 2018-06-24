@@ -30,6 +30,7 @@ public class MissileLauncherDestructor {
 	private long destructTime;
 	private DestructingMissile destructingMissile;
 	private FileHandler handler;
+	private Vector<MissileLauncher> realMissileLaunchers = new Vector<>();
 
 
 	public MissileLauncherDestructor(){
@@ -68,14 +69,33 @@ public class MissileLauncherDestructor {
 	public synchronized boolean destructMissileLauncher(){
 		MissileLauncher theMissileLauncher = destructedLauncher.remove(0);
 		System.out.println("******MissileLauncherDestructor chose missile launcher ");
+		
 		if(theMissileLauncher != null) {
+			System.out.println("in destructMissileLaumcher " + theMissileLauncher.getId());
+			
 			while(theMissileLauncher.getDestructTime() > War.getCurrentTime());
 			destructTime = War.getCurrentTime();
-			System.out.println(destructTime+"--> trying to destruct missile launcher " + theMissileLauncher.getId());
+			System.out.println(destructTime+"--> trying to destruct missile launcher " + theMissileLauncher.getLauncherId());
+			
 			if(theMissileLauncher.getDestructTime() == 0)
 				theMissileLauncher.setDestructTime(destructTime);
 			
-			return theMissileLauncher.destructSelf(this);
+			System.out.println("@@@@@@@@@@@@@@ is gsonGame " + War.gsonGame);
+			if(War.gsonGame) {
+				for(MissileLauncher ml : realMissileLaunchers) {
+					if(ml.getLauncherId().equals(theMissileLauncher.getLauncherId())) {
+						ml.setDestructTime(theMissileLauncher.getDestructTime());
+//						destructedLauncher.remove(theMissileLauncher);
+//						
+//						destructedLauncher.add(ml);
+						return ml.destructSelf(this);
+					}
+						
+				}
+			}
+			else {
+				return theMissileLauncher.destructSelf(this);
+			}
 		}
 		isBusy = false;
 		return false;
@@ -109,14 +129,16 @@ public class MissileLauncherDestructor {
 
 	public void initMissileLauncherDestructed(MissileLauncher theMissileLauncher) {
 	//setHandler();
-		for(int i=0 ; i < destructedLauncher.size() ; i++) {
-			if(destructedLauncher.get(i).getId().equals(theMissileLauncher.getId())) {
-				theMissileLauncher.setDestructTime(destructedLauncher.get(i).getDestructTime());
-				destructedLauncher.remove(i);
-				destructedLauncher.add(i, theMissileLauncher);
-				break;
-			}
-		}
+		realMissileLaunchers.add(theMissileLauncher);
+//		System.out.println("@@@@@@@@@@@@ destructedLauncher.size(): " + destructedLauncher.size() + " thread ID " + theMissileLauncher.getId());
+//		for(int i=0 ; i < destructedLauncher.size() ; i++) {
+//			if(destructedLauncher.get(i).getLauncherId().equals(theMissileLauncher.getLauncherId())) {
+//				theMissileLauncher.setDestructTime(destructedLauncher.get(i).getDestructTime());
+//				destructedLauncher.remove(i);
+//				destructedLauncher.add(i, theMissileLauncher);
+//				System.out.println("@@@@@@@@@@@@@@@" + destructedLauncher.get(i).getId());
+//			}
+//		}
 	}
 
 	public Vector<MissileLauncher> getDestructedLauncher() {

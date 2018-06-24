@@ -1,0 +1,35 @@
+24/06/2018 23:05:51
+Launcher id: L104
+
+24/06/2018 23:07:17
+Launcher id: L104
+
+24/06/2018 23:07:24
+Missile id: M9
+Destination: Sderot
+Launch time:36
+Missile landed: 41
+Damage: 1000
+
+24/06/2018 23:15:36
+Launcher id: L104
+
+24/06/2018 23:15:42
+Missile id: M5
+Destination: Sderot
+Launch time:37
+Missile destroyed: 41
+
+24/06/2018 23:49:37
+Launcher id: L104
+
+24/06/2018 23:50:21
+Missile id: M6
+Destination: Sderot
+Launch time:61
+Missile landed: 66
+Damage: 1000
+
+24/06/2018 23:59:11
+Launcher id: L104
+

@@ -13,16 +13,17 @@ import java.util.logging.LogRecord;
 import com.google.gson.annotations.SerializedName;
 
 import bussinesLogic.LoggerManager;
+import bussinesLogic.MissileLaunchers;
 import bussinesLogic.ObjectFilter;
 import bussinesLogic.War;
 import bussinesLogic.WarFormatter;
 
-public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
+public class MissileLauncher extends Thread {
 	//	private final static int ZERO = 0;
 	//	private final static int TWO = 2;
 
 
-	private static int idGenerator = 100;
+	public static int idGenerator = 100;
 	@SerializedName("id")
 	private String id;
 	private boolean isHidden;
@@ -38,13 +39,14 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 
 	//Gson constructor
 	public MissileLauncher(){
-		++idGenerator;
+	//	++idGenerator;
 	//	setHandler();
-		//System.err.println("Launcher id: "+ id);
+//		System.err.println("Launcher id: "+ id);
 		this.isCurrentlyHidden = this.isHidden;
 	}
 
 	public MissileLauncher(int isHidden) {
+		//idGenerator = Integer.parseInt(id.substring(1));
 		this.id = "L" + (++idGenerator);
 		setHidden(isHidden);
 		setHandler();
@@ -66,8 +68,6 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 
 	public void setDestroyed(boolean isDestroyed) {
 		this.isDestroyed = isDestroyed;
-
-
 	}
 	
 
@@ -87,7 +87,7 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 
 				}
 				else {
-					System.out.println(War.getCurrentTime()+"--> Launcher "+this.getId()+" is waiting for missiles");
+					System.out.println(War.getCurrentTime()+"--> Launcher "+this.getLauncherId()+" is waiting for missiles");
 					synchronized (this) {
 						isBusy = false;
 						wait();
@@ -95,16 +95,12 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 				}
 			}
 
-			System.out.println(War.getCurrentTime()+"--> Launcher "+ this.getId()+ " is destroyed!!!");
+			System.out.println(War.getCurrentTime()+"--> Launcher "+ this.getLauncherId()+ " is destroyed!!!");
 		} catch (InterruptedException e) {
 			setDestroyed(true);
 			e.printStackTrace();
 		}
-
-
 	}
-
-
 
 	public synchronized void launch() throws InterruptedException {
 		Collections.sort(waitingMissiles);
@@ -126,6 +122,7 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 			}
 			if(isHidden)
 				isCurrentlyHidden = true;
+//			System.out.println("*****" + this.getId() +"in launch " + isCurrentlyHidden);
 		}
 	}
 
@@ -139,6 +136,7 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 		for (Missile m : missile){
 			System.out.println(War.getCurrentTime()+"--> Missile "+m.getMissileId()+" started");
 			m.setLauncher(launcher);
+			Missile.idGenerator++;
 			m.start();
 		}
 	}
@@ -159,17 +157,24 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 
 
 	public boolean destructSelf(MissileLauncherDestructor destructor){ 
+		System.out.println("*************" + this.getId() + " in destruct " +isCurrentlyHidden);
 		if(isCurrentlyHidden){
 			setDestroyed(false);
+			System.out.println(War.getCurrentTime()+"--> Launcher "+this.getLauncherId()+" is destroyed: "+ isDestroyed);
+
 		}
 		else {
 			setDestroyed(true);
+			System.out.println(War.getCurrentTime()+"--> Launcher "+this.getLauncherId()+" is destroyed: "+ isDestroyed);
 		}
-		System.out.println(War.getCurrentTime()+"--> Launcher "+this.getId()+" is destroyed: "+ isDestroyed);
 		destructor.logMissile(logLauncher());
 		return isDestroyed;
 	}
 	
+	public void setCurrentlyHidden(boolean isCurrentlyHidden) {
+		this.isCurrentlyHidden = isCurrentlyHidden;
+	}
+
 	public String logLauncher(){
 		StringBuffer buf = new StringBuffer();
 		
@@ -194,7 +199,7 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 		return this.isHidden;
 	}
 
-	public String getId() {
+	public String getLauncherId() {
 		return id;
 	}
 
@@ -256,10 +261,10 @@ public class MissileLauncher implements Runnable, Comparable<MissileLauncher> {
 		return str;
 	}
 
-	@Override
-	public int compareTo(MissileLauncher o) {
-		return (int)(this.destructTime - o.destructTime);
-	}
+//	@Override
+//	public int compareTo(MissileLauncher o) {
+//		return (int)(this.destructTime - o.destructTime);
+//	}
 }
     class LauncherFilter implements Filter {
 

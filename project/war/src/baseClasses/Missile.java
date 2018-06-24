@@ -14,7 +14,7 @@ public class Missile extends Thread implements Comparable<Missile> {
 	public final static int MAX_TIME = 5000;
 	//	private final static int ZERO = 0;
 	//	private final static int ONE =1;
-	private static int idGenerator = 0;
+	public static int idGenerator = 0;
 	@SerializedName("id")
 	private String missileId;
 	private String destination;
@@ -32,7 +32,6 @@ public class Missile extends Thread implements Comparable<Missile> {
 	private boolean isDestructed;
 
 	public Missile(){
-		++idGenerator;
 	}
 
 	public Missile(String destination, int flyTime, int damage, MissileLauncher launcher) {
@@ -53,6 +52,7 @@ public class Missile extends Thread implements Comparable<Missile> {
 	@Override
 	public void run() {
 		try {
+			System.out.println("~~~~~~~~~~in run " +this.getId());
 			flying();
 			logMissile();
 		} catch (InterruptedException e) {
@@ -68,7 +68,7 @@ public class Missile extends Thread implements Comparable<Missile> {
 		setDestructAfterLaunch(War.getCurrentTime());
 		logMissile(); 
 		synchronized (launcher) {
-			launcher.notifyAll();			
+			launcher.notify();			
 		}
 
 	}
@@ -80,6 +80,7 @@ public class Missile extends Thread implements Comparable<Missile> {
 		}
 		else {
 			System.out.println(War.getCurrentTime() +"--> Missile "+this.getMissileId() +" - Desctruct succeeded");
+			System.out.println("~~~~~~~~~~~~~~" + this.getId());
 			WarSummary.getInstance().addDestructedMissile();
 			isDestructed = true;
 			this.interrupt();
