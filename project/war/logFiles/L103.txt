@@ -1,90 +1,103 @@
-24/06/2018 16:49:03
+25/06/2018 17:09:25
 Launcher id: L103
 
-24/06/2018 16:55:31
+25/06/2018 17:31:45
 Launcher id: L103
 
-24/06/2018 16:55:41
-Missile id: M9
-Destination: Sderot
+25/06/2018 18:12:07
+Launcher id: L103
+
+25/06/2018 18:12:41
+Missile id: M5
+Destination: Area 0
+Launch time:71
+Missile landed: 76
+Damage: 5953
+
+25/06/2018 18:42:24
+Launcher id: L103
+
+25/06/2018 18:42:48
+Missile id: M5
+Destination: Area 0
+Launch time:55
+Missile landed: 60
+Damage: 2900
+
+25/06/2018 18:43:13
+Missile id: M6
+Destination: Area 0
+Launch time:80
+Missile landed: 85
+Damage: 5335
+
+25/06/2018 18:43:30
+Missile id: M8
+Destination: Area 2
+Launch time:94
+Missile landed: 101
+Damage: 4308
+
+25/06/2018 18:44:29
+Launcher id: L103
+
+25/06/2018 18:45:24
+Missile id: M2
+Destination: Area 2
+Launch time:62
+Missile landed: 69
+Damage: 4302
+
+25/06/2018 23:51:37
+Launcher id: L103
+
+25/06/2018 23:52:56
+Missile id: M7
+Destination: Area 1
+Launch time:179
+Missile landed: 185
+Damage: 2366
+
+25/06/2018 23:55:28
+Launcher id: L103
+
+25/06/2018 23:56:04
+Missile id: M7
+Destination: Area 0
+Launch time:49
+Missile landed: 54
+Damage: 4223
+
+26/06/2018 00:26:02
+Launcher id: L103
+
+26/06/2018 00:26:13
+Missile id: M6
+Destination: Area 0
 Launch time:56
 Missile landed: 61
-Damage: 1000
+Damage: 4845
 
-24/06/2018 23:05:45
+26/06/2018 00:38:40
 Launcher id: L103
 
-24/06/2018 23:07:12
-Launcher id: L103
-
-24/06/2018 23:10:03
-Launcher id: L103
-
-24/06/2018 23:14:36
-Launcher id: L103
-
-24/06/2018 23:15:34
-Launcher id: L103
-
-24/06/2018 23:21:02
-Launcher id: L103
-
-24/06/2018 23:22:16
-Launcher id: L103
-
-24/06/2018 23:24:29
-Launcher id: L103
-
-24/06/2018 23:35:10
-Launcher id: L103
-
-24/06/2018 23:38:21
-Launcher id: L103
-
-24/06/2018 23:39:43
-Launcher id: L103
-
-24/06/2018 23:49:36
-Launcher id: L103
-
-24/06/2018 23:57:48
-Launcher id: L103
-
-24/06/2018 23:58:09
+26/06/2018 00:38:48
 Missile id: M5
-Destination: Sderot
+Destination: Area 1
 Launch time:46
-Missile landed: 51
-Damage: 1000
+Missile destroyed: 47
 
-25/06/2018 00:03:06
-Launcher id: L103
-
-25/06/2018 00:03:36
+26/06/2018 00:39:05
 Missile id: M6
-Destination: Sderot
-Launch time:169
-Missile landed: 174
-Damage: 1000
+Destination: Area 0
+Launch time:59
+Missile landed: 64
+Damage: 3978
 
-25/06/2018 00:03:43
+26/06/2018 00:39:16
 Missile id: M8
-Destination: Sderot
-Launch time:176
-Missile landed: 181
-Damage: 1000
-
-25/06/2018 00:05:26
-Missile id: M9
-Destination: Sderot
-Launch time:280
-Missile landed: 285
-Damage: 1000
-
-25/06/2018 00:05:31
-Missile id: M12
-Destination: Sderot
-Launch time:285
-Missile landed: 290
-Damage: 1000
+Destination: Area 0
+Launch time:70
+Missile landed: 75
+Damage: 1126
 

@@ -83,6 +83,17 @@ public class MissileDestructors {
 		}
 		
 	}
+
+	public ArrayList<MissileDestructor> getDestructors() {
+		return destructor;
+	}
+
+
+	public void endWar() {
+		System.out.println("in missile destructors");
+		for(MissileDestructor md : destructor)
+			md.endWar();	
+	}
 	
 	
 }

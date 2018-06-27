@@ -1,1325 +1,1948 @@
-24/06/2018 16:26:50
+25/06/2018 17:09:02
 Launcher id: L102
 
-24/06/2018 16:26:57
+25/06/2018 17:09:09
 Missile id: M3
 Destination: Ofakim
 Launch time:4
 Missile landed: 7
 Damage: 5000
 
-24/06/2018 16:27:01
+25/06/2018 17:09:13
 Missile id: M4
 Destination: Beer-Sheva
 Launch time:9
 Missile destroyed: 11
 
-24/06/2018 16:29:28
-Launcher id: L102
-
-24/06/2018 16:29:35
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 16:29:39
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 16:38:47
-Launcher id: L102
-
-24/06/2018 16:38:54
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 16:38:58
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 16:48:37
-Launcher id: L102
-
-24/06/2018 16:48:44
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 16:48:48
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 16:49:16
-Missile id: M9
-Destination: Sderot
-Launch time:38
-Missile destroyed: 39
-
-24/06/2018 16:54:39
-Launcher id: L102
-
-24/06/2018 16:54:46
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 16:54:50
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 16:56:39
-Launcher id: L102
-
-24/06/2018 16:56:46
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 16:56:50
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 17:00:21
-Launcher id: L102
-
-24/06/2018 17:00:28
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 17:00:32
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 17:01:31
-Launcher id: L102
-
-24/06/2018 17:01:38
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 17:01:42
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 17:03:03
-Launcher id: L102
-
-24/06/2018 17:03:10
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 17:03:14
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 17:05:49
-Launcher id: L102
-
-24/06/2018 17:05:56
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 17:06:00
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 17:08:29
-Launcher id: L102
-
-24/06/2018 17:08:36
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 17:08:40
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 17:10:55
-Launcher id: L102
-
-24/06/2018 17:11:02
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 17:11:06
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 17:15:32
-Launcher id: L102
-
-24/06/2018 17:15:54
-Launcher id: L102
-
-24/06/2018 17:16:01
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 17:16:05
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 17:18:49
-Launcher id: L102
-
-24/06/2018 17:18:56
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 17:19:00
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 17:25:58
-Launcher id: L102
-
-24/06/2018 17:26:05
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 17:26:09
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 17:31:08
-Launcher id: L102
-
-24/06/2018 17:31:15
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 17:31:19
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 17:33:58
-Launcher id: L102
-
-24/06/2018 17:34:06
-Launcher id: L102
-
-24/06/2018 17:34:13
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 17:34:17
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 17:35:18
-Launcher id: L102
-
-24/06/2018 17:35:25
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 17:35:29
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 17:38:40
-Launcher id: L102
-
-24/06/2018 17:38:47
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 17:38:51
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 17:41:44
-Launcher id: L102
-
-24/06/2018 17:41:51
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 17:41:55
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 17:53:15
-Launcher id: L102
-
-24/06/2018 17:53:22
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 17:53:26
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 17:54:28
-Launcher id: L102
-
-24/06/2018 17:54:35
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 17:54:39
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 17:56:55
-Launcher id: L102
-
-24/06/2018 17:56:59
-Launcher id: L102
-
-24/06/2018 17:57:06
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 17:57:10
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 17:59:21
-Launcher id: L102
-
-24/06/2018 17:59:28
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 17:59:32
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 18:08:52
-Launcher id: L102
-
-24/06/2018 18:08:57
-Launcher id: L102
-
-24/06/2018 18:09:04
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 18:09:08
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 18:09:57
-Launcher id: L102
-
-24/06/2018 18:10:04
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 18:10:08
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 18:13:48
-Launcher id: L102
-
-24/06/2018 18:13:55
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 18:13:59
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 18:17:53
-Launcher id: L102
-
-24/06/2018 18:18:00
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 18:18:04
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 18:24:05
-Launcher id: L102
-
-24/06/2018 18:24:13
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 18:24:16
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 18:25:33
-Launcher id: L102
-
-24/06/2018 18:25:40
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 18:25:44
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 18:34:13
-Launcher id: L102
-
-24/06/2018 18:34:20
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 18:34:24
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 18:36:36
-Launcher id: L102
-
-24/06/2018 18:36:43
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 18:36:47
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 18:41:28
-Launcher id: L102
-
-24/06/2018 18:58:30
-Launcher id: L102
-
-24/06/2018 18:58:37
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 18:58:41
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 18:59:11
-Launcher id: L102
-
-24/06/2018 18:59:18
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 19:00:04
-Launcher id: L102
-
-24/06/2018 19:00:11
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 19:02:43
-Launcher id: L102
-
-24/06/2018 19:02:50
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 19:02:54
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 19:04:51
-Launcher id: L102
-
-24/06/2018 19:04:58
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 19:05:02
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 19:20:02
-Launcher id: L102
-
-24/06/2018 19:20:09
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 19:20:13
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 19:27:44
-Launcher id: L102
-
-24/06/2018 19:27:53
-Launcher id: L102
-
-24/06/2018 19:28:00
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 19:28:13
-Launcher id: L102
-
-24/06/2018 19:28:44
-Launcher id: L102
-
-24/06/2018 19:28:51
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 19:28:55
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 19:32:11
-Launcher id: L102
-
-24/06/2018 19:32:18
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 19:32:22
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 19:53:43
-Launcher id: L102
-
-24/06/2018 19:53:48
-Launcher id: L102
-
-24/06/2018 19:53:55
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 19:53:59
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 19:54:32
-Launcher id: L102
-
-24/06/2018 19:54:39
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 19:54:51
-Launcher id: L102
-
-24/06/2018 19:54:58
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 19:55:02
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 19:56:19
-Launcher id: L102
-
-24/06/2018 19:56:26
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 19:56:30
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 20:01:26
-Launcher id: L102
-
-24/06/2018 20:01:33
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 20:01:37
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 20:02:05
-Launcher id: L102
-
-24/06/2018 20:02:12
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 20:02:21
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile landed: 16
-Damage: 1000
-
-24/06/2018 20:06:55
-Launcher id: L102
-
-24/06/2018 20:07:02
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 20:07:06
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 20:08:35
-Launcher id: L102
-
-24/06/2018 20:08:42
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 20:08:46
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 20:11:19
-Launcher id: L102
-
-24/06/2018 20:11:26
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 20:11:30
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 20:14:37
-Launcher id: L102
-
-24/06/2018 20:14:44
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 20:14:48
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 20:43:15
-Launcher id: L102
-
-24/06/2018 20:43:22
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 21:07:55
-Launcher id: L102
-
-24/06/2018 21:08:02
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 21:08:06
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 21:09:31
-Launcher id: L102
-
-24/06/2018 21:09:38
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 21:09:42
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 21:11:00
-Launcher id: L102
-
-24/06/2018 21:11:07
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 21:11:11
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 21:29:11
-Launcher id: L102
-
-24/06/2018 21:29:18
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 21:29:25
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 14
-
-24/06/2018 21:30:06
-Launcher id: L102
-
-24/06/2018 21:30:13
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 21:30:20
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 14
-
-24/06/2018 21:41:54
-Launcher id: L102
-
-24/06/2018 21:42:01
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 21:42:10
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile landed: 16
-Damage: 1000
-
-24/06/2018 21:45:55
-Launcher id: L102
-
-24/06/2018 21:46:02
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 21:46:11
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile landed: 16
-Damage: 1000
-
-24/06/2018 21:48:43
-Launcher id: L102
-
-24/06/2018 21:48:50
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 21:48:57
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 14
-
-24/06/2018 21:56:32
-Launcher id: L102
-
-24/06/2018 21:56:39
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 21:56:46
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 14
-
-24/06/2018 21:57:23
-Launcher id: L102
-
-24/06/2018 21:57:30
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 22:10:24
-Launcher id: L102
-
-24/06/2018 22:10:31
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 22:10:38
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 14
-
-24/06/2018 22:11:29
-Launcher id: L102
-
-24/06/2018 22:11:36
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 22:11:39
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 10
-
-24/06/2018 23:00:46
-Launcher id: L102
-
-24/06/2018 23:00:53
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 23:00:57
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 23:02:54
-Launcher id: L102
-
-24/06/2018 23:03:01
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 23:03:05
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 23:06:43
-Launcher id: L102
-
-24/06/2018 23:06:50
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 23:06:54
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 23:07:46
-Missile id: M10
-Destination: Sderot
-Launch time:58
-Missile landed: 63
-Damage: 1000
-
-24/06/2018 23:09:43
-Launcher id: L102
-
-24/06/2018 23:09:50
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 23:09:54
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 23:14:20
-Launcher id: L102
-
-24/06/2018 23:14:27
-Missile id: M3
-Destination: Ofakim
-Launch time:4
-Missile landed: 7
-Damage: 5000
-
-24/06/2018 23:14:31
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 23:14:43
+25/06/2018 17:09:38
 Missile id: M5
-Destination: Sderot
-Launch time:18
-Missile landed: 23
-Damage: 1000
+Destination: Area 1
+Launch time:34
+Missile destroyed: 36
 
-24/06/2018 23:15:01
+25/06/2018 17:09:53
+Missile id: M6
+Destination: Area 1
+Launch time:45
+Missile landed: 51
+Damage: 3625
+
+25/06/2018 17:17:31
 Launcher id: L102
 
-24/06/2018 23:15:08
+25/06/2018 17:17:38
 Missile id: M3
 Destination: Ofakim
 Launch time:4
 Missile landed: 7
 Damage: 5000
 
-24/06/2018 23:15:12
+25/06/2018 17:17:42
 Missile id: M4
 Destination: Beer-Sheva
 Launch time:9
 Missile destroyed: 11
 
-24/06/2018 23:20:35
+25/06/2018 17:18:20
 Launcher id: L102
 
-24/06/2018 23:20:42
+25/06/2018 17:19:19
+Launcher id: L102
+
+25/06/2018 17:19:26
 Missile id: M3
 Destination: Ofakim
 Launch time:4
 Missile landed: 7
 Damage: 5000
 
-24/06/2018 23:20:46
+25/06/2018 17:19:30
 Missile id: M4
 Destination: Beer-Sheva
 Launch time:9
 Missile destroyed: 11
 
-24/06/2018 23:21:46
+25/06/2018 17:25:17
 Launcher id: L102
 
-24/06/2018 23:21:53
+25/06/2018 17:25:24
 Missile id: M3
 Destination: Ofakim
 Launch time:4
 Missile landed: 7
 Damage: 5000
 
-24/06/2018 23:21:57
-Missile id: M4
-Destination: Beer-Sheva
-Launch time:9
-Missile destroyed: 11
-
-24/06/2018 23:23:38
+25/06/2018 17:30:09
 Launcher id: L102
 
-24/06/2018 23:23:45
+25/06/2018 17:30:16
 Missile id: M3
 Destination: Ofakim
 Launch time:4
 Missile landed: 7
 Damage: 5000
 
-24/06/2018 23:23:49
+25/06/2018 17:30:20
 Missile id: M4
 Destination: Beer-Sheva
 Launch time:9
 Missile destroyed: 11
 
-24/06/2018 23:28:02
+25/06/2018 17:31:05
 Launcher id: L102
 
-24/06/2018 23:28:09
+25/06/2018 17:31:25
+Launcher id: L102
+
+25/06/2018 17:31:32
 Missile id: M3
 Destination: Ofakim
 Launch time:4
 Missile landed: 7
 Damage: 5000
 
-24/06/2018 23:28:13
+25/06/2018 17:31:36
 Missile id: M4
 Destination: Beer-Sheva
 Launch time:9
 Missile destroyed: 11
 
-24/06/2018 23:34:51
+25/06/2018 17:32:28
 Launcher id: L102
 
-24/06/2018 23:34:58
+25/06/2018 17:32:35
 Missile id: M3
 Destination: Ofakim
 Launch time:4
 Missile landed: 7
 Damage: 5000
 
-24/06/2018 23:35:02
+25/06/2018 17:32:39
 Missile id: M4
 Destination: Beer-Sheva
 Launch time:9
 Missile destroyed: 11
 
-24/06/2018 23:38:03
+25/06/2018 17:32:54
 Launcher id: L102
 
-24/06/2018 23:38:10
+25/06/2018 17:33:01
 Missile id: M3
 Destination: Ofakim
 Launch time:4
 Missile landed: 7
 Damage: 5000
 
-24/06/2018 23:38:14
+25/06/2018 17:33:05
 Missile id: M4
 Destination: Beer-Sheva
 Launch time:9
 Missile destroyed: 11
 
-24/06/2018 23:39:25
+25/06/2018 17:33:48
 Launcher id: L102
 
-24/06/2018 23:39:32
+25/06/2018 17:33:55
 Missile id: M3
 Destination: Ofakim
 Launch time:4
 Missile landed: 7
 Damage: 5000
 
-24/06/2018 23:39:36
+25/06/2018 17:33:59
 Missile id: M4
 Destination: Beer-Sheva
 Launch time:9
 Missile destroyed: 11
 
-24/06/2018 23:49:15
+25/06/2018 17:40:03
 Launcher id: L102
 
-24/06/2018 23:49:22
+25/06/2018 17:40:10
 Missile id: M3
 Destination: Ofakim
 Launch time:4
 Missile landed: 7
 Damage: 5000
 
-24/06/2018 23:49:26
+25/06/2018 17:40:14
 Missile id: M4
 Destination: Beer-Sheva
 Launch time:9
 Missile destroyed: 11
 
-24/06/2018 23:50:00
-Missile id: M5
-Destination: Sderot
-Launch time:43
-Missile destroyed: 44
-
-24/06/2018 23:57:17
+25/06/2018 17:43:48
 Launcher id: L102
 
-24/06/2018 23:57:24
+25/06/2018 17:43:55
 Missile id: M3
 Destination: Ofakim
 Launch time:4
 Missile landed: 7
 Damage: 5000
 
-24/06/2018 23:57:28
+25/06/2018 17:43:59
 Missile id: M4
 Destination: Beer-Sheva
 Launch time:9
 Missile destroyed: 11
 
-25/06/2018 00:00:41
+25/06/2018 17:44:33
 Launcher id: L102
 
-25/06/2018 00:00:48
+25/06/2018 17:44:40
 Missile id: M3
 Destination: Ofakim
 Launch time:4
 Missile landed: 7
 Damage: 5000
 
-25/06/2018 00:00:52
+25/06/2018 17:44:44
 Missile id: M4
 Destination: Beer-Sheva
 Launch time:9
 Missile destroyed: 11
 
-25/06/2018 00:03:35
-Missile id: M5
-Destination: Sderot
-Launch time:168
-Missile landed: 173
-Damage: 1000
+25/06/2018 17:46:54
+Launcher id: L102
 
-25/06/2018 00:03:41
+25/06/2018 17:47:01
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 17:47:05
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 17:47:57
+Launcher id: L102
+
+25/06/2018 17:48:04
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 17:48:08
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 17:49:13
+Launcher id: L102
+
+25/06/2018 17:49:20
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 17:49:24
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 17:50:29
+Launcher id: L102
+
+25/06/2018 17:50:36
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 17:50:40
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 17:51:21
+Launcher id: L102
+
+25/06/2018 17:51:28
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 17:51:32
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 17:52:26
+Launcher id: L102
+
+25/06/2018 17:52:33
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 17:52:37
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 17:53:16
+Launcher id: L102
+
+25/06/2018 17:53:23
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 17:53:27
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 17:55:30
+Launcher id: L102
+
+25/06/2018 17:55:37
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 17:55:41
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 17:57:47
+Launcher id: L102
+
+25/06/2018 18:00:38
+Launcher id: L102
+
+25/06/2018 18:02:29
+Launcher id: L102
+
+25/06/2018 18:02:36
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 18:02:40
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 18:11:25
+Launcher id: L102
+
+25/06/2018 18:11:32
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 18:11:36
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 18:18:43
+Launcher id: L102
+
+25/06/2018 18:18:50
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 18:18:54
+Launcher id: L102
+
+25/06/2018 18:19:02
+Launcher id: L102
+
+25/06/2018 18:19:09
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 18:19:13
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 18:40:11
+Launcher id: L102
+
+25/06/2018 18:40:18
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 18:41:48
+Launcher id: L102
+
+25/06/2018 18:41:55
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 18:41:59
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 18:43:20
 Missile id: M7
-Destination: Sderot
-Launch time:174
-Missile landed: 179
+Destination: Area 1
+Launch time:85
+Missile landed: 91
+Damage: 3641
+
+25/06/2018 18:43:47
+Missile id: M9
+Destination: Area 2
+Launch time:111
+Missile landed: 118
+Damage: 5735
+
+25/06/2018 18:44:24
+Launcher id: L102
+
+25/06/2018 18:45:36
+Missile id: M3
+Destination: Area 2
+Launch time:74
+Missile landed: 81
+Damage: 4675
+
+25/06/2018 18:47:27
+Launcher id: L102
+
+25/06/2018 18:47:34
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 18:47:38
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 18:52:45
+Launcher id: L102
+
+25/06/2018 18:52:52
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 18:52:56
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 18:54:08
+Launcher id: L102
+
+25/06/2018 18:54:15
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 18:54:19
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 18:54:28
+Launcher id: L102
+
+25/06/2018 18:57:57
+Launcher id: L102
+
+25/06/2018 18:58:04
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 18:58:08
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 18:58:46
+Launcher id: L102
+
+25/06/2018 18:58:53
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 18:58:57
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 19:00:24
+Launcher id: L102
+
+25/06/2018 19:01:31
+Launcher id: L102
+
+25/06/2018 19:01:38
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:01:42
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 19:05:24
+Launcher id: L102
+
+25/06/2018 19:05:31
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:05:37
+Launcher id: L102
+
+25/06/2018 19:05:44
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:05:49
+Launcher id: L102
+
+25/06/2018 19:05:56
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:09:09
+Launcher id: L102
+
+25/06/2018 19:09:16
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:09:20
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 19:09:56
+Launcher id: L102
+
+25/06/2018 19:11:35
+Launcher id: L102
+
+25/06/2018 19:11:42
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:11:46
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 19:13:16
+Launcher id: L102
+
+25/06/2018 19:13:23
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:13:27
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 19:14:51
+Launcher id: L102
+
+25/06/2018 19:14:58
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:15:02
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 19:15:13
+Launcher id: L102
+
+25/06/2018 19:15:20
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:15:24
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 19:20:27
+Launcher id: L102
+
+25/06/2018 19:20:34
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:20:38
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 19:22:21
+Launcher id: L102
+
+25/06/2018 19:22:31
+Launcher id: L102
+
+25/06/2018 19:22:37
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:22:41
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 19:23:23
+Launcher id: L102
+
+25/06/2018 19:23:30
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:23:34
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 19:24:17
+Launcher id: L102
+
+25/06/2018 19:24:24
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:24:28
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 19:25:12
+Launcher id: L102
+
+25/06/2018 19:25:19
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:25:23
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 19:26:06
+Launcher id: L102
+
+25/06/2018 19:26:13
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:26:17
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 19:27:51
+Launcher id: L102
+
+25/06/2018 19:28:01
+Launcher id: L102
+
+25/06/2018 19:28:08
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:28:11
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 19:29:22
+Launcher id: L102
+
+25/06/2018 19:29:29
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:29:33
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 19:34:42
+Launcher id: L102
+
+25/06/2018 19:34:49
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:34:53
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 19:37:48
+Launcher id: L102
+
+25/06/2018 19:37:55
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:37:59
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 19:39:17
+Launcher id: L102
+
+25/06/2018 19:39:24
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 19:39:28
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 20:30:32
+Launcher id: L102
+
+25/06/2018 20:30:39
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 20:30:43
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 20:35:41
+Launcher id: L102
+
+25/06/2018 20:35:48
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 20:35:52
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 23:44:40
+Launcher id: L102
+
+25/06/2018 23:44:47
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 23:44:51
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 23:45:14
+Launcher id: L102
+
+25/06/2018 23:46:00
+Launcher id: L102
+
+25/06/2018 23:48:33
+Launcher id: L102
+
+25/06/2018 23:48:50
+Missile id: M1
+Destination: Area 1
+Launch time:15
+Missile landed: 21
+Damage: 4266
+
+25/06/2018 23:49:13
+Launcher id: L102
+
+25/06/2018 23:49:20
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 23:49:24
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 23:49:50
+Launcher id: L102
+
+25/06/2018 23:49:57
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 23:50:01
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 23:51:46
+Missile id: M5
+Destination: Area 0
+Launch time:111
+Missile landed: 116
+Damage: 1754
+
+25/06/2018 23:52:04
+Missile id: M6
+Destination: Area 1
+Launch time:127
+Missile landed: 133
+Damage: 4066
+
+25/06/2018 23:55:10
+Launcher id: L102
+
+25/06/2018 23:55:17
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 23:55:21
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 23:55:41
+Missile id: M5
+Destination: Area 0
+Launch time:26
+Missile landed: 31
+Damage: 3019
+
+25/06/2018 23:55:56
+Missile id: M6
+Destination: Area 0
+Launch time:41
+Missile landed: 46
+Damage: 4449
+
+25/06/2018 23:57:39
+Launcher id: L102
+
+25/06/2018 23:57:46
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 23:57:50
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 23:58:10
+Missile id: M5
+Destination: Area 0
+Launch time:26
+Missile landed: 31
+Damage: 1286
+
+25/06/2018 23:59:23
+Launcher id: L102
+
+25/06/2018 23:59:30
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+25/06/2018 23:59:34
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+25/06/2018 23:59:44
+Launcher id: L102
+
+25/06/2018 23:59:51
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile landed: 16
 Damage: 1000
 
-25/06/2018 00:05:28
-Missile id: M10
-Destination: Sderot
-Launch time:281
-Missile landed: 286
-Damage: 1000
+25/06/2018 23:59:51
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
 
-25/06/2018 00:05:33
-Missile id: M11
-Destination: Sderot
-Launch time:286
-Missile landed: 291
-Damage: 1000
+26/06/2018 00:04:46
+Launcher id: L102
+
+26/06/2018 00:04:53
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 00:04:57
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 00:08:35
+Launcher id: L102
+
+26/06/2018 00:08:42
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 00:09:05
+Launcher id: L102
+
+26/06/2018 00:09:12
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 00:09:16
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 00:12:50
+Launcher id: L102
+
+26/06/2018 00:17:49
+Launcher id: L102
+
+26/06/2018 00:17:56
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 00:18:00
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 00:20:09
+Launcher id: L102
+
+26/06/2018 00:20:16
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 00:20:20
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 00:20:43
+Launcher id: L102
+
+26/06/2018 00:20:50
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 00:20:54
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 00:21:00
+Missile id: M5
+Destination: Area 1
+Launch time:11
+Missile landed: 17
+Damage: 1754
+
+26/06/2018 00:21:36
+Launcher id: L102
+
+26/06/2018 00:21:43
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 00:21:47
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 00:25:11
+Launcher id: L102
+
+26/06/2018 00:25:18
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 00:25:22
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 00:25:37
+Missile id: M5
+Destination: Area 0
+Launch time:21
+Missile landed: 26
+Damage: 5831
+
+26/06/2018 00:28:58
+Launcher id: L102
+
+26/06/2018 00:29:05
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 00:29:09
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 00:29:25
+Missile id: M5
+Destination: Area 0
+Launch time:21
+Missile landed: 26
+Damage: 4753
+
+26/06/2018 00:30:44
+Launcher id: L102
+
+26/06/2018 00:30:53
+Launcher id: L102
+
+26/06/2018 00:31:00
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 00:31:04
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 00:31:15
+Missile id: M5
+Destination: Area 0
+Launch time:17
+Missile landed: 22
+Damage: 2836
+
+26/06/2018 00:31:22
+Launcher id: L102
+
+26/06/2018 00:31:29
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 00:31:33
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 00:31:53
+Missile id: M5
+Destination: Area 0
+Launch time:25
+Missile landed: 30
+Damage: 3917
+
+26/06/2018 00:33:02
+Launcher id: L102
+
+26/06/2018 00:33:09
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 00:33:13
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 00:33:28
+Missile id: M5
+Destination: Area 0
+Launch time:21
+Missile landed: 26
+Damage: 5380
+
+26/06/2018 00:38:00
+Launcher id: L102
+
+26/06/2018 00:38:07
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 00:38:11
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 00:39:13
+Missile id: M7
+Destination: Area 0
+Launch time:68
+Missile landed: 73
+Damage: 4629
+
+26/06/2018 00:39:27
+Launcher id: L102
+
+26/06/2018 00:39:34
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 00:39:38
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 00:39:54
+Missile id: M5
+Destination: Area 0
+Launch time:21
+Missile landed: 26
+Damage: 2834
+
+26/06/2018 00:51:31
+Launcher id: L102
+
+26/06/2018 00:51:38
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 10:51:41
+Launcher id: L102
+
+26/06/2018 10:51:48
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 10:51:52
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 10:52:02
+Launcher id: L102
+
+26/06/2018 10:52:09
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 10:52:14
+Launcher id: L102
+
+26/06/2018 10:52:21
+Launcher id: L102
+
+26/06/2018 10:52:28
+Launcher id: L102
+
+26/06/2018 10:52:35
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 10:52:39
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 10:53:07
+Launcher id: L102
+
+26/06/2018 10:53:14
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 10:53:18
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 10:53:31
+Launcher id: L102
+
+26/06/2018 10:53:38
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 10:53:44
+Launcher id: L102
+
+26/06/2018 10:53:52
+Launcher id: L102
+
+26/06/2018 10:53:58
+Launcher id: L102
+
+26/06/2018 10:54:46
+Launcher id: L102
+
+26/06/2018 10:54:53
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 10:54:57
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 10:55:49
+Launcher id: L102
+
+26/06/2018 10:55:56
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 10:56:00
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 10:56:04
+Launcher id: L102
+
+26/06/2018 10:56:11
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 10:57:20
+Launcher id: L102
+
+26/06/2018 10:57:27
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 10:57:31
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 10:57:53
+Launcher id: L102
+
+26/06/2018 10:58:00
+Launcher id: L102
+
+26/06/2018 10:58:06
+Launcher id: L102
+
+26/06/2018 10:58:23
+Launcher id: L102
+
+26/06/2018 10:58:30
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 10:58:34
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 10:58:39
+Launcher id: L102
+
+26/06/2018 10:58:46
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 10:58:48
+Launcher id: L102
+
+26/06/2018 10:58:54
+Launcher id: L102
+
+26/06/2018 10:59:00
+Launcher id: L102
+
+26/06/2018 10:59:05
+Launcher id: L102
+
+26/06/2018 10:59:12
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 10:59:17
+Launcher id: L102
+
+26/06/2018 10:59:22
+Launcher id: L102
+
+26/06/2018 10:59:27
+Launcher id: L102
+
+26/06/2018 10:59:32
+Launcher id: L102
+
+26/06/2018 10:59:37
+Launcher id: L102
+
+26/06/2018 10:59:46
+Launcher id: L102
+
+26/06/2018 10:59:50
+Launcher id: L102
+
+26/06/2018 10:59:55
+Launcher id: L102
+
+26/06/2018 11:00:02
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:00:20
+Launcher id: L102
+
+26/06/2018 11:00:27
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:00:31
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 11:00:37
+Launcher id: L102
+
+26/06/2018 11:00:46
+Launcher id: L102
+
+26/06/2018 11:00:51
+Launcher id: L102
+
+26/06/2018 11:00:56
+Launcher id: L102
+
+26/06/2018 11:01:01
+Launcher id: L102
+
+26/06/2018 11:01:08
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:01:12
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 11:01:32
+Launcher id: L102
+
+26/06/2018 11:01:39
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:01:43
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 11:03:17
+Launcher id: L102
+
+26/06/2018 11:03:24
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:03:28
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 11:03:44
+Launcher id: L102
+
+26/06/2018 11:03:51
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:03:55
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 11:04:28
+Launcher id: L102
+
+26/06/2018 11:04:35
+Launcher id: L102
+
+26/06/2018 11:04:39
+Launcher id: L102
+
+26/06/2018 11:04:46
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:04:50
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 11:04:59
+Launcher id: L102
+
+26/06/2018 11:05:56
+Launcher id: L102
+
+26/06/2018 11:06:03
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:06:08
+Launcher id: L102
+
+26/06/2018 11:06:13
+Launcher id: L102
+
+26/06/2018 11:06:20
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:09:07
+Launcher id: L102
+
+26/06/2018 11:09:14
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:09:18
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 11:09:29
+Launcher id: L102
+
+26/06/2018 11:11:00
+Launcher id: L102
+
+26/06/2018 11:11:07
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:11:11
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 11:11:19
+Launcher id: L102
+
+26/06/2018 11:11:26
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:11:32
+Launcher id: L102
+
+26/06/2018 11:11:38
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:11:42
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 11:12:02
+Launcher id: L102
+
+26/06/2018 11:12:09
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:12:13
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 11:12:33
+Launcher id: L102
+
+26/06/2018 11:12:40
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:12:44
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 11:12:49
+Launcher id: L102
+
+26/06/2018 11:12:56
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:13:00
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 11:13:40
+Launcher id: L102
+
+26/06/2018 11:13:45
+Launcher id: L102
+
+26/06/2018 11:13:51
+Launcher id: L102
+
+26/06/2018 11:13:57
+Launcher id: L102
+
+26/06/2018 11:14:03
+Launcher id: L102
+
+26/06/2018 11:14:08
+Launcher id: L102
+
+26/06/2018 11:14:16
+Launcher id: L102
+
+26/06/2018 11:14:23
+Launcher id: L102
+
+26/06/2018 11:14:39
+Launcher id: L102
+
+26/06/2018 11:14:46
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:14:52
+Launcher id: L102
+
+26/06/2018 11:15:00
+Missile id: M1
+Destination: Area 1
+Launch time:7
+Missile landed: 12
+Damage: 2081
+
+26/06/2018 11:15:12
+Missile id: M4
+Destination: Area 1
+Launch time:19
+Missile landed: 24
+Damage: 1373
+
+26/06/2018 11:21:28
+Launcher id: L102
+
+26/06/2018 11:22:02
+Launcher id: L102
+
+26/06/2018 11:22:09
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:22:13
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 11:29:55
+Launcher id: L102
+
+26/06/2018 11:44:28
+Launcher id: L102
+
+26/06/2018 11:46:02
+Launcher id: L102
+
+26/06/2018 11:46:09
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 11:46:13
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+26/06/2018 12:03:29
+Launcher id: L102
+
+26/06/2018 12:03:36
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+26/06/2018 12:03:40
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+27/06/2018 12:35:51
+Launcher id: L102
+
+27/06/2018 12:35:58
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+27/06/2018 12:36:02
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
+
+27/06/2018 12:38:34
+Launcher id: L102
+
+27/06/2018 12:38:41
+Missile id: M3
+Destination: Ofakim
+Launch time:4
+Missile landed: 7
+Damage: 5000
+
+27/06/2018 12:38:44
+Missile id: M4
+Destination: Beer-Sheva
+Launch time:9
+Missile destroyed: 11
 

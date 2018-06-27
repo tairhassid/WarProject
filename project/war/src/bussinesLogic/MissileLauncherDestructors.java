@@ -18,11 +18,6 @@ public class MissileLauncherDestructors {
 	public void addMissileLauncherDestructor(MissileLauncherDestructor.DestructorType t) throws IllegalArgumentException { 
 		MissileLauncherDestructor theMissileLauncherDestructor = new MissileLauncherDestructor(t);
 		destructor.add(theMissileLauncherDestructor);
-
-		//Thread missileLauncherDestructor = new Thread(new MissileDestructor());
-		//System.out.println("Missile distructor - "+ missileLauncherDestructor.getId());
-		//missileLauncherDestructor.start();
-		
 	}
 	
 	
@@ -39,15 +34,10 @@ public class MissileLauncherDestructors {
 	public void destructMissileLauncher(MissileLauncher theMissileLauncher){
 		MissileLauncherDestructor theMissileLauncherDestructor = findMissileLauncherDestructor();
 		if (theMissileLauncherDestructor == null){
-			//No Missile launcher destructor exist
+			return;
 		}
 		else{
 			theMissileLauncherDestructor.add(theMissileLauncher);
-//			if(theMissileLauncher.getIsDestroyed())
-//				totalMissileLauncherDestroyed++;
-//			//theMissileLauncher.destructMissileLauncher(); //interrupt the thread
-//			System.out.println("Missile is hidden="+ theMissileLauncher.isHidden());
-//			System.out.println("Missile Launcher destroyed="+theMissileLauncher.getIsDestroyed());
 		}
 	}
 	
@@ -70,6 +60,16 @@ public class MissileLauncherDestructors {
 		for (MissileLauncherDestructor mld: destructor ){
 			mld.initMissileLauncherDestructed(theMissileLauncher);
 		}
+		
+	}
+
+	public ArrayList<MissileLauncherDestructor> getDestructor() {
+		return this.destructor;
+	}
+
+	public void endWar() {
+		for(MissileLauncherDestructor mld : destructor)
+			mld.endWar();
 		
 	}
 	

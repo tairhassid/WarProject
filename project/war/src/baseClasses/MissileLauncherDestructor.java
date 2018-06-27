@@ -1,7 +1,6 @@
 package baseClasses;
 
 import java.io.IOException;
-import java.util.Random;
 import java.util.Vector;
 import java.util.logging.FileHandler;
 import java.util.logging.Filter;
@@ -13,37 +12,105 @@ import com.google.gson.annotations.SerializedName;
 import bussinesLogic.LoggerManager;
 import bussinesLogic.War;
 import bussinesLogic.WarFormatter;
-import bussinesLogic.WarSummary;
 
 public class MissileLauncherDestructor {
-	public final static int MIN_TIME = 1000;
-	public final static int MAX_TIME = 5000;
+
+	private static boolean warIsOn;
+	
 	public enum DestructorType {
 		@SerializedName("plane")
 		Plane, 
 		@SerializedName("ship")
 		Ship};
 	public DestructorType type;
+	
 	private Vector<MissileLauncher> destructedLauncher = new Vector<>();
-
-	private boolean isBusy = false;
 	private long destructTime;
 	private DestructingMissile destructingMissile;
 	private FileHandler handler;
 	private Vector<MissileLauncher> realMissileLaunchers = new Vector<>();
 
-
+	/*gson constructor*/
 	public MissileLauncherDestructor(){
+		warIsOn = true;
 		this.destructingMissile = new DestructingMissile();
 		//setHandler();
 	}
 
 	public MissileLauncherDestructor(DestructorType type) {
+		warIsOn = true;
 		this.type= type;
 		this.destructingMissile = new DestructingMissile();
 		setHandler();
 	}
 	
+	public synchronized void destructMissileLauncher() {
+		MissileLauncher theMissileLauncher = destructedLauncher.remove(0);
+		
+		if(theMissileLauncher != null) {
+			while(theMissileLauncher.getDestructTime() > War.getCurrentTime()); //dummy wait
+			destructTime = War.getCurrentTime();
+			System.out.println(destructTime+"--> trying to destruct missile launcher " + theMissileLauncher.getLauncherId());
+			
+			if(theMissileLauncher.getDestructTime() == 0)
+				theMissileLauncher.setDestructTime(destructTime);
+			
+			if(War.nowGsonGame) {
+				for(MissileLauncher ml : realMissileLaunchers) {
+					if(ml.getLauncherId().equals(theMissileLauncher.getLauncherId())) {
+						ml.setDestructTime(theMissileLauncher.getDestructTime());
+						ml.destructSelf(this);
+					}	
+				}
+			}
+			else {
+				theMissileLauncher.destructSelf(this);
+			}
+		}
+	}
+
+	public void add(MissileLauncher theMissileLauncher) {
+		if(!destructingMissile.isAlive())
+			destructingMissile.start();
+		destructedLauncher.add(theMissileLauncher);;
+		destructingMissile.notifyDestructor();
+	}
+
+	public void addFromGson(){
+		System.out.println("~~~~~~destructedLauncher " + this.getType() + " size " + destructedLauncher.size());
+		if(!destructingMissile.isAlive())
+			destructingMissile.start();
+	}
+
+
+	public void initMissileLauncherDestructed(MissileLauncher theMissileLauncher) {
+	//setHandler();
+		realMissileLaunchers.add(theMissileLauncher);
+//		System.out.println("@@@@@@@@@@@@ destructedLauncher.size(): " + destructedLauncher.size() + " thread ID " + theMissileLauncher.getId());
+//		for(int i=0 ; i < destructedLauncher.size() ; i++) {
+//			if(destructedLauncher.get(i).getLauncherId().equals(theMissileLauncher.getLauncherId())) {
+//				theMissileLauncher.setDestructTime(destructedLauncher.get(i).getDestructTime());
+//				destructedLauncher.remove(i);
+//				destructedLauncher.add(i, theMissileLauncher);
+//				System.out.println("@@@@@@@@@@@@@@@" + destructedLauncher.get(i).getId());
+//			}
+//		}
+	}
+	
+	public void endWar() {
+		for(MissileLauncher ml : destructedLauncher) {
+			synchronized (ml) {
+				ml.setDestroyed(true);
+				ml.notify();
+			}
+		}
+		warIsOn = false;
+		synchronized (destructingMissile) {
+			destructingMissile.notify();
+		}
+	}
+	
+	//for logger
 	public void setHandler(){
 		try {
 			String log = "Launcher Destructor type: "+ this.type + "\n";
@@ -64,83 +131,8 @@ public class MissileLauncherDestructor {
 	public void logMissile(String log){
 		LoggerManager.getLogger().log(Level.INFO, log, this);
 	}
-
-
-	public synchronized boolean destructMissileLauncher(){
-		MissileLauncher theMissileLauncher = destructedLauncher.remove(0);
-		System.out.println("******MissileLauncherDestructor chose missile launcher ");
-		
-		if(theMissileLauncher != null) {
-			System.out.println("in destructMissileLaumcher " + theMissileLauncher.getId());
-			
-			while(theMissileLauncher.getDestructTime() > War.getCurrentTime());
-			destructTime = War.getCurrentTime();
-			System.out.println(destructTime+"--> trying to destruct missile launcher " + theMissileLauncher.getLauncherId());
-			
-			if(theMissileLauncher.getDestructTime() == 0)
-				theMissileLauncher.setDestructTime(destructTime);
-			
-			System.out.println("@@@@@@@@@@@@@@ is gsonGame " + War.gsonGame);
-			if(War.gsonGame) {
-				for(MissileLauncher ml : realMissileLaunchers) {
-					if(ml.getLauncherId().equals(theMissileLauncher.getLauncherId())) {
-						ml.setDestructTime(theMissileLauncher.getDestructTime());
-//						destructedLauncher.remove(theMissileLauncher);
-//						
-//						destructedLauncher.add(ml);
-						return ml.destructSelf(this);
-					}
-						
-				}
-			}
-			else {
-				return theMissileLauncher.destructSelf(this);
-			}
-		}
-		isBusy = false;
-		return false;
-	}
-
-	public int randomNumber(int from, int to){
-		Random rand = new Random();
-		int number = rand.nextInt(to) + from;
-
-		return number;
-	}
-
-	public void add(MissileLauncher theMissileLauncher) {
-		if(!destructingMissile.isAlive())
-			destructingMissile.start();
-		destructedLauncher.add(theMissileLauncher);
-		isBusy = true;
-		destructingMissile.notifyDestructor();
-	}
-
-	public void addFromGson(){
-		System.out.println("~~~~~~destructedLauncher " + this.getType() + " size " + destructedLauncher.size());
-		if(!destructingMissile.isAlive())
-			destructingMissile.start();
-		isBusy = true;
-		//		for (MissileLauncher m : destructedLauncher){
-		//			destructingMissile.notifyDestructor();
-		//		}
-	}
-
-
-	public void initMissileLauncherDestructed(MissileLauncher theMissileLauncher) {
-	//setHandler();
-		realMissileLaunchers.add(theMissileLauncher);
-//		System.out.println("@@@@@@@@@@@@ destructedLauncher.size(): " + destructedLauncher.size() + " thread ID " + theMissileLauncher.getId());
-//		for(int i=0 ; i < destructedLauncher.size() ; i++) {
-//			if(destructedLauncher.get(i).getLauncherId().equals(theMissileLauncher.getLauncherId())) {
-//				theMissileLauncher.setDestructTime(destructedLauncher.get(i).getDestructTime());
-//				destructedLauncher.remove(i);
-//				destructedLauncher.add(i, theMissileLauncher);
-//				System.out.println("@@@@@@@@@@@@@@@" + destructedLauncher.get(i).getId());
-//			}
-//		}
-	}
-
+	
+	//setters and getters
 	public Vector<MissileLauncher> getDestructedLauncher() {
 		return destructedLauncher;
 	}
@@ -177,18 +169,17 @@ public class MissileLauncherDestructor {
 
 		@Override
 		public void run() {
-			while(true) {
+			while(warIsOn) {
 				if(!destructedLauncher.isEmpty()) {
-					isBusy = true;
 					destructMissileLauncher();
 					
 				}
 				else {
 					synchronized (this) {
 						try {
-							System.out.println(War.getCurrentTime()+"--> destructingLauncher waiting to run");
+//							System.out.println(War.getCurrentTime()+"--> destructingLauncher waiting to run");
 							wait();
-							System.out.println(War.getCurrentTime()+"--> destructingLauncher finished waiting to run");
+//							System.out.println(War.getCurrentTime()+"--> destructingLauncher finished waiting to run");
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						}
@@ -204,6 +195,7 @@ public class MissileLauncherDestructor {
 			}
 		}
 	}
+
 }
 
 class LauncherDestructorFilter implements Filter {

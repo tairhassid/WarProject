@@ -18,8 +18,8 @@ public class LoggerManager {
 			logger.setUseParentHandlers(false);
 			logger.log(Level.INFO, "Let the war begin:\n");
 		} catch (SecurityException | IOException e) {
+			
 		} 
-		
 	}
 	
 	public static void addHandler(FileHandler handler){

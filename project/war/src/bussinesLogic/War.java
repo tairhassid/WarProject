@@ -10,25 +10,27 @@ import baseClasses.MissileLauncherDestructor;
 import baseClasses.MissileLauncherDestructor.DestructorType;
 
 public class War {
+	Scanner s = new Scanner(System.in);
 	public static final String LOG_PATH = "logFiles\\";
 	public static long timer;
+	public static boolean warIsOn = true;
 	private ArrayList<Missile> allMissiles = new ArrayList<>();
 	private int totalDamage;
 	private MissileLaunchers missileLaunchers = new MissileLaunchers();
 	private MissileDestructors missileDestructors = new MissileDestructors();
 	private MissileLauncherDestructors missileLauncherDestructors = new MissileLauncherDestructors();
 	public static boolean gsonGame;
-	
-	
+	public static boolean nowGsonGame;
 
+	
 	public  War() {
+		warIsOn = true;
 		totalDamage = 0;
 		timer = System.currentTimeMillis();
 		gsonGame = false;
 		
 	}
 
-	
 	public void initMissileDestructors(){
 		for (Missile m : allMissiles){
 			missileDestructors.initMissileDestructor(m);
@@ -87,13 +89,17 @@ public class War {
 	
 	public Missile findMissile(){//returns the first missile that hasn't been destructed yet and already launched
 		for (Missile m : allMissiles){// need to check if isFlying!!!
-			System.out.println(getCurrentTime());
-			if(!m.getIsDestructed() && m.getLaunchTime() > 0 && m.getLaunchTime() < getCurrentTime()
-					&& m.isFlying()){ //checking if is flying
+			if(checkForFlyingMissiles(m)) //checking if is flying
 				return m;
-			}
 		}
 		return null;
+	}
+	
+	public boolean checkForFlyingMissiles(Missile m) {
+		if(!m.getIsDestructed() && m.getLaunchTime() > 0 && m.getLaunchTime() <= getCurrentTime()
+				&& m.isFlying())
+			return true;
+		return false;
 	}
 	
 	public static int randomNumber(int from, int to){
@@ -104,15 +110,14 @@ public class War {
 	}
 
 	public boolean ifGsonGame() {
-		Scanner s = new Scanner(System.in);
+		
 		String answer;
 		System.out.println("Do you wish to load game from file? y/n");
 		answer = s.nextLine();
 		if (answer.equalsIgnoreCase("y")){
 			return true;
 		}
-		return false;
-		
+		return false;	
 	}
 	
 //	public void setWarSummary(){
@@ -170,9 +175,6 @@ public class War {
 	public void setAllMissiles(ArrayList<Missile> allMissiles) {
 		this.allMissiles = allMissiles;
 	}
-	
-
-
 
 	public void initMissileLauncherDestructors() {
 		for (MissileLauncher ml : missileLaunchers.getLauncher()){
@@ -186,10 +188,10 @@ public class War {
 		Iterator<Missile> iterMissiles = allMissiles.iterator();
 		Iterator<MissileLauncher> iterLaunchers = missileLaunchers.getActiveLaunchers().iterator();
 		
-		if(allMissiles.isEmpty()){
-			System.out.println("the war hasn't began yet!");
-			return;
-		}
+//		if(allMissiles.isEmpty()){
+//			System.out.println("the war hasn't began yet!");
+//			return;
+//		}
 		
 		if(gsonGame){ //there is a chance that a missile from gson never got launched
 			while(iterMissiles.hasNext()){
@@ -198,12 +200,11 @@ public class War {
 					iterMissiles.remove();
 			}
 			
-			while(iterLaunchers.hasNext()){
-				MissileLauncher ml = iterLaunchers.next();
-				if(ml.getIsDestroyed())
-					iterLaunchers.remove();
-			}
-			setGsonGame(false);
+//			while(iterLaunchers.hasNext()){
+//				MissileLauncher ml = iterLaunchers.next();
+//				if(ml.getIsDestroyed())
+//					iterLaunchers.remove();
+//			}
 		}
 		WarSummary.getInstance().setTotalDestroyedMissilesDestructors(missileLaunchers.getLauncher().size() - missileLaunchers.getActiveLaunchers().size());
 		WarSummary.getInstance().setTotalLaunchedMissiles(allMissiles.size());
@@ -214,8 +215,14 @@ public class War {
 		War.gsonGame = gsonGame;
 	}
 	
-	
-	
+	public void endWar() {
+		System.out.println("in war- end war");
+		warIsOn = false;
+		missileLaunchers.endWar();
+		missileDestructors.endWar();
+		missileLauncherDestructors.endWar();
+		
+	}
 
 
 }

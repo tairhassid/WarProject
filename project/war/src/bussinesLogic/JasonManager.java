@@ -15,6 +15,19 @@ public class JasonManager {
 			this.war = war;
 		}
 		
+		public void startAll() {
+			setAllMissilesFromGson();
+			war.initMissileDestructors();
+			war.initMissileLauncherDestructors();
+			War.setCurrentTime(System.currentTimeMillis());
+			startMissiles();
+			startLaunchers();
+			startMissileDestructors();
+			startMissileLauncherDestructors();
+			setActiveLaunchers();
+
+		}
+
 		public War readFromGson(){
 			if(Files.exists(Paths.get("war.json"))){
 				FileReader reader = null;
@@ -27,6 +40,7 @@ public class JasonManager {
 			   war = gson.fromJson(reader, War.class);
 			   
 			   war.setGsonGame(true);
+			   War.nowGsonGame = true;
 			   return war;
 			}
 			return null;
