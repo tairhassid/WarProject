@@ -13,8 +13,8 @@ public class ConsoleGame {
 	private War war;
 	private int[] flyTimeByArea;
 
-	public ConsoleGame(War war){
-		this.war = war;
+	public ConsoleGame(){
+		this.war = War.getInstance();
 	}
 
 	public void startGame(){
@@ -114,73 +114,68 @@ public class ConsoleGame {
 				illegal = true;
 
 				if(war.getMissileLaunchers().getActiveLaunchers().size() > 0) {
-					
-					while(illegal) {
-						System.out.print("Please enter a destination to hit- area 1, 2 or 3: --> ");
-						int dest = s.nextInt();
-						if(dest <= 3 && dest >= 1) {
 
-							illegal = false;
-							int randDamage = War.randomNumber(1000, 5001);
-							war.launchMissile("Area " + dest, flyTimeByArea[dest-1], randDamage); //just as an example
-						}
-						else
-							System.out.println("Area " + dest + " does not exist\n");
-					}
+
+					System.out.print("Please enter a destination to hit --> ");
+					String dest = s.nextLine();
+					illegal = false;
+
+					war.launchMissile(dest); //just as an example
+
 				}
 				else 
 					System.out.println("\nCan't launch a missile: There are no active launchers. You need to add one!");
 
-			break;
+				break;
 
-		case 5:
-			if(war.getMissileLauncherDestructors().getDestructor().size() == 0)
-				System.out.println("\nCan't destruct launchers: There are no missile launcher destructors. You need to add one!");
-			else if(war.getMissileLaunchers().getActiveLaunchers().size() == 0)
-				System.out.println("\nCan't destruct launchers: There are no missile launchers to destruct!");
-			else
-				war.destructMissileLauncher();
+			case 5:
+				if(war.getMissileLauncherDestructors().getDestructor().size() == 0)
+					System.out.println("\nCan't destruct launchers: There are no missile launcher destructors. You need to add one!");
+				else if(war.getMissileLaunchers().getActiveLaunchers().size() == 0)
+					System.out.println("\nCan't destruct launchers: There are no missile launchers to destruct!");
+				else
+					war.destructMissileLauncher();
 
-			break;
+				break;
 
-		case 6:
-			if(war.findMissile() == null)
-				System.out.println("\nCan't destruct missile: There are no currently flying missiles");
-			else if(war.getMissileDestructors().getDestructors().size() == 0)
-				System.out.println("\nCan't destruct missile: There are no missile destructors. You need to add one!");
-			else
-				war.destructMissile();
-			break;
+			case 6:
+				if(war.findMissile() == null)
+					System.out.println("\nCan't destruct missile: There are no currently flying missiles");
+				else if(war.getMissileDestructors().getDestructors().size() == 0)
+					System.out.println("\nCan't destruct missile: There are no missile destructors. You need to add one!");
+				else
+					war.destructMissile();
+				break;
 
-		case 7:
-			war.getWarSummary();
-			break;
+			case 7:
+				war.getWarSummary();
+				break;
 
-		case 8:
-			endWar();
-			break;
+			case 8:
+				endWar();
+				break;
 
-		default:
-			break;
+			default:
+				break;
 
+			}
 		}
+		s.close();
+
 	}
-	s.close();
 
-}
+	private void flyTimeSettings() {
+		flyTimeByArea = new int[3];
+		flyTimeByArea[0] = 5;
+		flyTimeByArea[1] = 6;
+		flyTimeByArea[2] = 7;
+	}
 
-private void flyTimeSettings() {
-	flyTimeByArea = new int[3];
-	flyTimeByArea[0] = 5;
-	flyTimeByArea[1] = 6;
-	flyTimeByArea[2] = 7;
-}
-
-private void endWar() {
-	System.out.println("enter end war");
-	war.getWarSummary();
-	war.endWar();
-	atWar = false;
-}
+	private void endWar() {
+		System.out.println("enter end war");
+		war.getWarSummary();
+		war.endWar();
+		atWar = false;
+	}
 
 }

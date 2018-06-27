@@ -21,9 +21,17 @@ public class War {
 	private MissileLauncherDestructors missileLauncherDestructors = new MissileLauncherDestructors();
 	public static boolean gsonGame;
 	public static boolean nowGsonGame;
+	
+	private static War war = null;
+	
+	public static War getInstance(){
+		if(war == null)
+			war = new War();
+		return war;
+	}
 
 	
-	public  War() {
+	private War() {
 		warIsOn = true;
 		totalDamage = 0;
 		timer = System.currentTimeMillis();
@@ -62,8 +70,10 @@ public class War {
 		missileDestructors.addMissileDestructor();
 	}
 	
-	public void launchMissile(String destination, int flyTime, int damage){
-		missileLaunchers.launchMissile(destination, flyTime, damage, allMissiles);
+	public void launchMissile(String destination){
+		int randDamage = randomNumber(1000, 5001);
+		int flyTime = randomNumber(2,9);
+		missileLaunchers.launchMissile(destination, flyTime, randDamage, allMissiles);
 	}
 	
 	public void destructMissileLauncher(){
